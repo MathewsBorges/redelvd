@@ -19,15 +19,14 @@
     </div>
     <div class="col-md-12 ">
         <div class="row mb-5">
-            <div class="col-md-10 col-info">
-                <div class="nome">
-                    <p>Nome: </p>
-                    <p> NOME DO FUNCIONÁRIO EXEMPLO</p>
+            <div class="col col-info">
+                <div class="col nome">
+                    <p>Nome: Matheus Neugebauer Borges </p>
+                   
 
                 </div>
-                <div class="data">
-                    <p>Mês de Competência: </p>
-                    <p>Janeiro</p>
+                <div class="col data">
+                    <p>Mês de Competência: Janeiro</p>
                 </div>
 
             </div>

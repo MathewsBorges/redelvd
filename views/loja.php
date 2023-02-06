@@ -10,10 +10,10 @@
     <div class="col-md-12 mb-5 principal">
 
 
-        <div class="container d-flex">
+    
 
 
-            <div class="col-md-12 col-sm-4 ms-4 mb-5 card shadow">
+            <div class="col-md-12 mb-5 card shadow">
                 <div class="titulo-card mt-3">
                     <h3><i class="fa-solid fa-users me-2"></i>Funcionários da Farmácia</h3>
 
@@ -45,7 +45,7 @@
                 </div>
 
             </div>
-            <div class="col-md-12 mt-5 mb-5 ms-4 card shadow">
+            <div class="col-md-12 mt-5 mb-5  card shadow">
                 <div class="titulo-card mt-3">
                     <h3><i class="fa-regular fa-file me-2"></i>Contra-cheque de Funcionários</h3>
 
@@ -88,7 +88,7 @@
             </div>
 
 
-            <div class="col-md-12 ms-4 mb-5 card shadow">
+            <div class="col-md-12   mb-5 card shadow">
                 <div class="titulo-card mt-3">
                     <h3><i class="fa-regular fa-folder-open me-2"></i>Arquivos da Farmácia</h3>
                 </div>
@@ -164,7 +164,7 @@
 
 
 
-    </div>
+    
 
 
 

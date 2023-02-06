@@ -13,12 +13,19 @@
 
 }
 
+.texto {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .texto-principal h1 {
     color: #427675;
     margin-top: 2rem;
     font-size: 5rem;
     font-weight: 800;
+    text-align: center;
 }
 
 .texto-secundario {
@@ -27,6 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .buttons {
@@ -196,6 +204,7 @@ button {
 .col-info .nome,
 .col-info .data {
     display: flex;
+    text-align: center;
 
 }
 
@@ -258,12 +267,12 @@ button {
         justify-content: center;
     }
 
-    .col-info{
+    .col-info {
         flex-direction: column;
-     }
+    }
 }
 
-.footer{
+.footer {
     height: 40px;
     display: flex;
     justify-content: flex-end;
@@ -305,6 +314,28 @@ button {
 
     .d-flex {
         flex-direction: column;
+    }
+
+    .cheque {
+        height: auto;
+        flex-direction: column;
+        
+    }
+
+    .nome{
+        display: none !important;
+    }
+    
+
+
+
+
+}
+
+
+@media(max-width:520px) {
+    .nav-item h5 {
+        display: none;
     }
 
 

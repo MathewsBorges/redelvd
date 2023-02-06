@@ -23,10 +23,12 @@
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
     <link rel="stylesheet" href="../assets/vendor/css/painel.css">
+ 
     <script src="../assets/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
+    
   </head>
 
 <body>
@@ -98,11 +100,11 @@
         </nav>
         <div class="row">
           <div class="col-md-12" id="conteudo" style="width:100%">
-            <div class="titulo">
-              <div class="texto-principal">
+            <div class="titulo justify-content-center">
+              <div class="texto-principal  justify-content-center">
                 <h1>REDE LVD</h1>
               </div>
-              <div class="texto-secundario">
+              <div class="texto-secundario  justify-content-center">
                 <p>Aqui você tem amigos</p>
               </div>
             </div>
