@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div class="container-fluid text-center footer">
+    <div class="col-md-12 text-center footer">
         ©Copyright 2023 REDE LVD, Todos os direitos reservados.
     </div>
 </body>
@@ -76,7 +76,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
 
-    <script src="./js/validator.js"></script>
+  
 
     <script type="text/javascript">
         $('#username').mask('000.000.000-00');

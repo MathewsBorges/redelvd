@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="../assets/css/demo.css" />
   <link rel="stylesheet" href="../assets/vendor/css/painel.css">
 
-  <script src="../assets/vendor/js/helpers.js"></script>
+  
 
 
   <script src="../assets/js/config.js"></script>
@@ -114,10 +114,10 @@
 
           <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
-            <div class="navbar-nav align-items-center ">
-              <div class="nav-item d-flex align-items-center pt-2">
-                <h4 class="me-5">Nome: Funcionário</h4>
-                <h5 class="ms-5">Cargo:  Funcionário</h5>
+            <div class="navbar-nav align-items-center justify-content-center ">
+              <div class="nav-item d-flex align-items-center justify-content-center pt-2">
+                <h4 class="">Nome: Funcionário</h4>
+                <h5 class="">Cargo: Funcionário</h5>
               </div>
             </div>
 
@@ -157,16 +157,6 @@
     </span>
   </footer>
 
-  <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-  <script src="../assets/vendor/libs/popper/popper.js"></script>
-  <script src="../assets/vendor/js/bootstrap.js"></script>
-  <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-  <script src="../assets/vendor/js/menu.js"></script>
-
-
-
-  <script src="../assets/js/main.js"></script>
 
 
 </body>
@@ -183,7 +173,7 @@
 
     $(this).parent().addClass('active');
     var href = $(this).attr('href');
-    
+
     history.pushState({}, null, href);
     $("#conteudo").load(href);
   });
