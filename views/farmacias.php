@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/farmacia.css">
+    <link rel="stylesheet" href="../assets/vendor/css/farmacia.css">
     <title>Farmácia</title>
 </head>
 <body>
 
-<div class="row">
+<div class="row mt-4">
     <div class="col-md-12">
         <div class="col-md-12">
             <div class="h-40 p-5 bg-light border rounded-3">
@@ -25,12 +25,13 @@
     <div class="col-md-12 mt-5">
 
 
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12 col-sm-6">
             <div class="card-group mb-4 ">
                 <div class="card ">
                     <div class="card-body">
                         <h5 class="card-title">Matriz - Loja 01</h5>
                         <p class="card-text">Av. Capitão Adolfo Castro, 385 - Centro Camaquã/RS</p>
+                        <br>
                         <p class="card-text"><small class="text-muted">Fone: (51) 3671-9311 <br>
                                 Celular: (51) 99528-3283</small></p>
                         <hr>
@@ -46,6 +47,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Rede LVD - Loja 02</h5>
                         <p class="card-text">Av. Emancipação, 191 - Centro Cristal/RS</p>
+                        <br>
                         <br>
                         <p class="card-text"><small class="text-muted">Fone: (51) 3678-1002 <br>
                                 Celular: (51) 98168-5874</small></p>
@@ -193,6 +195,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Rede LVD - Loja 10</h5>
                         <p class="card-text">Rua Cruz Alta, 985 - Viégas Camaquã/RS</p>
+                        <br>
                         <p class="card-text"><small class="text-muted">Fone: (51) 3671-1990 <br>
                                 Celular: (51) 99631-4481</small></p>
                         <hr>

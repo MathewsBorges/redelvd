@@ -30,7 +30,7 @@ class Projects
 
                     echo '
                 <tr>
-                <td><a href="pdfs/display.php?id=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file"></i>' . $row['nome'] . '</a></td>
+                <td><a href="pdfs/display.php?id=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file me-2"></i>' . $row['nome'] . '</a></td>
                 
                 <td>' . $row['tipo'] . '</td>
                 <td>' . $date->format('d/m/Y') . '</td>
@@ -78,7 +78,7 @@ class Projects
 
                     echo '
                     <tr>
-                    <td><a href="pdfs/display.php?id=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file"></i>' . $row['nome'] . '</a></td>
+                    <td><a href="pdfs/display.php?id=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file me-2"></i>' . $row['nome'] . '</a></td>
                     
                     <td>' . $row['tipo'] . '</td>
                     <td>' . $date->format('d/m/Y') . '</td>

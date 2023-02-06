@@ -123,8 +123,8 @@
 
     <div class="col-md-12 mt-5 mb-5">
         <hr>
-        <h3>Último Contracheque</h3>
-        <div class="col-md-12 ms-2 cheque">
+        <h3 class="ms-4">Último Contracheque</h3>
+        <div class="col-md-12 ms-4 cheque">
             <div class="arquivo">
                 <p>Arquivo: </p>
                 <p><a href="http://">Arquivo.pdf</a></p>
@@ -139,8 +139,8 @@
 
     <div class="col-md-12">
         <hr>
-        <h4>Todos os Contracheques</h4>
-      
+        <h4 class="ms-4">Todos os Contracheques</h4>
+
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-hover table-borderless" id="dataCheques" width="100%" cellspacing="0">

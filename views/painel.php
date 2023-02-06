@@ -10,7 +10,7 @@
 
   <meta name="description" content="" />
 
- 
+
   <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/7073a72774.js" crossorigin="anonymous"></script>
@@ -20,7 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
 
-  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css">
 
 
   <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -56,33 +57,33 @@
 
         <ul class="menu-inner py-1">
 
-          <li class="menu-item active">
+          <li class="menu-item">
             <a href="documentos.php" class="menu-link">
-              <i class="menu-icon tf-icons bx bx-file"></i>
+              <i class="fa-regular fa-file me-2"></i>
               Meus Documentos
             </a>
           </li>
           <li class="menu-item ">
             <a href="cheques.php" class="menu-link">
-              <i class="menu-icon tf-icons bx bx-file"></i>
+              <i class="fa-solid fa-file-invoice me-2"></i>
               Contracheques
             </a>
           </li>
           <li class="menu-item ">
             <a href="farmacias.php" class="menu-link">
-              <i class="menu-icon tf-icons bx bx-file"></i>
+              <i class="fa-solid fa-shop me-2"></i>
               Farmácias
             </a>
           </li>
           <li class="menu-item ">
             <a href="loja.php" class="menu-link">
-              <i class="menu-icon tf-icons bx bx-file"></i>
+              <i class="fa-solid fa-server me-2"></i>
               Dados da Farmácia
             </a>
           </li>
           <li class="menu-item ">
             <a href="crud.php" class="menu-link">
-              <i class="menu-icon tf-icons bx bx-file"></i>
+              <i class="fa-solid fa-users me-2"></i>
               Gestão de Funcionários
             </a>
           </li>
@@ -93,6 +94,12 @@
 
 
         </ul>
+        <li class="menu-item sair">
+          <a href="../index.php" class="menu-link">
+            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+            Sair
+          </a>
+        </li>
       </aside>
 
       <div class="layout-page">
@@ -107,10 +114,10 @@
 
           <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
 
-            <div class="navbar-nav align-items-center">
-              <div class="nav-item d-flex align-items-center">
-                <h2>Nome: Funcionário</h2>
-                <h2>Cargo Funcionário</h2>
+            <div class="navbar-nav align-items-center ">
+              <div class="nav-item d-flex align-items-center pt-2">
+                <h2 class="me-5">Nome: Funcionário</h2>
+                <h2 class="ms-5">Cargo Funcionário</h2>
               </div>
             </div>
 
@@ -167,6 +174,12 @@
 <script>
   $(".menu-inner  a").click(function(e) {
     e.preventDefault();
+
+    $(".menu-inner li").each(function(index, elemente) {
+       $(elemente).removeClass('active');
+    })
+
+    $(this).parent().addClass('active');
     var href = $(this).attr('href');
     $("#conteudo").load(href);
   });

@@ -132,8 +132,8 @@ a.bg-primary:hover, a.bg-primary:focus {
 .pagination li.active > a:not(.page-link),
 .pagination li.active > a:not(.page-link):hover,
 .pagination li.active > a:not(.page-link):focus {
-  border-color: #696cff;
-  background-color: #696cff;
+  border-color: #cf7400;
+  background-color: #cf7400;
   color: #fff;
   box-shadow: 0 0.125rem 0.25rem rgba(105, 108, 255, 0.4);
 }
@@ -307,29 +307,29 @@ button.list-group-item-primary.active {
 
 .form-control:focus,
 .form-select:focus {
-  border-color: #696cff;
+  border-color: #5faaa7;
 }
 
 .input-group:focus-within .form-control,
 .input-group:focus-within .input-group-text {
-  border-color: #696cff;
+  border-color: #5faaa7;
 }
 
 .form-check-input:focus {
-  border-color: #696cff;
+  border-color: #5faaa7;
   box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
 }
 .form-check-input:disabled {
   background-color: #eceef1;
 }
 .form-check-input:checked, .form-check-input[type=checkbox]:indeterminate {
-  background-color: #696cff;
-  border-color: #696cff;
+  background-color: #5faaa7;
+  border-color: #5faaa7;
   box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
 }
 
 .custom-option.checked {
-  border: 1px solid #696cff;
+  border: 1px solid #5faaa7;
 }
 
 .form-switch .form-check-input:focus {
@@ -340,7 +340,7 @@ button.list-group-item-primary.active {
 }
 
 .form-control:focus ~ .form-label {
-  border-color: #696cff;
+  border-color: #5faaa7;
 }
 .form-control:focus ~ .form-label::after {
   border-color: inherit;

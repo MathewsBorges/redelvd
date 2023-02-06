@@ -14,7 +14,7 @@
 
             <div class="col me-5 card shadow">
                 <div class="titulo-card mt-2">
-                    <h3><i class="fa-regular fa-folder-open"></i>Arquivos da Farmácia</h3>
+                    <h3><i class="fa-regular fa-folder-open me-2"></i>Arquivos da Farmácia</h3>
                 </div>
                 <div class="card mb-3">
                     <div class="card-body">
@@ -45,7 +45,7 @@
 
                     <form class="form-arquivos-loja" action="pdfs/enviarfarmacias.php" method="post" enctype="multipart/form-data">
                         <div class="col-md-12 ps-2">
-                            <h5><i class="fa-solid fa-upload"></i>Upload de Arquivos</h5>
+                            <h5><i class="fa-solid fa-upload me-2"></i>Upload de Arquivos</h5>
                             <div class="col-md-10 ms-5 mb-2">
                                 <div class="input-group">
                                     <input type="file" name="pdf_file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
@@ -77,9 +77,9 @@
             </div>
 
 
-            <div class="col ms-5 card shadow">
+            <div class="col me-5 card shadow">
                 <div class="titulo-card mt-2">
-                    <h3><i class="fa-solid fa-users"></i>Funcionários da Farmácia</h3>
+                    <h3><i class="fa-solid fa-users me-2"></i>Funcionários da Farmácia</h3>
 
                 </div>
                 <div class="card mb-1">
@@ -120,7 +120,7 @@
 
         <div class="col-md-12 mt-5 card shadow">
             <div class="titulo-card mt-2">
-                <h3><i class="fa-regular fa-file"></i>Contra-cheque de Funcionários</h3>
+                <h3><i class="fa-regular fa-file me-2"></i>Contra-cheque de Funcionários</h3>
 
             </div>
             <div class="card mb-3">
