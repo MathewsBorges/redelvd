@@ -231,7 +231,7 @@ button {
 }
 
 
-@media(max-width:1400px) {
+@media(max-width:1800px) {
 
     .form-arquivos {
         width: 100%;
@@ -264,7 +264,14 @@ button {
      }
 }
 
-
+.footer{
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 2rem;
+    font-size: 16px;
+}
 
 
 @media (max-width: 767px) {

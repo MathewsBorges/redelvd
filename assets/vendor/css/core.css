@@ -8,7 +8,7 @@
   --bs-red: #ff3e1d;
   --bs-orange: #fd7e14;
   --bs-yellow: #ffab00;
-  --bs-green: #23c746;
+  --bs-green: #5faaa7;
   --bs-teal: #20c997;
   --bs-cyan: #03c3ec;
   --bs-white: #fff;
@@ -27,8 +27,8 @@
   --bs-gray: rgba(67, 89, 113, 0.1);
   --bs-primary-rgb: 105, 108, 255;
   --bs-secondary-rgb: 133, 146, 163;
-  --bs-success-rgb: 113, 221, 55;
-  --bs-info-rgb: 3, 195, 236;
+  --bs-success-rgb: 87, 170, 167;
+   --bs-info-rgb: 3, 195, 236;
   --bs-warning-rgb: 255, 171, 0;
   --bs-danger-rgb: 255, 62, 29;
   --bs-light-rgb: 252, 253, 253;
@@ -16994,7 +16994,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
   min-height: 1px;
   align-items: center;
   background: linear-gradient(135deg, #cf7400 0%, #bc6a00 100%);
-  
+
 
 }
 
@@ -17016,7 +17016,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
 .app-brand-logo img,
 .app-brand-logo svg {
   display: block;
-  
+
 }
 
 

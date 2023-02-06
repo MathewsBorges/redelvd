@@ -116,8 +116,8 @@
 
             <div class="navbar-nav align-items-center ">
               <div class="nav-item d-flex align-items-center pt-2">
-                <h2 class="me-5">Nome: Funcionário</h2>
-                <h2 class="ms-5">Cargo Funcionário</h2>
+                <h4 class="me-5">Nome: Funcionário</h4>
+                <h5 class="ms-5">Cargo:  Funcionário</h5>
               </div>
             </div>
 

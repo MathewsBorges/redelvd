@@ -1,5 +1,5 @@
 <a href="#users"></a>
-<div class="col-md-12 tabela">
+<div class="col-md-12 tabela mt-5">
     <div class="row">
         <div class="col-md-12 mb-5">
             <div class="col-md-12">
@@ -21,7 +21,7 @@
 
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table table-hover mb-5" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>Código</th>

@@ -55,18 +55,31 @@
                         </form>
                     </div>
                     <div class="row">
-                        <p>Não tem conta?<a href="mailto:">Consulte um Administrador</a></p>
+                        <p >Não tem conta?<a class="ms-2" href="mailto:ti@redelvd.com.br">Consulte um Administrador</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer -->
+
     <div class="container-fluid text-center footer">
         ©Copyright 2023 REDE LVD, Todos os direitos reservados.
     </div>
 </body>
 
 </body>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+
+    <script src="./js/validator.js"></script>
+
+    <script type="text/javascript">
+        $('#username').mask('000.000.000-00');
+    </script>
 
 </html>
