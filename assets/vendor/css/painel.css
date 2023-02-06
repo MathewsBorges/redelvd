@@ -3,6 +3,16 @@
 
 }
 
+ .user h4{
+    font-weight: 600;
+    /* border-bottom: 1px solid black; */
+}
+
+.user h5{
+  position: absolute;
+  top: 54px;
+  font-weight: 200;
+} 
 
 .info {
     width: 30%;

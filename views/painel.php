@@ -3,6 +3,7 @@
 <html lang="pt-br" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
 <head>
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
@@ -23,12 +24,12 @@
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
     <link rel="stylesheet" href="../assets/vendor/css/painel.css">
- 
+
     <script src="../assets/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
-    
+
   </head>
 
 <body>
@@ -76,12 +77,16 @@
             </a>
           </li>
         </ul>
+
+
         <li class="menu-item sair">
+
           <a href="../index.php" class="menu-link">
             <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
             Sair
           </a>
         </li>
+
       </aside>
       <div class="layout-page">
         <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
@@ -90,13 +95,14 @@
               <i class="bx bx-menu bx-sm"></i>
             </a>
           </div>
-          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-            <div class="navbar-nav align-items-center justify-content-center ">
-              <div class="nav-item d-flex align-items-center justify-content-center pt-2">
-                <h4 class="">Nome: Funcionário</h4>
-                <h5 class="">Cargo: Funcionário</h5>
+          <div class="navbar-nav-right d-flex align-items-start pt-1 ps-5" id="navbar-collapse">
+            <div class="navbar-nav align-items-start justify-content-center">
+              <div class="nav-item d-flex align-items-start justify-content-center user">
+                <h4 class="">Matheus Neugebauer Borges</h4>
+                <h5 class="">Front End Developer</h5>
               </div>
             </div>
+          </div>
         </nav>
         <div class="row">
           <div class="col-md-12" id="conteudo" style="width:100%">
@@ -136,8 +142,8 @@
     });
     $(this).parent().addClass('active');
     var href = $(this).attr('href');
-    history.pushState({}, null, href);
     $("#conteudo").load(href);
+
   });
 </script>
 

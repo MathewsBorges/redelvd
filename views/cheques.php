@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../assets/vendor/css/painel.css">
-<div class="col-md-12">
+<div class="col-md-12 mt-1">
     <div class="row">
-        <div class="col-md-12 mb-5">
+        <div class="col-md-12 mb-2">
             <div class="col-md-12">
                 <div class="h-40 p-5 bg-light border rounded-3">
                     <a id="crud"></a>
@@ -136,7 +136,7 @@
         </div>
     </div>
 
-    <div class="col-md-12">
+    <div class="card shadow col-md-12">
         <hr>
         <h4 class="ms-4">Todos os Contracheques</h4>
 

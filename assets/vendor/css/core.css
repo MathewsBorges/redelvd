@@ -16565,7 +16565,7 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
   position: relative;
   padding-top: 0.25rem;
   padding-bottom: 0.2rem;
-  height: 3.875rem;
+  height: 5rem;
   flex-wrap: nowrap;
   color: #697a8d;
   z-index: 2;
