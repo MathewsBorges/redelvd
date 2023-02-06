@@ -173,14 +173,18 @@
 
 <script>
   $(".menu-inner  a").click(function(e) {
+
     e.preventDefault();
 
     $(".menu-inner li").each(function(index, elemente) {
-       $(elemente).removeClass('active');
-    })
+      $(elemente).removeClass('active');
+    });
+
 
     $(this).parent().addClass('active');
     var href = $(this).attr('href');
+    
+    history.pushState({}, null, href);
     $("#conteudo").load(href);
   });
 </script>

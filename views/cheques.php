@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="h-40 p-5 bg-light border rounded-3">
                     <a id="crud"></a>
-                    <h2><i class="fa-regular fa-file"></i>Contracheques</h2>
+                    <h2><i class="fa-regular fa-file me-4"></i>Contracheques</h2>
                     <p>Visualize aqui seus Contracheques</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
