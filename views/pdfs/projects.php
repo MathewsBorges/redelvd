@@ -125,7 +125,7 @@ class Projects
                     <tr>
                     <td>' . $row['id'] . '</td>
     
-                    <td><a href="pdfs/display.php?doc=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file"></i>' . $row['nome'] . '</a></td>
+                    <td><a href="pdfs/display.php?doc=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file me-2"></i>' . $row['nome'] . '</a></td>
                     
                     <td>' . $row['tipo'] . '</td>
                     <td>' . $date->format('d/m/Y') . '</td>
