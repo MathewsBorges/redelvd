@@ -98,13 +98,16 @@ formAviso.addEventListener("submit", (e) => {
 
 let btnEditar = document.getElementById("editar")
 let btnSalvar = document.getElementById("submit")
+let btnCancelar = document.getElementById("cancelar")
+
 
 btnEditar.addEventListener("click", (e) => {
 
     e.preventDefault()
-    btnEditar.setAttribute("disabled", "")
-    btnSalvar.removeAttribute("disabled", "")
 
+    btnEditar.setAttribute("disabled", "")
+    btnCancelar.removeAttribute("disabled", "")
+    btnSalvar.removeAttribute("disabled", "")
     nome.removeAttribute("disabled", "")
     data.removeAttribute("disabled", "")
     cpf.removeAttribute("disabled", "")
@@ -117,6 +120,24 @@ btnEditar.addEventListener("click", (e) => {
     cargo.removeAttribute("disabled", "")
 
 
+})
+
+form.addEventListener("reset", (e) => {
+
+
+    btnEditar.removeAttribute("disabled", "")
+    btnCancelar.setAttribute("disabled", "")
+    btnSalvar.setAttribute("disabled", "")
+    nome.setAttribute("disabled", "")
+    data.setAttribute("disabled", "")
+    cpf.setAttribute("disabled", "")
+    email.setAttribute("disabled", "")
+    telefone.setAttribute("disabled", "")
+    endereco.setAttribute("disabled", "")
+    cep.setAttribute("disabled", "")
+    loja.setAttribute("disabled", "")
+    cidade.setAttribute("disabled", "")
+    cargo.setAttribute("disabled", "")
 })
 
 

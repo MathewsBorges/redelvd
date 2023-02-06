@@ -40,7 +40,7 @@
 
     <header>
 
-        <div class="cabecalho">
+        <div class=" col-md-12 cabecalho">
 
             <div class="img">
                 <img src="../assets/img/user.png" alt="erro">
@@ -150,7 +150,7 @@
 
 
         <div class="row formulario mb-2 card shadow py-5 pe-4">
-            <div class="titulo-card">
+            <div class="titulo-card col-md-12">
                 <h2>Dados do Funcionário</h2>
 
                 <?php
@@ -289,12 +289,10 @@
                         </div>
                     </div>
 
-                    <div class=" buttons col-md-6 mt-4">
-
+                    <div class=" buttons col-md-8 mt-4">
                         <button id="editar" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i>Editar</button>
-
-
                         <button type="submit" class="btn btn-success" id="submit" disabled><i class="fa-regular fa-floppy-disk"></i>Salvar</button>
+                        <button type="reset" id="cancelar" class="btn btn-danger" disabled><i class="fa-solid fa-ban"></i>Cancelar</button>
                     </div>
 
 
@@ -311,7 +309,7 @@
             </div>
         </div>
 
-        <div class="row mb-5  card shadow py-4">
+        <div class="row mb-5 card shadow py-4">
             <div class="titulo-card">
                 <h2>Arquivos do Funcionário</h2>
             </div>
@@ -339,46 +337,48 @@
                             </div>
                         </div>
                     </div>
-                    <div class="input-arquivos">
+                    <div class="row">
+                        <div class="input-arquivos">
 
-                        <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
-                            <div class="col-md-12 d-flex">
+                            <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
+                                <div class="col d-flex arquivos-funcionarios">
 
-                                <div class="col-md-4">
-                                    <div class="input-group">
-                                        <input type="file" class="form-control" name="pdf_file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <input type="file" class="form-control" name="pdf_file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="input-group mb-3 tipo">
+
+                                            <label class="input-group-text" for="inputGroupSelect01">Tipo de Arquivo</label>
+                                            <select class="form-select" name="tipo" id="inputGroupSelect01">
+                                                <option value="Folha de Pagamento" selected>Folha de Pagamento</option>
+                                                <option value="Folha Ponto">Folha Ponto</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="botao-anexar">
+                                        <span> <i class="fa-solid fa-paperclip"></i></span>
+                                        <input type="submit" value="Anexar">
+                                        <input type="hidden" name="codigo" value="<?php echo $dados['codigo'] ?>">
+                                        <input type="hidden" name="crud" value="crud">
+
                                     </div>
 
                                 </div>
 
-                                <div class="col-md-6">
-                                    <div class="input-group mb-3 tipo">
-
-                                        <label class="input-group-text" for="inputGroupSelect01">Tipo de Arquivo</label>
-                                        <select class="form-select" name="tipo" id="inputGroupSelect01">
-                                            <option value="Folha de Pagamento" selected>Folha de Pagamento</option>
-                                            <option value="Folha Ponto">Folha Ponto</option>
-
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4 botao-anexar">
-                                    <span> <i class="fa-solid fa-paperclip"></i></span>
-                                    <input type="submit" value="Anexar">
-                                    <input type="hidden" name="codigo" value="<?php echo $dados['codigo'] ?>">
-                                    <input type="hidden" name="crud" value="crud">
-
-                                </div>
-
-                            </div>
 
 
 
+                            </form>
 
-                        </form>
 
-
+                        </div>
                     </div>
                 </div>
 
@@ -388,8 +388,8 @@
         <div class="row mt-5">
 
 
-            <div class="col me-5 card shadow py-4">
-                <div class="titulo-card">
+            <div class="col-md-5 mb-5 me-1 card shadow py-4">
+                <div class="titulo-card col-md-12">
                     <h2>Adicionar Aviso</h2>
                 </div>
                 <form id="form-aviso" action="../controllers/AvisoController.php" method="post">
@@ -412,7 +412,7 @@
                             </div>
 
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <button type="submit" id="submit-aviso" class="btn btn-success">Adicionar</button>
                         </div>
 
@@ -427,7 +427,7 @@
 
 
 
-        <div class="col card shadow py-4">
+        <div class="col-md-6 ms-1 card shadow py-4">
             <div class="row">
                 <div class="titulo-card">
                     <h2>Avisos do Funcionário</h2>
