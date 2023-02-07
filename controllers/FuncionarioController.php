@@ -17,7 +17,6 @@ class FuncionarioController
 
     static protected $cargos  = ["G" => "Gerente", "V" => "Vendedor", "T" => "Farmaceutica", "S" => "Supervisor", "A" => "Auxiliar Admnistrativo", "X" => "X", "U" => "U", "E" => "Entregador", "F" => "Financeiro"];
 
-
     function listarFuncionario()
     {
 
@@ -59,9 +58,6 @@ class FuncionarioController
         }
     }
 
-
-
-
     function dadosFuncionario($codigo)
     {
         $dados = $this->funcionario->getFuncionario($codigo);
@@ -94,11 +90,23 @@ class FuncionarioController
         }
     }
 
-
     function editarFuncionario($campos)
     {
 
         $this->funcionario->editarFuncionario($campos);
+    }
+
+    function login($user, $campos)
+    {
+        $usuario = $this->funcionario->getLogin($user, $campos);
+        if ($usuario != null) {
+            session_start();
+            $_SESSION['id'] = $usuario['codigo'];
+            $_SESSION['nome'] = $usuario['nome'];
+            $_SESSION['nivel_acesso'] = $usuario['perfil'];
+        } else {
+            header("location: ../index.php?falhaLogin");
+        }
     }
 }
 
@@ -112,4 +120,10 @@ if (isset($_POST['method']) && $_POST['method'] == "editarFuncionario") {
     ];
 
     $controller->editarFuncionario($campos);
+}
+
+if (isset($_POST['method']) && $_POST['method'] == "login") {
+    $user = $_POST['user'];
+    $senha = $_POST['password'];
+    $controller->login($user, $senha);
 }

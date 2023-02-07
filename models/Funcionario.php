@@ -121,4 +121,12 @@ class Funcionario
             header("location: ../views/crudUsuario.php?id=$id&status=failed");
         }
     }
+
+    public function getLogin($user, $senha){
+        $query = $this->bd->prepare("SELECT * from colaborador where cpf = :user && senha = :senha");
+        $query->bindValue(":user", $user);
+        $query->bindValue(":senha", $senha);
+        $usuario = $query->fetch();
+        return $usuario;
+    }
 }
