@@ -1,30 +1,39 @@
 <?php
 require_once("../models/Funcionario.php");
+require_once("../models/Empresa.php");
 
 
 class FuncionarioController
 {
     protected $funcionario;
+    protected $loja;
+    protected $lojas;
 
     function __construct()
     {
         $this->funcionario = new Funcionario();
+        $this->loja = new Empresa();
     }
 
     static protected $cargos  = ["G" => "Gerente", "V" => "Vendedor", "T" => "Farmaceutica", "S" => "Supervisor", "A" => "Auxiliar Admnistrativo", "X" => "X", "U" => "U", "E" => "Entregador", "F" => "Financeiro"];
-    static protected $lojas = [1 => "Matriz ", 2 => "Loja 02", 3 => "Loja 03", 4 => "Loja 04", 5 => "Loja 05", 6 => "Loja 06", 7 => "Loja 07", 8 => "Loja 08", 9 => "Loja 09", 10 => "Loja 10", 11 => "Loja 11", 12 => "Loja 12", 13 => "Loja 13", 14 => "Loja 14", 15 => "Loja 15",  16 => "Loja 16", 17 => "Loja 17", 18 => "Loja 18", 99 => "Depósito"];
 
 
     function listarFuncionario()
     {
 
         $dados = $this->funcionario->getFuncionarios();
+        $lojas =  $this->loja->getLojas();
 
         foreach ($dados as $colaborador) {
 
             $codigo = $colaborador['codigo'];
             $nome =  $colaborador['nome'];
-            $loja = FuncionarioController::$lojas[$colaborador['loja']];
+
+
+            foreach ($lojas as $empresa) {
+                if ($empresa['codigo'] == $colaborador['loja']) $this->loja = $empresa['nome_res'];
+            }
+
             $cargo =  FuncionarioController::$cargos[$colaborador['classe']];
 
 
@@ -33,7 +42,7 @@ class FuncionarioController
             <td>' . $codigo . '</td>
             <td>' . $nome . '</td>
             <td>' . $cargo . '</td>
-            <td>' . $loja . '</td>
+            <td>' . $this->loja . '</td>
 
             <td>
             <form action="crudUsuario.php" method="post">
@@ -49,6 +58,9 @@ class FuncionarioController
             ';
         }
     }
+
+
+
 
     function dadosFuncionario($codigo)
     {

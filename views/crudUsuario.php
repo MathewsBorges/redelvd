@@ -249,11 +249,11 @@
                     <div class="col-md-4">
                         <div class="form-floating">
                             <select disabled class="form-select" name="loja" id="loja" aria-label="Floating label select example">
-                                <option selected value="1">Loja 01 - Matriz</option>
-                                <option value="2">Rede LVD - Loja 02</option>
-                                <option value="3">Rede LVD - Loja 03</option>
-                                <option value="4">Rede LVD - Loja 04</option>
-                                <option value="5">Rede LVD - Loja 05</option>
+                                <?php
+                                require_once '../controllers/EmpresaController.php';
+                                $empresa = new EmpresaController();
+                                $empresa->listarLojas($dados['loja']);
+                                ?>
 
                             </select>
                             <label for="floatingSelect">Loja</label>

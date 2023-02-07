@@ -12,6 +12,14 @@ class Funcionario
         $this->bd = BDconexao::getConexao();
     }
 
+    public function getLojas()
+    {
+        $query = $this->bd->prepare("SELECT * from empresa");
+        $query->execute();
+        $dados = $query->fetchAll();
+        return $dados;
+    }
+
 
     public function getFuncionarios()
     {
@@ -111,7 +119,6 @@ class Funcionario
             header("location: ../views/crudUsuario.php?id=$id&status=success");
         } catch (\Throwable $th) {
             header("location: ../views/crudUsuario.php?id=$id&status=failed");
-            
         }
     }
 }

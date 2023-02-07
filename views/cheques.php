@@ -71,7 +71,7 @@
                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Créditos</th>
+                                    <th>Débitos</th>
                                     <th>Descrição</th>
                                     <th>Valor</th>
                                 </tr>
@@ -79,14 +79,14 @@
 
                             <tbody>
                                 <tr>
-                                    <th scope="row">Salário Mês</th>
+                                    <th scope="row">Convênio Farmácia</th>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Férias</th>
+                                    <th scope="row">Vales</th>
 
                                 </tr>
                                 <tr>
-                                    <th scope="row">Outros</th>
+                                    <th scope="row">Empréstimos</th>
 
                                 </tr>
                                 <tr>
