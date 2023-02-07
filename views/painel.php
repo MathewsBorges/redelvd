@@ -128,7 +128,7 @@
   </div>
   <footer class="footer">
     <span style="color:black">
-      ©Copyright 2023 <strong class='ms-2 text-success'>Rede LVD</strong>
+      © Copyright<strong class='ms-2 text-success'>Rede LVD</strong>
     </span>
   </footer>
 </body>
