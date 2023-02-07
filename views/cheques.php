@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="../assets/vendor/css/painel.css">
-<div class="col-md-12 mt-1">
+<div class="col-md-12 mt-3">
     <div class="row">
-        <div class="col-md-12 mb-2">
+        <div class="col-md-12">
             <div class="col-md-12">
                 <div class="h-40 p-5 bg-light border rounded-3">
                     <a id="crud"></a>
@@ -168,10 +168,10 @@
 
 </div>
 
-<script src="../vendor/jquery/jquery.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../assets/endor/jquery/jquery.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="./js/sb-admin-2.min.js"></script>
-<script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="./js/datatables-demo.js"></script>
