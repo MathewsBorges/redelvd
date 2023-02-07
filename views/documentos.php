@@ -1,18 +1,21 @@
 <div class="row mt-2">
-    <div class="col-md-12 mb-2">
-        <div class=" h-55 p-4 bg-light border rounded-3">
-            <div class="titulo-documentos">
-                <i class="fa-solid fa-folder-open fa-2x me-2"></i>
-                <h2>Meus Documentos</h2>
+       <div class="col-md-12 mt-2">
+        <div class="col-md-12">
+            <div class="h-20 p-4 bg-light border rounded-3  me-2">
+                <h2><i class="fa-regular fa-file me-4"></i>Meus Documentos</h2>
+                <!-- <p>Mensagem de Administradores e Auxiliares Administrativos você encontra aqui</p> -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item " aria-current="page">Painel</li>
+                        <li class="breadcrumb-item active" aria-current="page">Meus Documentos</li>
+                    </ol>
+                </nav>
             </div>
-            <p class="subtitulo-documentos">Anexar Arquivos, Visualizar, Baixar Arquivos de RH</p>
-
         </div>
-
     </div>
 
-    <div class="row mt-5">
-        <div class="col-md-12 card shadow mb-4 pt-4">
+    <div class="row mt-2">
+        <div class="col-md-12 ms-2 card shadow mb-4 pt-4">
             <div class="col-md-12">
                 <div class="titulo-card">
                     <h4><i class="fa-solid fa-user me-2"></i>Meus Documentos Anexados</h4>
@@ -56,7 +59,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <div class="input-group mb-3 tipo">
+                                <div class="input-group mt-1 mb-3 tipo">
 
                                     <label class="input-group-text ms-2" for="inputGroupSelect01">Tipo de Arquivo</label>
                                     <select class="form-select" name="tipo" id="inputGroupSelect01">
@@ -92,8 +95,8 @@
     </div>
 
     <div class="row mt-5">
-        <div class="col-md-12 ">
-            <div class="col-md-12 card shadow mb-4 pt-4">
+        <div class="col-12">
+            <div class="col-md-12 ms-2 card shadow mb-4 pt-4">
 
                 <div class="titulo-card">
                     <h4><i class="fa-regular fa-file me-2"></i>Documentos RH</h4>
@@ -101,7 +104,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover" id="dataDocumentos" width="100%" cellspacing="0">
+                        <table class="table table-hover mb-2" id="dataDocumentos" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>Documento</th>

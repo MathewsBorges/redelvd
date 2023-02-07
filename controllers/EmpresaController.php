@@ -20,4 +20,5 @@ class EmpresaController
             echo ' <option value="'. $empresa['codigo'].'"   '. ($empresa['codigo']==$loja ? " selected":" ").'> REDE ' . $empresa['nome_res'] . '</option>';
         }
     }
+
 }

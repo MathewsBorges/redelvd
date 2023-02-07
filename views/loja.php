@@ -1,8 +1,10 @@
+
+
 <div class="row">
     <?php
 
     ?>
-    <div class="col-md-12">
+    <div class="mt-4 col-md-12">
         <div class="h-40 p-5 bg-light border rounded-3 mb-4">
             <h2>Rede LVD - Loja 02</h2>
         </div>

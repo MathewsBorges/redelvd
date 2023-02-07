@@ -1,22 +1,20 @@
 <a href="#users"></a>
-<div class="col-md-12 tabela mt-5">
+<div class="col-md-12 tabela mt-2">
     <div class="row">
-        <div class="col-md-12 mb-5">
-            <div class="col-md-12">
-                <div class="h-40 p-5 bg-light border rounded-3">
-                    <a id="crud"></a>
-                    <h2><i class="fa-solid fa-list-ul"></i>Lista de Funcionários</h2>
-                    <p>Visualize todos os funcionários da farmácia aqui, você pode pesquisar para facilitar sua busca</p>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item " aria-current="page">Painel</li>
-                            <li class="breadcrumb-item active" aria-current="page">Gestão de Funcionários</li>
-                        </ol>
-                    </nav>
-                </div>
+    <div class="col-md-12 mt-2">
+        <div class="col-md-12">
+            <div class="h-20 p-4 bg-light border rounded-3  me-2 mb-2">
+                <h2><i class="fa-solid fa-list me-4"></i>Lista de Funcionários</h2>
+                <p>Visualize todos os funcionários da farmácia aqui, você pode pesquisar para facilitar sua busca</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item " aria-current="page">Painel</li>
+                        <li class="breadcrumb-item active" aria-current="page">Gestão de Funcionários</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-
+    </div>
         <div class="card shadow mb-4">
 
             <div class="card-body">

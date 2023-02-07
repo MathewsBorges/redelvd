@@ -599,7 +599,7 @@ a:hover {
 .bg-navbar-theme .navbar-nav > .nav-item > .nav-link:focus,
 .bg-navbar-theme .navbar-nav > .nav > .nav-item > .nav-link:hover,
 .bg-navbar-theme .navbar-nav > .nav > .nav-item > .nav-link:focus {
-  color: #fff;
+  color: #cf7400;
 }
 .bg-navbar-theme .navbar-nav > .nav-link.disabled,
 .bg-navbar-theme .navbar-nav > .nav-item > .nav-link.disabled,

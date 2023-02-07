@@ -65,6 +65,12 @@
             </a>
           </li>
           <li class="menu-item ">
+            <a href="avisos.php" class="menu-link">
+              <i class="fa-solid fa-bell me-2"></i>
+              Avisos
+            </a>
+          </li>
+          <li class="menu-item ">
             <a href="loja.php" class="menu-link">
               <i class="fa-solid fa-server me-2"></i>
               Dados da Farmácia

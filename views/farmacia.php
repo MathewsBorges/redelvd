@@ -5,7 +5,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/7073a72774.js" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<link rel="stylesheet" href="styles/painel.css">
+
+<link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+<link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+<link rel="stylesheet" href="../assets/css/demo.css" />
+<link rel="stylesheet" href="../assets/vendor/css/painel.css">
+
 
 <div class="row">
     <?php
@@ -30,7 +35,7 @@
 
         <div class="container-fluid d-flex">
 
-            <div class="col me-5 card shadow">
+            <div class="col-12 ms-4 card shadow">
                 <div class="titulo-card mt-2">
                     <h3><i class="ms-2 me-2 fa-regular fa-folder-open"></i>Arquivos da Farmácia</h3>
                 </div>
@@ -63,7 +68,7 @@
                     <form class="form-arquivos-loja" action="pdfs/enviarfarmacias.php" method="post" enctype="multipart/form-data">
                         <div class="col-md-12 ps-2">
                             <h5><i class="ms-2 me-2 fa-solid fa-upload"></i>Upload de Arquivos</h5>
-                            <div class="col-md-10 ms-5 mb-2">
+                            <div class="col-10 ms-5 mb-2">
                                 <div class="input-group">
                                     <input type="file" name="pdf_file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                                 </div>
@@ -94,7 +99,7 @@
             </div>
 
 
-            <div class="col ms-5 card shadow">
+            <div class="col-12 ms-4 mt-2 card shadow">
                 <div class="titulo-card mt-2">
                     <h3><i class="ms-2 me-2 fa-solid fa-users"></i>Funcionários da Farmácia</h3>
 
@@ -131,67 +136,75 @@
 
 
             </form>
-        </div>
 
 
 
-        <div class="col-md-12 mt-5 card shadow">
-            <div class="titulo-card mt-2">
-                <h3><i class="ms-2 me-2 fa-regular fa-file"></i>Contra-cheque de Funcionários</h3>
+            <div class="col-12 ms-4 mt-2 card shadow">
+                <div class="titulo-card mt-2">
+                    <h3><i class="ms-2 me-2 fa-regular fa-file"></i>Contra-cheque de Funcionários</h3>
 
-            </div>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover" id="dataTable3" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Funcionário</th>
-                                    <th>Arquivo</th>
-                                    <th>Data Emissão</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Teste</td>
-                                    <td>arquivo.pdf</td>
-                                    <td>27/01/2023</td>
-                                    <td>
-                                        <button class="btn btn-primary">Visualizar</button>
-                                    </td>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="dataTable3" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Código</th>
+                                        <th>Funcionário</th>
+                                        <th>Arquivo</th>
+                                        <th>Data Emissão</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Teste</td>
+                                        <td>arquivo.pdf</td>
+                                        <td>27/01/2023</td>
+                                        <td>
+                                            <button class="btn btn-primary">Visualizar</button>
+                                        </td>
 
-                                </tr>
+                                    </tr>
 
-                                <?php
+                                    <?php
 
 
-                                ?>
+                                    ?>
 
-                            </tbody>
-                        </table>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div>
+
+
+
 
     </div>
 
 
 
-
+    <footer class="footer">
+        <span style="color:black">
+            ©Copyright 2023 <strong class='ms-2 text-success'>Rede LVD</strong>
+        </span>
+    </footer>
 
 
 
 </div>
 
 
-<script src="../vendor/jquery/jquery.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="./js/sb-admin-2.min.js"></script>
-<script src="../vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="./js/datatables-demo.js"></script>
