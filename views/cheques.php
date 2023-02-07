@@ -98,7 +98,7 @@
                         </table>
                     </div>
 
-                    <div class="ms-4 col-md-12">
+                    <div class="ms-2 col-md-12">
                         <div class="input-group input-group-lg">
 
                             <span class="valor-span" id="">Total a Receber:</span>

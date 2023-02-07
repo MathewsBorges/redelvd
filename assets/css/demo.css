@@ -10,9 +10,9 @@
 }
 
 .app-brand img {
-  width: 200px;
+  width: 220px;
   height: 120px;
-  background-size: contain;
+  background-size: cover;
   
 }
 
