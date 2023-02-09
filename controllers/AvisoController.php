@@ -129,7 +129,7 @@ $controller = new AvisoController();
 
 if (isset($_POST['method']) && $_POST['method'] == "insertAviso") {
 
-    $campos = ["mensagem" => $_POST['mensagem'], "prioridade" => $_POST['prioridade'], "rementente" => 2, "id" => 1];
+    $campos = ["mensagem" => $_POST['mensagem'], "prioridade" => $_POST['prioridade'], "rementente" => 2, "id" => $_POST['id_funcionario']];
     $controller->insertAviso($campos);
 }
 

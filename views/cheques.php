@@ -147,15 +147,17 @@
                             <th>Documento</th>
                             <th>Mês de Competência</th>
                             <th>Emissão do Documento</th>
+                            <th>Resumo</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Arquivo.pdf</td>
-                            <td>JANEIRO</td>
-                            <td>03/02/2023</td>
-                        </tr>
+                        <?php 
+                            require_once '../controllers/ChequeController.php';
+                            $cheque = new ChequeController();
+                            $cheque->listarContracheque(266);
 
+
+                        ?>
 
                     </tbody>
                 </table>
