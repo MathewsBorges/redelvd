@@ -37,12 +37,6 @@ class AvisoController
            </p>
            <div class="d-flex justify-content-between">
                <p class="me-5">Data de Envio: ' . $date->format('d/m/Y') . '</p>
-               <form action="functions/excluirAviso.php" method="post">
-               
-
-               <button type="submit" class="btn"> <i class="fa-solid fa-trash"></i> </button>
-                <input type="hidden" name="codigo" value="' . $aviso['codigo'] . '"></input>
-               </form>
            </div>
        </div>
            ';

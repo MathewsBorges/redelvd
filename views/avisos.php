@@ -35,7 +35,7 @@
         <?php
         require_once '../controllers/AvisoController.php';
         $controller = new AvisoController();
-        $controller->listarAvisos(1);
+        $controller->listarAvisos(266);
         ?>
         <nav aria-label="Page navigation example" class="mt-5 float-end">
             <ul class="pagination">

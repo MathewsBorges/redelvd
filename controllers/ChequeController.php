@@ -28,16 +28,14 @@ class ChequeController
         <button type="button"  data-bs-placement="top" title="Visualizar" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal' . $cheque['codigo'] . '">
             <i class="fa-regular fa-eye"></i>
         </button>
-      
-        <form action="" method="post" >
-              <input type="hidden" name="method" value=""/>
-              <input type="hidden" name="id" value="' . $cheque['codigo'] . '"/>
-        
-                <button type="submit" data-bs-placement="top" title="Apagar Mensagem" class="btn">
-                    <input type="hidden" name="id_funcionario" value="' . $cheque['codigo'] . '">
-                    <i class="fa-solid fa-trash" style="color: red"></i>
-                 </button>
-        </form>
+            <form action="" method="post" >
+                     <input type="hidden" name="method" value=""/>
+                     <input type="hidden" name="id" value="' . $cheque['codigo'] . '"/>
+                    <button type="submit" data-bs-placement="top" title="Apagar Mensagem" class="btn">
+                      <input type="hidden" name="id_funcionario" value="' . $cheque['codigo'] . '">
+                      <i class="fa-solid fa-trash" style="color: red"></i>
+                    </button>
+           </form>
         </td>
         </tr>
 

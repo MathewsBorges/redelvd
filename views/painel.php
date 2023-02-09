@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <title>Painel - Rede LVD</title>
     <meta name="description" content="" />
- 
+
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7073a72774.js" crossorigin="anonymous"></script>
- 
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
@@ -27,7 +27,7 @@
 
     <script src="../assets/vendor/js/helpers.js"></script>
 
- 
+
     <script src="../assets/js/config.js"></script>
 
   </head>
@@ -141,14 +141,16 @@
 <script src="../assets/js/main.js"></script>
 
 <script>
+  
   $(".menu-inner  a").click(function(e) {
     e.preventDefault();
+   
     $(".menu-inner li").each(function(index, elemente) {
       $(elemente).removeClass('active');
     });
     $(this).parent().addClass('active');
     var href = $(this).attr('href');
-    $("#conteudo").load(href);
+     $("#conteudo").load(href);
 
   });
 </script>
