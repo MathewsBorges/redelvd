@@ -12,15 +12,6 @@ class Funcionario
         $this->bd = BDconexao::getConexao();
     }
 
-    public function getLojas()
-    {
-        $query = $this->bd->prepare("SELECT * from empresa");
-        $query->execute();
-        $dados = $query->fetchAll();
-        return $dados;
-    }
-
-
     public function getFuncionarios()
     {
         $query = $this->bd->prepare("SELECT codigo, nome, loja, perfil from colaborador where status= 'A' ");

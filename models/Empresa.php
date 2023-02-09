@@ -19,10 +19,12 @@ class Empresa
         return $dados;
     }
 
-    public function getCargos(){
+    public function getCargos()
+    {
         $query = $this->bd->prepare("SELECT codigo, nome from perfil");
         $query->execute();
         $dados = $query->fetchAll();
         return $dados;
     }
+
 }

@@ -20,12 +20,11 @@
     <link rel="stylesheet" href="../assets/css/demo.css" />
 
 
-
     <title>Funcionário</title>
+
 </head>
 
 <body>
-
     <?php
     require_once '../controllers/FuncionarioController.php';
     require_once '../controllers/AvisoController.php';
@@ -35,7 +34,6 @@
     $controllerAviso = new AvisoController();
     $dados = $controller->dadosFuncionario($codigo);
     $cargos  = [1 => "Administrador", 2 => "Gerente", 3 => "Vendedor", 5 => "Motoboy", 7 => "Diretor Geral", 8 => "Auxiliar Administrativo", 10 => "Farmacêutica", "E" => "Entregador", 4 => "Comprador", 11 =>"Gerente Folga"];
-
 
     ?>
 
@@ -48,9 +46,10 @@
             </div>
             <div class="descricao">
                 <?php echo '
-            <h2>' . $dados['nome'] . '</h2>
-            <h4>' . $cargos[$dados['perfil']] . '</h4>
-            '; ?>
+                                <h2>' . $dados['nome'] . '</h2>
+                                 <h4>' . $cargos[$dados['perfil']] . '</h4>
+                            '; 
+                ?>
 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
