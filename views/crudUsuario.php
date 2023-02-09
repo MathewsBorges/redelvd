@@ -34,7 +34,8 @@
     $controller = new FuncionarioController();
     $controllerAviso = new AvisoController();
     $dados = $controller->dadosFuncionario($codigo);
-    $cargos  = ["G" => "Gerente", "V" => "Vendedor", "T" => "Farmaceutica", "S" => "Supervisor", "A" => "Auxiliar Admnistrativo", "X" => "X", "U" => "U", "E" => "Entregador", "F" => "Financeiro"];
+    $cargos  = [1 => "Administrador", 2 => "Gerente", 3 => "Vendedor", 5 => "Motoboy", 7 => "Diretor Geral", 8 => "Auxiliar Administrativo", 10 => "Farmacêutica", "E" => "Entregador", 4 => "Comprador", 11 =>"Gerente Folga"];
+
 
     ?>
 
@@ -48,7 +49,7 @@
             <div class="descricao">
                 <?php echo '
             <h2>' . $dados['nome'] . '</h2>
-            <h4>' . $cargos[$dados['classe']] . '</h4>
+            <h4>' . $cargos[$dados['perfil']] . '</h4>
             '; ?>
 
                 <nav aria-label="breadcrumb">
@@ -276,12 +277,14 @@
                     <div class="col-md-4">
                         <div class="form-floating">
                             <select disabled class="form-select" name="classe" id="cargo" aria-label="Floating label select example">
-                                <option selected value="V">Vendedor</option>
-                                <option value="A">Administrador</option>
-                                <option value="A">Auxiliar Administrativo</option>
-                                <option value="S">Supervisor</option>
-                                <option value="E">Entregador</option>
-                                <option value="T">Farmacêutico</option>
+                              <?php 
+                              require_once '../controllers/EmpresaController.php';
+                              $empresa = new EmpresaController();
+                              $empresa->listarCargos($dados['perfil']);
+                              ?>
+
+
+
                             </select>
                             <label for="floatingSelect">Classe</label>
                             <div class="invalid-feedback">Cargo Inválido</div>

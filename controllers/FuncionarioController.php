@@ -15,7 +15,7 @@ class FuncionarioController
         $this->loja = new Empresa();
     }
 
-    static protected $cargos  = ["G" => "Gerente", "V" => "Vendedor", "T" => "Farmaceutica", "S" => "Supervisor", "A" => "Auxiliar Admnistrativo", "X" => "X", "U" => "U", "E" => "Entregador", "F" => "Financeiro"];
+    static protected $cargos  = [1 => "Administrador", 2 => "Gerente", 3 => "Vendedor", 5 => "Motoboy", 7 => "Diretor Geral", 8 => "Auxiliar Administrativo", 10 => "Farmacêutica", "E" => "Entregador", 4 => "Comprador", 11 =>"Gerente Folga"];
 
     function listarFuncionario()
     {
@@ -33,7 +33,7 @@ class FuncionarioController
                 if ($empresa['codigo'] == $colaborador['loja']) $this->loja = $empresa['nome_res'];
             }
 
-            $cargo =  FuncionarioController::$cargos[$colaborador['classe']];
+            $cargo =  FuncionarioController::$cargos[$colaborador['perfil']];
 
 
             echo '
@@ -73,7 +73,7 @@ class FuncionarioController
             $codigo = $colaborador['codigo'];
             $nome =  $colaborador['nome'];
             $telefone =  $colaborador['telefone'];
-            $cargo =  FuncionarioController::$cargos[$colaborador['classe']];
+            $cargo =  FuncionarioController::$cargos[$colaborador['perfil']];
 
 
             echo '

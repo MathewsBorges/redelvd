@@ -23,7 +23,7 @@ class Funcionario
 
     public function getFuncionarios()
     {
-        $query = $this->bd->prepare("SELECT codigo, nome, loja, classe from colaborador where status= 'A' ");
+        $query = $this->bd->prepare("SELECT codigo, nome, loja, perfil from colaborador where status= 'A' ");
         $query->execute();
         $dados = $query->fetchAll(PDO::FETCH_ASSOC);
         return $dados;
@@ -49,7 +49,7 @@ class Funcionario
 
     public function getFuncionariosByLoja($loja)
     {
-        $query = $this->bd->prepare("SELECT codigo, nome, classe, telefone from colaborador where loja=:loja");
+        $query = $this->bd->prepare("SELECT codigo, nome, perfil, telefone from colaborador where loja=:loja");
         $query->bindValue(":loja", $loja);
         $query->execute();
         $dados = $query->fetchAll(PDO::FETCH_ASSOC);

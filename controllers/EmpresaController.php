@@ -21,4 +21,17 @@ class EmpresaController
         }
     }
 
+    function listarCargos($id)
+    {
+
+
+        $dados = $this->empresa->getCargos();
+        foreach ($dados as $cargo) {
+
+            echo ' <option value="'. $cargo['codigo'].'"   '. ($cargo['codigo']==$id ? " selected":" ").'>' . $cargo['nome'] . '</option>';
+        }
+    }
+
+
+
 }
