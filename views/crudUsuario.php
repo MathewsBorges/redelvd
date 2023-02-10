@@ -579,7 +579,7 @@
 
                             <div class="col-md-12 d-flex justify-content-center mt-4 mb-5">
 
-                                <input type="submit" class="btn btn-success" value="Adicionar Contracheque">
+                                <button type="submit" class="btn btn-success"> <i class="fa-solid fa-file-circle-plus me-2"></i>Adicionar Contracheque</button>
 
                             </div>
                         </div>
