@@ -1,0 +1,374 @@
+:root {
+    --bg-dark: #5FAAA7;
+    --logo-height: 100px;
+    --header-height: 50px;
+    --menu-top-height: 70px;
+    --aside-width: 250px;
+    --footer-height: 55px;
+    --shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06),
+
+
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none !important;
+}
+
+
+aside.menu-area {
+    position: fixed;
+    padding-top: 130px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #cf7400 0%, #bc6a00 100%);
+    box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.12), 2px 0 15px 0 rgba(0, 0, 0, 0.09);
+    justify-content: space-between;
+}
+
+
+.menu a,
+.sair a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    font-weight: 300;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+
+
+i {
+    padding-right: 15px;
+}
+
+.menu a:hover {
+    background: linear-gradient(135deg, #5FAAA7 0%, #3f9f9c 100%);
+}
+
+.sair a:hover {
+    background: linear-gradient(135deg, #e81111 0%, #da3232 100%);
+
+}
+
+footer.footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 25px;
+    background-color: rgb(222, 222, 222);
+    box-shadow: var(--shadow);
+}
+
+aside.logo {
+    position: fixed;
+    width: 251px;
+    z-index: 1;
+
+    /* background-color: #1A2F3A; */
+    background: linear-gradient(135deg, #1A2F3A 0%, #5faaa7 100%);
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+aside.logo img {
+    padding-bottom: 15px;
+    width: 230px;
+}
+
+aside.logo h1 {
+    padding: 0px 10px;
+    width: 100%;
+    color: #cf7400 !important;
+    text-decoration: none !important;
+}
+
+aside.logo a {
+    color: #cf7400 !important;
+
+}
+
+
+
+
+.app {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr;
+    grid-template-rows: var(--header-height) 1fr var(--footer-height);
+    grid-template-areas: "logo header" "menu content" "menu footer";
+    height: 100vh;
+    background-color: #ffffff00;
+}
+
+aside.logo {
+    grid-area: logo;
+}
+
+header.header {
+    grid-area: header;
+}
+
+aside.menu-area {
+    grid-area: menu;
+}
+
+main.content {
+    grid-area: content;
+}
+
+footer.footer {
+    grid-area: footer;
+}
+
+body {
+
+    background-image: url(../../assets/imgs/bg.png);
+    background-repeat: repeat;
+
+}
+
+.info {
+    width: 30%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+
+
+header {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.content {
+
+    background-color: #12121400;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+}
+
+.texto-principal h1 {
+    color: #427675;
+    margin-top: 2rem;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.texto-secundario {
+    font-size: 1.5rem;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    margin-left: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+button {
+    margin-right: 0.5rem;
+}
+
+.input-arquivos {
+    display: flex;
+    align-items: center;
+
+}
+
+.input-arquivos h5 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.form-arquivos {
+    display: flex;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 2rem;
+}
+
+.titulo {
+    margin: 15rem 0rem;
+}
+
+.tabela {
+    margin-bottom: 30rem;
+}
+
+.form-arquivos-loja {
+    display: flex;
+}
+
+.botao-anexar input {
+    border: none;
+    background-color: #008080;
+    height: 32px;
+    width: 180px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.3rem;
+
+}
+
+.botao-anexar input:hover {
+    background-color: #004d4d;
+
+}
+
+
+.titulo-documentos {
+    display: flex;
+    align-items: center;
+}
+
+.subtitulo-documentos {
+    margin-left: 3.4rem;
+}
+
+.titulo-card {
+    margin-left: 2rem;
+}
+
+.dataTables_length label,
+.dataTables_filter label {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    padding: 0.2rem 1rem;
+    background-color: rgb(216, 216, 216);
+    border-radius: 50px;
+
+}
+
+.dataTables_filter label {
+    width: 240px;
+}
+
+.dataTables_length select {
+    margin: 0rem 0.5rem;
+    width: 45px;
+}
+
+.dataTables_filter input {
+    width: 120px;
+    margin-left: 1rem;
+    border-radius: 10px;
+}
+
+.principal h2::after,
+.principal h3::after {
+    content: '';
+    display: block;
+    width: 26rem;
+    height: 0.3rem;
+    background-color: #5FAAA7;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.valor {
+    background: linear-gradient(135deg, #121214 0%, #5faaa7 100%);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.valor p {
+    margin-top: 18px;
+    color: #fff;
+    font-weight: bold;
+    margin-right: 3rem;
+
+}
+
+.valor-span {
+    padding: 10px 20px;
+    height: 40px;
+    background-color: #121214;
+    font-weight: bolder;
+    color: #fff;
+    border-radius: 0 0 0 10px;
+
+}
+
+.col-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 10rem;
+    background: linear-gradient(135deg, #121214 0%, #5faaa7 100%);
+
+    height: 30px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.col-info p {
+    font-size: 20px;
+    margin-right: 1rem;
+    margin-top: 16px;
+    color: #fff;
+
+}
+
+.col-info .nome,
+.col-info .data {
+    display: flex;
+
+}
+
+.cheque {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.arquivo,
+.mes {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.arquivo p,
+.mes p {
+    font-size: 20px;
+    margin-right: 1rem;
+    margin-top: 16px;
+    color: #121214;
+}
+

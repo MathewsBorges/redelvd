@@ -39,7 +39,7 @@
 
     <header>
 
-        <div class=" col-md-12 cabecalho">
+        <div class=" col-12 cabecalho">
 
             <div class="img">
                 <img src="../assets/img/user.png" alt="erro">
