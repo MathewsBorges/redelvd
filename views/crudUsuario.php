@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script src="./js/maskMoney.min.js" type="text/javascript"></script>
 
     <title>Funcionário</title>
 
@@ -33,7 +37,7 @@
     $controller = new FuncionarioController();
     $controllerAviso = new AvisoController();
     $dados = $controller->dadosFuncionario($codigo);
-    $cargos  = [1 => "Administrador", 2 => "Gerente", 3 => "Vendedor", 5 => "Motoboy", 7 => "Diretor Geral", 8 => "Auxiliar Administrativo", 10 => "Farmacêutica", "E" => "Entregador", 4 => "Comprador", 11 =>"Gerente Folga"];
+    $cargos  = [1 => "Administrador", 2 => "Gerente", 3 => "Vendedor", 5 => "Motoboy", 7 => "Diretor Geral", 8 => "Auxiliar Administrativo", 10 => "Farmacêutica", "E" => "Entregador", 4 => "Comprador", 11 => "Gerente Folga"];
 
     ?>
 
@@ -48,7 +52,7 @@
                 <?php echo '
                                 <h2>' . $dados['nome'] . '</h2>
                                  <h4>' . $cargos[$dados['perfil']] . '</h4>
-                            '; 
+                            ';
                 ?>
 
                 <nav aria-label="breadcrumb">
@@ -276,11 +280,11 @@
                     <div class="col-md-4">
                         <div class="form-floating">
                             <select disabled class="form-select" name="classe" id="cargo" aria-label="Floating label select example">
-                              <?php 
-                              require_once '../controllers/EmpresaController.php';
-                              $empresa = new EmpresaController();
-                              $empresa->listarCargos($dados['perfil']);
-                              ?>
+                                <?php
+                                require_once '../controllers/EmpresaController.php';
+                                $empresa = new EmpresaController();
+                                $empresa->listarCargos($dados['perfil']);
+                                ?>
 
 
 
@@ -429,7 +433,7 @@
 
 
 
-        <div class="col-md-6 ms-1 card shadow py-4">
+        <div class="col-md-6 ms-1 mb-2 card shadow py-4">
             <div class="row">
                 <div class="titulo-card">
                     <h2>Avisos do Funcionário</h2>
@@ -459,6 +463,178 @@
             </div>
 
         </div>
+
+
+
+        <div class="row shadow bg-white rounded-3 py-4">
+            <h3>Contracheque do Funcionário</h3>
+
+            <div class="col-md-6">
+
+                <div class="row g-2">
+                    <h4>Créditos</h4>
+                    <div class="col-md mb-1">
+                        <div class="form-floating">
+                            <input type="text" class="form-control money" id="salario" placeholder="Salário" value="">
+                            <label for="floatingInputGrid">Salário Mês</label>
+                        </div>
+                    </div>
+                    <div class="col-md mb-1">
+                        <div class="form-floating">
+                            <input type="text" class="form-control money" id="ferias" placeholder="Férias" value="">
+                            <label for="floatingInputGrid">Férias</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-md mb-1">
+                        <div class="form-floating">
+                            <input type="text" class="form-control money" id="outros" placeholder="Outros" value="">
+                            <label for="floatingInputGrid">Outros</label>
+                        </div>
+                    </div>
+                    <div class="col-md mb-1">
+                        <div class="form-floating">
+                            <input type="text" class="form-control moneyTotal" id="total_creditos" placeholder="Total" value="">
+                            <label for="floatingInputGrid">Total de Créditos</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row g-2">
+                    <h4>Débitos</h4>
+
+                    <div class="col-md mb-1">
+                        <div class="form-floating">
+                            <input type="text" class="form-control moneyDeb" id="moneydeb" placeholder="Convênio" value="">
+                            <label for="floatingInputGrid">Convênio Farmácia</label>
+                        </div>
+                    </div>
+                    <div class="col-md mb-1">
+                        <div class="form-floating">
+                            <input type="text" class="form-control moneyDeb" id="moneydeb" placeholder="Vales" value="">
+                            <label for="floatingInputGrid">Vales</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="col-md mb-1">
+                        <div class="form-floating">
+                            <input type="text" class="form-control moneyDeb" id="moneydeb" placeholder="Empréstimos" value="">
+                            <label for="floatingInputGrid">Empréstimos</label>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="total_debitos" placeholder="Total de Débitos" value="">
+                            <label for="floatingInputGrid">Total de Débitos</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="col-md">
+                    <h4>Total</h4>
+
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="total" placeholder="Total a Receber" value="">
+                        <label for="floatingInputGrid">Total a Receber</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 mt-2">
+                <div class="input-arquivos">
+                    <h4><i class="fa-solid fa-upload me-2"></i>Upload de Contracheque</h4>
+
+                    <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <input type="file" name="pdf_file" class="form-control" id="pdf" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="input-group mt-1">
+
+                                    <label class="input-group-text" for="inputGroupSelect01">Mês de Competência</label>
+                                    <select class="form-select" name="mes" id="inputGroupSelect01">
+                                        <option value="Janeiro" selected>Janeiro</option>
+                                        <option value="Fevereiro">Fevereiro</option>
+                                        <option value="Março">Março</option>
+                                        <option value="Abril">Abril</option>
+                                        <option value="Maio">Maio</option>
+                                        <option value="Junho">Junho</option>
+                                        <option value="Julho">Julho</option>
+                                        <option value="Agosto">Agosto</option>
+                                        <option value="Setembro">Setembro</option>
+                                        <option value="Outubro">Outubro</option>
+                                        <option value="Novembro">Novembro</option>
+                                        <option value="Dezembro">Dezembro</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 d-flex justify-content-center mt-4 mb-5">
+
+                                <input type="submit" class="btn btn-success" value="Adicionar Contracheque">
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </form>
+
+
+                </div>
+
+                <div class="col-md-12 ms-2 shadow py-2">
+                    <div class="row">
+                        <div class="titulo-card">
+                            <h4>Contracheques</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="dataTableCheques" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Documento</th>
+                                            <th>Data de Emissão</th>
+                                            <th>Mês de Competência</th>
+
+                                            <th>Opções</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <td>cheque.pdf</td>
+                                        <td>10/02/2023</td>
+                                        <td></td>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
     </div>
     </div>
 
@@ -470,6 +646,73 @@
 
 
     <script>
+        $('.money').maskMoney({
+            prefix: 'R$ ',
+            allowNegative: false,
+            thousands: '.',
+            decimal: ',',
+            million: '.',
+
+            affixesStay: true
+        });
+        $('.moneyDeb').maskMoney({
+            prefix: 'R$ -',
+            allowNegative: false,
+            thousands: '.',
+            decimal: ',',
+            million: '.',
+            affixesStay: true
+        });
+
+        $(document).on("keyup", ".money", function() {
+
+            var total = 0;
+            $(".money").each(function() {
+                let valor = $(this).val() === "" ? "0" : $(this).val();
+                let soma = valor.replace("R$ ", "")
+                let numero = soma.replace(",", "")
+                numero = numero.replace(".", "")
+
+                numero = parseFloat(numero) === NaN ? 0 : parseFloat(numero)
+                total = total + numero;
+
+            });
+            const formatter = new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            })
+            const formatted = formatter.format(total / 100);
+            document.getElementById('total_creditos').value = formatted;
+
+        });
+
+        $(document).on("keyup", ".moneyDeb", function() {
+
+            var total = 0;
+            $(".moneyDeb").each(function() {
+                let valor = $(this).val() === "" ? "0" : $(this).val();
+                let soma = valor.replace("R$ -", "")
+
+
+                let numero = soma.replace(",", "")
+                numero = numero.replace(".", "")
+
+                numero = parseFloat(numero) === NaN ? 0 : parseFloat(numero)
+                total = total + numero;
+
+            });
+            const formatter = new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            })
+            const formatted = formatter.format(total / 100);
+            document.getElementById('total_debitos').value = "-" + formatted;
+
+
+        });
+
+
+
         function removeMensagem() {
             setTimeout(function() {
                 var msg = document.getElementById("msg-success");
@@ -483,12 +726,13 @@
         }
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
 
 
     <script src="./js/validator.js"></script>
+
+
+    </script>
 
     <script type="text/javascript">
         $('#telefone').mask('(00) 0000-00000');
