@@ -3,7 +3,6 @@ require_once '../../connection/BDconexao.php';
 
 
 if (!empty($_FILES['pdf_file']['name'])) {
-
     if ($_FILES['pdf_file']['error'] != 0) {
         echo 'Algo de errado com o arquivo';
     } else {
@@ -13,7 +12,6 @@ if (!empty($_FILES['pdf_file']['name'])) {
         $data = date("d/m/Y");
         if ($pdf_blob = fopen($file_tmp, "rb")) {
             try {
-
                 $insert_sql = "INSERT INTO documentos_farmacia (tipo_documento, data_emissao, fk_farmacia, documento, nome_documento) VALUES(:tipo, :data, :fk, :pdf_doc, :nome_documento)";
                 $stmt = BDconexao::getConexao()->prepare($insert_sql);
                 $stmt->bindValue(':tipo', $tipo);
@@ -21,7 +19,6 @@ if (!empty($_FILES['pdf_file']['name'])) {
                 $stmt->bindValue(':fk', 2);
                 $stmt->bindParam(':pdf_doc', $pdf_blob, PDO::PARAM_LOB);
                 $stmt->bindValue(':nome_documento', $file_name);
-
                 $stmt->execute();
                 header("location: ../painel.php");
             } catch (PDOException $e) {
@@ -29,7 +26,6 @@ if (!empty($_FILES['pdf_file']['name'])) {
                     ': ' . $e->getLine();
             }
         } else {
-
             echo 'erro';
         }
     }
