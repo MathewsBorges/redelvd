@@ -24,10 +24,10 @@
                         <table class="table table-hover" id="dataMeusDocumentos" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Documento</th>
-                                    <th>Tipo do Documento</th>
-                                    <th>Emissão do Documento</th>
-                                    <th>Opções</th>
+                                    <th><i class="fa-regular fa-file me-2"></i>Documento</th>
+                                    <th><i class="fa-solid fa-clipboard-list me-2"></i>Tipo do Documento</th>
+                                    <th><i class="fa-regular fa-calendar-days me-2"></i>Emissão do Documento</th>
+                                    <th><i class="fa-solid fa-gears me-2"></i>Opções</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -59,8 +59,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4 ms-2  button-anexar">
-                                <input type="submit" class="btn btn-success" value="Anexar">
+                            <div class="col-md-12 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
+                                
                             </div>
                         </div>
                     </form>
@@ -69,7 +70,7 @@
             <hr />
         </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-2">
         <div class="col-12">
             <div class="col-md-12 ms-2 card shadow mb-4 pt-4">
                 <div class="titulo-card">
@@ -80,10 +81,10 @@
                         <table class="table table-hover mb-2" id="dataDocumentos" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Documento</th>
-                                    <th>Tipo do Documento</th>
-                                    <th>Emissão do Documento</th>
-                                    <th>Remetente</th>
+                                    <th><i class="fa-regular fa-file me-2"></i>Documento</th>
+                                    <th><i class="fa-solid fa-clipboard-list me-2"></i>Tipo do Documento</th>
+                                    <th><i class="fa-regular fa-calendar-days me-2"></i>Emissão do Documento</th>
+                                    <th><i class="fa-solid fa-user me-2"></i>Remetente</th>
                                 </tr>
                             </thead>
                             <tbody>

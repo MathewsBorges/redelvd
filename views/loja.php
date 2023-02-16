@@ -77,10 +77,10 @@
                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th scope="col" class="text-center">Código</th>
-                                    <th scope="col" sortable="name">Nome do Arquivo</th>
-                                    <th scope="col" sortable="area">Tipo</th>
-                                    <th scope="col" sortable="population">Emissão</th>
+                                    <th scope="col">Código</th>
+                                    <th scope="col">Arquivo</th>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col">Emissão</th>
                                 </tr>
                             </thead>
                             <tbody>
