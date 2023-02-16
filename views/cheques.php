@@ -16,38 +16,38 @@
             </div>
         </div>
     </div>
-    <div class="col-md-12 ">
-        <div class="row mb-5">
-            <div class="col col-info">
-                <div class="col nome">
-                    <p>Nome: Matheus Neugebauer Borges </p>
-                </div>
-                <div class="col data">
-                    <p>Mês de Competência: Janeiro</p>
-                </div>
-            </div>
-        </div>
+    <div class="col-md-12 mt-2">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 card shadow py-4 rounded-3">
+                <div class="row">
+                    <div class="col-md-6 nome">
+                        <p>Nome: Matheus Neugebauer Borges</p>
+                    </div>
+                    <div class="col-md-4 data ms-2">
+                        <p>Mês de Competência: Janeiro</p>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-md-6">
+
                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Créditos</th>
-                                    <th>Descrição</th>
-                                    <th>Valor</th>
+                                    <th><i class="fa-solid fa-sack-dollar me-2"></i>Créditos</th>
+                                    <th><i class="fa-regular fa-rectangle-list me-2"></i>Descrição</th>
+                                    <th><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">Salário Mês</th>
+                                    <th scope="row"><i class="fa-solid fa-dollar-sign me-2"></i>Salário Mês</th>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Férias</th>
+                                    <th scope="row"><i class="fa-solid fa-gift me-2"></i>Férias</th>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Outros</th>
+                                    <th scope="row"><i class="fa-solid fa-receipt me-2"></i>Outros</th>
                                 </tr>
                                 <tr>
                                     <th scope="row">Total</th>
@@ -59,20 +59,20 @@
                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Débitos</th>
-                                    <th>Descrição</th>
-                                    <th>Valor</th>
+                                    <th><i class="fa-solid fa-cash-register me-2"></i>Débitos</th>
+                                    <th><i class="fa-regular fa-rectangle-list me-2"></i>Descrição</th>
+                                    <th><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th scope="row">Convênio Farmácia</th>
+                                    <th scope="row"><i class="fa-regular fa-credit-card me-2"></i>Convênio Farmácia</th>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Vales</th>
+                                    <th scope="row"><i class="fa-solid fa-file-invoice-dollar me-2"></i>Vales</th>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Empréstimos</th>
+                                    <th scope="row"><i class="fa-solid fa-hand-holding-dollar me-2"></i>Empréstimos</th>
                                 </tr>
                                 <tr>
                                     <th scope="row">Total</th>
@@ -93,9 +93,9 @@
         </div>
     </div>
 
-    <div class="col-md-12 mt-5 mb-5">
-        <hr>
+    <div class="col-md-12 card rounded-3 py-5 mt-5 mb-5">
         <h3 class="ms-4">Último Contracheque</h3>
+        <hr>
         <div class="col-md-12 ms-4 cheque">
             <div class="arquivo">
                 <p>Arquivo: </p>
@@ -106,6 +106,7 @@
                 <p>Janeiro</p>
             </div>
         </div>
+        <hr>
     </div>
 
     <div class="card shadow col-md-12">
@@ -123,10 +124,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php 
-                            require_once '../controllers/ChequeController.php';
-                            $cheque = new ChequeController();
-                            $cheque->listarContracheque(266);
+                        <?php
+                        require_once '../controllers/ChequeController.php';
+                        $cheque = new ChequeController();
+                        $cheque->listarContracheque(266);
                         ?>
                     </tbody>
                 </table>

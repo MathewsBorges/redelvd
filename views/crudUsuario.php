@@ -43,10 +43,10 @@
 
     <header>
 
-        <div class=" col-12 cabecalho">
+        <div class=" col-12 cabecalho ">
 
             <div class="img">
-                <img src="../assets/img/user.png" alt="erro">
+                <img class="fa-solid fa-user ms-4 fa-6x" src="" alt="">
             </div>
             <div class="descricao">
                 <?php echo '
@@ -156,12 +156,10 @@
         <div class="row formulario mb-2 card shadow py-5 pe-4">
             <div class="titulo-card col-md-12">
                 <h2>Dados do Funcionário</h2>
-
                 <?php
                 if (isset($_GET['status'])) {
                     if ($_GET['status'] == "success") {
                         echo '
-   
                     <div class="alert alert-success" role="alert"  id="msg-success">
                       <i class="fa-solid fa-check"></i>
                          Funcionário Editado com Sucesso
@@ -170,9 +168,7 @@
                     }
 
                     if ($_GET['status'] == "failed") {
-
                         echo '
-        
                             <div class="alert alert-danger" role="alert" id="msg-success">
                                  <i class="fa-solid fa-cancel"></i>
                                     Erro ao editar funcionário
@@ -180,9 +176,6 @@
                           ';
                     }
                 }
-
-
-
                 ?>
 
 
@@ -195,17 +188,16 @@
                     <div class="col-md-4">
                         <div class="form-floating mb-3">
                             <input disabled type="text" name="nome" class="form-control" id="nome" placeholder="Nome Completo" value="<?php echo $dados['nome'] ?>" required>
-                            <label for="floatingInput">Nome Completo</label>
+                            <label for="floatingInput"><i class="fa-solid fa-user me-2"></i>Nome Completo</label>
                             <div class="invalid-feedback">Nome Válido</div>
                             <div class="valid-feedback">Nome Inválido</div>
-
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="form-floating mb-3">
                             <input disabled type="date" name="data" class="form-control" value="<?php echo $dados['data_n'] ?>" id="data" placeholder="Data de Nascimento" required>
-                            <label for="floatingInput">Data Nascimento</label>
+                            <label for="floatingInput"><i class="fa-solid fa-calendar-days me-2"></i>Data Nascimento</label>
                             <div class="invalid-feedback">Data Inválida</div>
                             <div class="valid-feedback">Data Válida</div>
                         </div>
@@ -213,7 +205,7 @@
                     <div class="col-md-4">
                         <div class="form-floating mb-3">
                             <input disabled type="text" name="cpf" class="form-control" id="cpf" placeholder="CPF" value=<?php echo $dados['cpf'] ?> required>
-                            <label for="floatingInput">CPF</label>
+                            <label for="floatingInput"><i class="fa-solid fa-id-card me-2"></i>CPF</label>
                             <div class="invalid-feedback">CPF Inválido</div>
                             <div class="valid-feedback">CPF Válido</div>
                         </div>
@@ -221,7 +213,7 @@
                     <div class="col-md-4">
                         <div class="form-floating mb-3">
                             <input disabled type="email" name="email" class="form-control" id="email" placeholder="Email" value="<?php echo $dados['email'] ?>">
-                            <label for="floatingInput">Email</label>
+                            <label for="floatingInput"><i class="fa-solid fa-at me-2"></i>Email</label>
                             <div class="invalid-feedback">Email Inválido</div>
                             <div class="valid-feedback">Email Válido</div>
                         </div>
@@ -229,7 +221,7 @@
                     <div class="col-md-4">
                         <div class="form-floating mb-3">
                             <input disabled type="text" name="telefone" class="form-control" id="telefone" placeholder="(xx) 9xxxx-xxxx" value="<?php echo $dados['telefone'] ?>">
-                            <label for="floatingInput">Telefone</label>
+                            <label for="floatingInput"><i class="fa-solid fa-mobile me-2"></i>Telefone</label>
                             <div class="invalid-feedback">Telefone Inválido</div>
                             <div class="valid-feedback">Telefone Válido</div>
                         </div>
@@ -237,7 +229,7 @@
                     <div class="col-md-4">
                         <div class="form-floating mb-3">
                             <input disabled type="text" name="endereco" class="form-control" id="endereco" placeholder="Endereço Completo" value="<?php echo $dados['endereco'] ?>">
-                            <label for="floatingInput">Endereço</label>
+                            <label for="floatingInput"><i class="fa-solid fa-location-dot me-2"></i>Endereço</label>
                             <div class="invalid-feedback">Endereço Inválido, Branco ou sem número de Residencia</div>
                             <div class="valid-feedback">Endereço Válido</div>
                         </div>
@@ -245,7 +237,7 @@
                     <div class="col-md-4">
                         <div class="form-floating mb-3">
                             <input disabled type="text" name="cep" class="form-control" id="cep" placeholder="CEP" value="<?php echo $dados['cep'] ?>">
-                            <label for="floatingInput">CEP</label>
+                            <label for="floatingInput"><i class="fa-solid fa-map-pin me-2"></i>CEP</label>
                             <div class="invalid-feedback">CEP Inválido</div>
                             <div class="valid-feedback">CEP Válido</div>
                         </div>
@@ -260,7 +252,7 @@
                                 ?>
 
                             </select>
-                            <label for="floatingSelect">Loja</label>
+                            <label for="floatingSelect"><i class="fa-solid fa-store me-2"></i>Loja</label>
                             <div class="invalid-feedback">Loja Inválida</div>
                             <div class="valid-feedback">Loja Válida</div>
                         </div>
@@ -269,7 +261,7 @@
                     <div class="col-md-4">
                         <div class="form-floating mb-3">
                             <input disabled type="text" name="cidade" class="form-control" id="cidade" placeholder="Cidade" value="Camaquã">
-                            <label for="floatingInput">Cidade</label>
+                            <label for="floatingInput"><i class="fa-solid fa-city me-2"></i>Cidade</label>
                             <div class="invalid-feedback">Cidade Inválida</div>
                             <div class="valid-feedback">Cidade Válida</div>
                         </div>
@@ -289,9 +281,9 @@
 
 
                             </select>
-                            <label for="floatingSelect">Classe</label>
-                            <div class="invalid-feedback">Cargo Inválido</div>
-                            <div class="valid-feedback">Cargo Válida</div>
+                            <label for="floatingSelect"><i class="fa-solid fa-user-tie me-2"></i>Perfil</label>
+                            <div class="invalid-feedback">Perfil Inválido</div>
+                            <div class="valid-feedback">Perfil Válido</div>
                         </div>
                     </div>
 
@@ -300,17 +292,6 @@
                         <button type="submit" class="btn btn-success" id="submit" disabled><i class="fa-regular fa-floppy-disk"></i>Salvar</button>
                         <button type="reset" id="cancelar" class="btn btn-danger" disabled><i class="fa-solid fa-ban"></i>Cancelar</button>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
                 </form>
             </div>
         </div>
@@ -327,10 +308,10 @@
                                 <table class="table table-hover" id="dataTableArquivos" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Arquivo</th>
-                                            <th>Tipo</th>
-                                            <th>Data Emissão</th>
-                                            <th>Opções</th>
+                                            <th><i class="fa-regular fa-file me-2"></i>Arquivo</th>
+                                            <th><i class="fa-solid fa-file-pen me-2"></i>Tipo</th>
+                                            <th><i class="fa-regular fa-calendar-days me-2"></i>Data Emissão</th>
+                                            <th><i class="fa-solid fa-gears me-2"></i>Opções</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -369,8 +350,7 @@
                                     </div>
 
                                     <div class="botao-anexar">
-                                        <span> <i class="fa-solid fa-paperclip"></i></span>
-                                        <input type="submit" value="Anexar">
+                                        <button class="btn btn-success" type="submit"><i class="fa-solid fa-file-circle-plus me-2"></i>Anexar</button>
                                         <input type="hidden" name="codigo" value="<?php echo $dados['codigo'] ?>">
                                         <input type="hidden" name="crud" value="crud">
                                     </div>
@@ -383,66 +363,81 @@
             </div>
         </div>
 
-        <div class="row mt-5">
-            <div class="col-md-5 mb-5 me-1 card shadow py-4">
-                <div class="titulo-card col-md-12">
-                    <h2>Adicionar Aviso</h2>
+        <div class="col-md-12 mb-5 card shadow py-4">
+
+            <div class="col mb-5 me-1   py-4 px-4">
+                <div class="titulo-card">
+                    <h2>Avisos</h2>
                 </div>
-                <form id="form-aviso" action="../controllers/AvisoController.php" method="post">
-                    <input type="hidden" name="method" value="insertAviso">
-                    <div class="form-floating mb-4">
-                        <textarea class="form-control" name="mensagem" placeholder="Leave a comment here" id="aviso" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Aviso</label>
-                        <div class="invalid-feedback">Preencha o Aviso</div>
-                        <div class="valid-feedback">Aviso Preenchido</div>
+
+                <div class="row shadow rounded-3">
+                    <div class="titulo-card py-2">
+                        <h3>Adicionar Aviso</h3>
                     </div>
-                    <div class="row d-flex align-items-center justify-content-start">
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <select class="form-select" name="prioridade" id="floatingSelect" aria-label="Floating label select example">
-                                    <option value="NORMAL">Normal</option>
-                                    <option value="URGENTE">Urgente</option>
-                                    <option value="IMPORTANTE">Importante</option>
-                                </select>
-                                <label for="floatingSelect">Nível de Prioridade</label>
+                    <div class="col-md-6">
+                        <form id="form-aviso" action="../controllers/AvisoController.php" method="post">
+                            <input type="hidden" name="method" value="insertAviso">
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control" name="mensagem" placeholder="Escreva o aviso aqui" id="aviso" style="height: 120px"></textarea>
+                                <label for="floatingTextarea2"><i class="fa-solid fa-envelope me-2"></i>Aviso</label>
+                                <div class="invalid-feedback">Preencha o Aviso</div>
+                                <div class="valid-feedback">Aviso Preenchido</div>
+                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row d-flex align-items-center justify-content-start">
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <select class="form-select" name="prioridade" id="floatingSelect" aria-label="Floating label select example">
+                                        <option value="NORMAL">Normal</option>
+                                        <option value="URGENTE">Urgente</option>
+                                        <option value="IMPORTANTE">Importante</option>
+                                    </select>
+                                    <label for="floatingSelect"><i class="fa-solid fa-signal me-2"></i>Nível de Prioridade</label>
+                                </div>
+
+                            </div>
+                            <div class="row ms-1  mt-2">
+                                <button type="submit" id="submit-aviso" class="btn btn-success"><i class="fa-solid fa-paper-plane me-2"></i>Adicionar</button>
                             </div>
 
+                            <input type="hidden" name="id_funcionario" value="<?php echo $dados['codigo'] ?>">
+                            </form>
                         </div>
-                        <div class="col-md-6">
-                            <button type="submit" id="submit-aviso" class="btn btn-success">Adicionar</button>
-                        </div>
+                    </div>
 
-                        <input type="hidden" name="id_funcionario" value="<?php echo $dados['codigo'] ?>">
-                </form>
-            </div>
-        </div>
 
-        <div class="col-md-6 ms-1 mb-2 card shadow py-4">
-            <div class="row">
-                <div class="titulo-card">
-                    <h2>Avisos do Funcionário</h2>
                 </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover" id="dataTableAvisos" width="100%" cellspacing="0">
-                            <thead>
-                                <tr>
-                                    <th>Prioridade</th>
-                                    <th>Data de Envio</th>
-                                    <th>Remetente</th>
-                                    <th>Opções</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php $controllerAviso->listarAvisosTabela($codigo); ?>
-                            </tbody>
-                        </table>
+
+
+                <div class="col-md-12 mt-2 ms-1 mb-2 card shadow py-4">
+                    <div class="row">
+                        <div class="titulo-card">
+                            <h3>Avisos do Funcionário</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="dataTableAvisos" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th><i class="fa-solid fa-signal me-2"></i>Prioridade</th>
+                                            <th><i class="fa-regular fa-calendar-days me-2"></i>Data de Envio</th>
+                                            <th><i class="fa-solid fa-user-tie me-2"></i>Remetente</th>
+                                            <th><i class="fa-solid fa-gear me-2"></i>Opções</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php $controllerAviso->listarAvisosTabela($codigo); ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="row shadow bg-white rounded-3 py-4">
+        <div class="row shadow bg-white rounded-3 py-4 px-3">
             <h3>Contracheque do Funcionário</h3>
             <div class="col-md-6">
                 <div class="row g-2">
@@ -512,10 +507,9 @@
                         <label for="floatingInputGrid"><i class="fa-solid fa-coins me-2"></i>Total a Receber</label>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-6 mt-2">
-                <div class="input-arquivos">
-                    <h4><i class="fa-solid fa-upload me-2"></i>Upload de Contracheque</h4>
+                <hr>
+                <div class="input-arquivos mt-2">
+                    <h4>Upload de Contracheque</h4>
                     <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
                         <div class="col-md-12">
                             <div class="col-md-12">
@@ -549,15 +543,16 @@
                         </div>
                     </form>
                 </div>
-
-                <div class="col-md-12 ms-2 shadow py-3 px-2 rounded-3">
+            </div>
+            <div class="col-md-6 mt-2">
+                <div class="col-md-12 ms-2 mt-4 shadow  py-4 px-2 rounded-3">
                     <div class="row">
                         <div class="titulo-card">
-                            <h4>Último Contracheque</h4>
+                            <h4>Últimos Contracheques</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-hover" width="100%" cellspacing="0">
+                                <table class="table table-hover" id="dataContracheques" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>Documento</th>
@@ -581,7 +576,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
     </div>
 
     <footer class="footer">
