@@ -7085,7 +7085,7 @@ label.btn {
   color: #fff;
   background-color: #0ac193;
   border-color: #0ac193;
-  
+
 }
 
 .btn-success:hover {
@@ -16336,13 +16336,7 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
   flex: 1 1 auto;
 }
 
-.menu-vertical .menu-inner>.menu-item {
-  margin: 0.0625rem 0;
-}
 
-.menu-vertical .menu-inner>.menu-item .menu-link {
-  /* margin: 0rem 1rem; */
-}
 
 .menu-vertical .menu-item .menu-link,
 .menu-vertical .menu-block {
