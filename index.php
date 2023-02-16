@@ -24,24 +24,19 @@
             <div class="col-md-4 text-center company__info">
                 <span class="company__logo">
                     <img src="assets/img/logo-lvd.png" alt="">
-
                 </span>
-
             </div>
 
-
             <div class="col-md-8 col-xs-12 col-sm-12 login_form">
-
                 <div class="container-fluid">
                     <div class="row">
                         <h2>Login</h2>
-
                     </div>
                     <?php
                     if (isset($_GET['falhaLogin'])) {
 
                         echo '
-                                    <div class="alert alert-danger" role="alert">
+                                    <div class="alert alert-danger rounded-3" role="alert">
                                     <i class="fa-solid fa-circle-exclamation"></i>
                                        Não foi possível conectar, CPF ou Senha Incorretos
                                     </div>
