@@ -21,11 +21,10 @@
                     <table class="table table-hover mb-5" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Código</th>
-                                <th>Nome</th>
-                                <th>Cargo</th>
-                                <th>Loja</th>
-                                <th>Opções</th>
+                                <th><i class="fa-solid fa-user me-2"></i>Nome</th>
+                                <th><i class="fa-solid fa-briefcase me-2"></i>Cargo</th>
+                                <th><i class="fa-solid fa-shop me-2"></i>Loja</th>
+                                <th><i class="fa-solid fa-gears me-2"></i>Opções</th>
                             </tr>
                         </thead>
                         <tbody>

@@ -15,9 +15,9 @@
                         <table class="table table-hover" id="dataTable2" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Nome</th>
-                                    <th>Cargo</th>
-                                    <th>Telefone</th>
+                                    <th><i class="fa-solid fa-user me-2"></i>Nome</th>
+                                    <th><i class="fa-solid fa-briefcase me-2"></i>Cargo</th>
+                                    <th><i class="fa-solid fa-phone me-2"></i>Telefone</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,16 +42,14 @@
                         <table class="table table-hover" id="dataTable3" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Código</th>
-                                    <th>Funcionário</th>
-                                    <th>Arquivo</th>
-                                    <th>Data Emissão</th>
-                                    <th>Ações</th>
+                                    <th><i class="fa-solid fa-user me-2"></i>Funcionário</th>
+                                    <th><i class="fa-solid fa-file me-2"></i>Arquivo</th>
+                                    <th><i class="fa-regular fa-calendar-days me-2"></i>Data Emissão</th>
+                                    <th><i class="fa-solid fa-gears me-2"></i>Opções</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
                                     <td>Teste</td>
                                     <td>arquivo.pdf</td>
                                     <td>27/01/2023</td>
@@ -77,10 +75,9 @@
                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th scope="col">Código</th>
-                                    <th scope="col">Arquivo</th>
-                                    <th scope="col">Tipo</th>
-                                    <th scope="col">Emissão</th>
+                                    <th scope="col"><i class="fa-solid fa-file me-2"></i>Arquivo</th>
+                                    <th scope="col"><i class="fa-solid fa-clipboard-list me-2"></i>Tipo</th>
+                                    <th scope="col"><i class="fa-regular fa-calendar-days me-2"></i>Emissão</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -111,8 +108,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-12 botao-anexar d-flex justify-content-center align-itens-center mb-4">
-                                <input type="submit" value="Anexar">
+                            <div class="col-md-12 d-flex justify-content-center align-itens-center mb-4">
+                              <button class="btn btn-success"type="submit"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
                             </div>
                         </div>
                     </form>

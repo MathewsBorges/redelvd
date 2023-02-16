@@ -1,1 +1,5 @@
-input{border: none;background-color: #cf7400;border-radius: 10px;color: white;}input:hover{background-color: #e68301;}
+body {
+    background-image: url("../../img/bg.png");
+    background-position: cover;
+
+}

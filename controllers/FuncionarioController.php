@@ -38,14 +38,14 @@ class FuncionarioController
 
             echo '
             <tr>
-            <td>' . $codigo . '</td>
+
             <td>' . $nome . '</td>
             <td>' . $cargo . '</td>
             <td>' . $this->loja . '</td>
 
             <td>
             <form action="crudUsuario.php" method="post">
-                <button class="btn" data-bs-placement="top" title="Editar Funcionário" ><i class="fa-solid fa-pen-to-square" style="color: blue"></i></button>
+                <button class="btn" data-bs-placement="top" title="Editar Funcionário" ><i class="fa-solid fa-user-gear" style="color:royalblue"></i></button>
                 <input type="hidden" name="codigo" value=' . $codigo . '>
             
             </form>

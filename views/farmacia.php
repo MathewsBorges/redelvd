@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
 <link rel="stylesheet" href="../assets/css/demo.css" />
 <link rel="stylesheet" href="../assets/vendor/css/painel.css">
+<link rel="stylesheet" href="../assets/vendor/css/farmacia.css">
+
 
 
 <div class="row">
@@ -31,7 +33,7 @@
     </div>
     <div class="col-md-12 mb-5 principal">
         <div class="container-fluid d-flex">
-            <div class="col-12 ms-4 card shadow">
+            <div class="col-12 ms-4 card shadow py-4">
                 <div class="titulo-card mt-2">
                     <h3><i class="ms-2 me-2 fa-regular fa-folder-open"></i>Arquivos da Farmácia</h3>
                 </div>
@@ -41,9 +43,9 @@
                             <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th scope="col" sortable="name">Nome do Arquivo</th>
-                                        <th scope="col" sortable="area">Tipo</th>
-                                        <th scope="col" sortable="population">Emissão</th>
+                                        <th scope="col"><i class="fa-solid fa-file me-2"></i>Arquivo</th>
+                                        <th scope="col"><i class="fa-solid fa-clipboard-list me-2"></i>Tipo de Arquivo</th>
+                                        <th scope="col"><i class="fa-regular fa-calendar-days me-2"></i>Data de Emissão</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -58,12 +60,12 @@
                     <form class="form-arquivos-loja" action="pdfs/enviarfarmacias.php" method="post" enctype="multipart/form-data">
                         <div class="col-md-12 ps-2">
                             <h5><i class="ms-2 me-2 fa-solid fa-upload"></i>Upload de Arquivos</h5>
-                            <div class="col-10 ms-5 mb-2">
+                            <div class="col-md-12 pe-2 mb-2">
                                 <div class="input-group">
                                     <input type="file" name="pdf_file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                                 </div>
                             </div>
-                            <div class="col-md-10 ms-5">
+                            <div class="col-md-12 pe-2">
                                 <div class="input-group mb-3 tipo">
                                     <label class="input-group-text" for="inputGroupSelect01">Tipo de Arquivo</label>
                                     <select class="form-select" name="tipo" id="inputGroupSelect01">
@@ -73,8 +75,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-12 botao-anexar d-flex justify-content-center mb-4">
-                                <input type="submit" value="Anexar">
+                            <div class="col-md-12 d-flex justify-content-center mb-4">
+                                <button class="btn btn-success" type="submit"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
                             </div>
                         </div>
                     </form>
@@ -82,7 +84,7 @@
             </div>
 
 
-            <div class="col-12 ms-4 mt-2 card shadow">
+            <div class="col-12 ms-4 mt-2 card shadow py-4">
                 <div class="titulo-card mt-2">
                     <h3><i class="ms-2 me-2 fa-solid fa-users"></i>Funcionários da Farmácia</h3>
                 </div>
@@ -92,9 +94,9 @@
                             <table class="table table-hover" id="dataTable2" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Nome</th>
-                                        <th>Cargo</th>
-                                        <th>Telefone</th>
+                                        <th><i class="fa-solid fa-user me-2"></i>Nome</th>
+                                        <th><i class="fa-solid fa-briefcase me-2"></i>Cargo</th>
+                                        <th><i class="fa-solid fa-phone me-2"></i>Telefone</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -110,9 +112,9 @@
                 </div>
             </div>
             </form>
-            <div class="col-12 ms-4 mt-2 card shadow">
+            <div class="col-12 ms-4 mt-2 card shadow py-4">
                 <div class="titulo-card mt-2">
-                    <h3><i class="ms-2 me-2 fa-regular fa-file"></i>Contra-cheque de Funcionários</h3>
+                    <h3><i class="ms-2 me-2 fa-regular fa-file"></i>Contracheque de Funcionários</h3>
                 </div>
                 <div class="card mb-3">
                     <div class="card-body">
@@ -120,11 +122,10 @@
                             <table class="table table-hover" id="dataTable3" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Código</th>
-                                        <th>Funcionário</th>
-                                        <th>Arquivo</th>
-                                        <th>Data Emissão</th>
-                                        <th>Ações</th>
+                                        <th><i class="fa-solid fa-hashtag me-2"></i>Código</th>
+                                        <th><i class="fa-solid fa-user me-2"></i>Funcionário</th>
+                                        <th><i class="fa-solid fa-file me-2"></i>Arquivo</th>
+                                        <th><i class="fa-regular fa-calendar-days me-2"></i>Data Emissão</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -133,9 +134,6 @@
                                         <td>Teste</td>
                                         <td>arquivo.pdf</td>
                                         <td>27/01/2023</td>
-                                        <td>
-                                            <button class="btn btn-primary">Visualizar</button>
-                                        </td>
                                     </tr>
                                 <tbody>
 

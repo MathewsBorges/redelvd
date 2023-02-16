@@ -123,7 +123,7 @@ class Projects
 
                     echo '
                     <tr>
-                    <td>' . $row['id'] . '</td>
+               
     
                     <td><a href="pdfs/display.php?doc=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file me-2"></i>' . $row['nome'] . '</a></td>
                     
