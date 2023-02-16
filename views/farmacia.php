@@ -25,16 +25,12 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="painel.php">Painel</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><a href="#">Rede LVD - <?php echo $lojas[$farmacia] ?></a></li>
-
                 </ol>
             </nav>
         </div>
     </div>
     <div class="col-md-12 mb-5 principal">
-
-
         <div class="container-fluid d-flex">
-
             <div class="col-12 ms-4 card shadow">
                 <div class="titulo-card mt-2">
                     <h3><i class="ms-2 me-2 fa-regular fa-folder-open"></i>Arquivos da Farmácia</h3>
@@ -54,17 +50,11 @@
                                     <?php
                                     require_once 'pdfs/projects.php';
                                     Projects::listarDocumentosFarmacia($farmacia);
-
-
                                     ?>
-
                                 </tbody>
                             </table>
                         </div>
                     </div>
-
-
-
                     <form class="form-arquivos-loja" action="pdfs/enviarfarmacias.php" method="post" enctype="multipart/form-data">
                         <div class="col-md-12 ps-2">
                             <h5><i class="ms-2 me-2 fa-solid fa-upload"></i>Upload de Arquivos</h5>
@@ -75,13 +65,11 @@
                             </div>
                             <div class="col-md-10 ms-5">
                                 <div class="input-group mb-3 tipo">
-
                                     <label class="input-group-text" for="inputGroupSelect01">Tipo de Arquivo</label>
                                     <select class="form-select" name="tipo" id="inputGroupSelect01">
                                         <option value="Documento de Fiscalização" selected>Documento de Fiscalização</option>
                                         <option value="Alvará">Alvará</option>
                                         <option value="Outros">Outros</option>
-
                                     </select>
                                 </div>
                             </div>
@@ -91,18 +79,12 @@
                         </div>
                     </form>
                 </div>
-
-
-
-
-
             </div>
 
 
             <div class="col-12 ms-4 mt-2 card shadow">
                 <div class="titulo-card mt-2">
                     <h3><i class="ms-2 me-2 fa-solid fa-users"></i>Funcionários da Farmácia</h3>
-
                 </div>
                 <div class="card mb-1">
                     <div class="card-body">
@@ -116,33 +98,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
                                     <?php
                                     require_once '../controllers/FuncionarioController.php';
                                     $controller =  new FuncionarioController();
                                     $controller->listarFuncionarioLoja($farmacia);
-
                                     ?>
-
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
-
-
             </form>
-
-
-
             <div class="col-12 ms-4 mt-2 card shadow">
                 <div class="titulo-card mt-2">
                     <h3><i class="ms-2 me-2 fa-regular fa-file"></i>Contra-cheque de Funcionários</h3>
-
                 </div>
                 <div class="card mb-3">
                     <div class="card-body">
@@ -166,13 +136,8 @@
                                         <td>
                                             <button class="btn btn-primary">Visualizar</button>
                                         </td>
-
                                     </tr>
-
-                                    <?php
-
-
-                                    ?>
+                                <tbody>
 
                                 </tbody>
                             </table>

@@ -21,18 +21,14 @@
             <div class="col col-info">
                 <div class="col nome">
                     <p>Nome: Matheus Neugebauer Borges </p>
-                   
-
                 </div>
                 <div class="col data">
                     <p>Mês de Competência: Janeiro</p>
                 </div>
-
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-
                 <div class="row">
                     <div class="col-md-6">
                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
@@ -49,23 +45,16 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Férias</th>
-
                                 </tr>
                                 <tr>
                                     <th scope="row">Outros</th>
-
                                 </tr>
                                 <tr>
                                     <th scope="row">Total</th>
-
                                 </tr>
-
                             </tbody>
                         </table>
                     </div>
-
-
-
                     <div class="col-md-6">
                         <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
@@ -75,48 +64,33 @@
                                     <th>Valor</th>
                                 </tr>
                             </thead>
-
                             <tbody>
                                 <tr>
                                     <th scope="row">Convênio Farmácia</th>
                                 </tr>
                                 <tr>
                                     <th scope="row">Vales</th>
-
                                 </tr>
                                 <tr>
                                     <th scope="row">Empréstimos</th>
-
                                 </tr>
                                 <tr>
                                     <th scope="row">Total</th>
-
                                 </tr>
-
                             </tbody>
-
                         </table>
                     </div>
-
                     <div class="ms-2 col-md-12">
                         <div class="input-group input-group-lg">
-
                             <span class="valor-span" id="">Total a Receber:</span>
-
                             <div class="col-md-10 valor">
                                 <p>R$ 3858,52</p>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
-
-
             </div>
         </div>
-
     </div>
 
     <div class="col-md-12 mt-5 mb-5">
@@ -131,14 +105,12 @@
                 <p>Mês de Competência: </p>
                 <p>Janeiro</p>
             </div>
-
         </div>
     </div>
 
     <div class="card shadow col-md-12">
         <hr>
         <h4 class="ms-4">Todos os Contracheques</h4>
-
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-hover table-borderless" id="dataCheques" width="100%" cellspacing="0">
@@ -155,18 +127,12 @@
                             require_once '../controllers/ChequeController.php';
                             $cheque = new ChequeController();
                             $cheque->listarContracheque(266);
-
-
                         ?>
-
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
-
-
-
 </div>
 
 <script src="../assets/endor/jquery/jquery.min.js"></script>

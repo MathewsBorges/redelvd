@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="../assets/vendor/css/core.css">
 <div class="row">
-
     <div class="col-md-12 mt-2">
         <div class="col-md-12">
             <div class="h-20 p-4 bg-light border rounded-3  me-2">
@@ -39,15 +38,12 @@
         ?>
         <nav aria-label="Page navigation example" class="mt-5 float-end">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">
-                        <</a>
-                </li>
+                <li class="page-item"><a class="page-link" href="#"><</a></li>
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item"><a class="page-link" href="#">></a></li>
             </ul>
         </nav>
-
     </div>
 </div>

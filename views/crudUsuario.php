@@ -373,17 +373,9 @@
                                         <input type="submit" value="Anexar">
                                         <input type="hidden" name="codigo" value="<?php echo $dados['codigo'] ?>">
                                         <input type="hidden" name="crud" value="crud">
-
                                     </div>
-
                                 </div>
-
-
-
-
                             </form>
-
-
                         </div>
                     </div>
                 </div>
@@ -392,8 +384,6 @@
         </div>
 
         <div class="row mt-5">
-
-
             <div class="col-md-5 mb-5 me-1 card shadow py-4">
                 <div class="titulo-card col-md-12">
                     <h2>Adicionar Aviso</h2>
@@ -425,13 +415,7 @@
                         <input type="hidden" name="id_funcionario" value="<?php echo $dados['codigo'] ?>">
                 </form>
             </div>
-
         </div>
-
-
-
-
-
 
         <div class="col-md-6 ms-1 mb-2 card shadow py-4">
             <div class="row">
@@ -450,27 +434,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-
-                                <?php
-
-                                $controllerAviso->listarAvisosTabela($codigo); ?>
-
+                                <?php $controllerAviso->listarAvisosTabela($codigo); ?>
                             </tbody>
                         </table>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-
 
         <div class="row shadow bg-white rounded-3 py-4">
             <h3>Contracheque do Funcionário</h3>
-
             <div class="col-md-6">
-
                 <div class="row g-2">
                     <h4>Créditos</h4>
                     <div class="col-md mb-1">
@@ -503,7 +477,6 @@
                 <hr>
                 <div class="row g-2">
                     <h4>Débitos</h4>
-
                     <div class="col-md mb-1">
                         <div class="form-floating">
                             <input type="text" class="form-control moneyDeb" id="moneydeb" placeholder="Convênio" value="">
@@ -534,30 +507,24 @@
                 <hr>
                 <div class="col-md">
                     <h4>Total</h4>
-
                     <div class="form-floating">
                         <input type="text" class="form-control" id="total" placeholder="Total a Receber" value="">
                         <label for="floatingInputGrid"><i class="fa-solid fa-coins me-2"></i>Total a Receber</label>
                     </div>
                 </div>
-
             </div>
             <div class="col-md-6 mt-2">
                 <div class="input-arquivos">
                     <h4><i class="fa-solid fa-upload me-2"></i>Upload de Contracheque</h4>
-
                     <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
                         <div class="col-md-12">
                             <div class="col-md-12">
                                 <div class="input-group">
                                     <input type="file" name="pdf_file" class="form-control" id="pdf" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                                 </div>
-
                             </div>
-
                             <div class="col-md-12">
                                 <div class="input-group mt-1">
-
                                     <label class="input-group-text" for="inputGroupSelect01">Mês de Competência</label>
                                     <select class="form-select" name="mes" id="inputGroupSelect01">
                                         <option value="Janeiro" selected>Janeiro</option>
@@ -572,25 +539,15 @@
                                         <option value="Outubro">Outubro</option>
                                         <option value="Novembro">Novembro</option>
                                         <option value="Dezembro">Dezembro</option>
-
                                     </select>
                                 </div>
                             </div>
 
                             <div class="col-md-12 d-flex justify-content-center mt-4 mb-5">
-
                                 <button type="submit" class="btn btn-success"> <i class="fa-solid fa-file-circle-plus me-2"></i>Adicionar Contracheque</button>
-
                             </div>
                         </div>
-
-
-
-
-
                     </form>
-
-
                 </div>
 
                 <div class="col-md-12 ms-2 shadow py-3 px-2 rounded-3">
@@ -607,55 +564,35 @@
                                             <th>Data de Emissão</th>
                                             <th>Mês de Competência</th>
                                             <th>Opções</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
-
                                         <tr>
                                             <td>cheque.pdf</td>
                                             <td>10/02/2023</td>
                                             <td>Janeiro</td>
                                             <td></td>
                                         </tr>
-
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
-
             </div>
-
         </div>
-
-
-
-
-
     </div>
     </div>
 
     <footer class="footer">
         <span class="text-white">
-            ©Copyright 2023 <strong class='ms-2 text-success'>Rede LVD</strong>
+            © Copyright 2023 <strong class='ms-2 text-success'>Rede LVD</strong>
         </span>
     </footer>
 
 
     <script src="js/crud.js"></script>
-
-
-
-
     <script src="./js/validator.js"></script>
-
-
-    </script>
 
     <script type="text/javascript">
         $('#telefone').mask('(00) 0000-00000');
