@@ -16341,7 +16341,7 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
 }
 
 .menu-vertical .menu-inner>.menu-item .menu-link {
-  margin: 0rem 1rem;
+  /* margin: 0rem 1rem; */
 }
 
 .menu-vertical .menu-item .menu-link,

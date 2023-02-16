@@ -43,7 +43,7 @@
 
     <header>
 
-        <div class=" col-12 cabecalho ">
+        <div class="col-md-12 col-sm-12 cabecalho">
 
             <div class="img">
                 <img class="fa-solid fa-user ms-4 fa-6x" src="" alt="">
@@ -59,7 +59,6 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item  active" aria-current="page"><a href="painel.php">Painel</a></li>
                         <li class="breadcrumb-item">Gestão de Funcionários - <?php echo $dados['nome'] ?></li>
-
                     </ol>
                 </nav>
             </div>
@@ -149,7 +148,7 @@
 
 
 
-    <div class="container principal">
+    <div class="container principal overflow-hidden">
 
 
 
@@ -287,10 +286,10 @@
                         </div>
                     </div>
 
-                    <div class=" buttons col-md-8 mt-4">
-                        <button id="editar" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i>Editar</button>
-                        <button type="submit" class="btn btn-success" id="submit" disabled><i class="fa-regular fa-floppy-disk"></i>Salvar</button>
-                        <button type="reset" id="cancelar" class="btn btn-danger" disabled><i class="fa-solid fa-ban"></i>Cancelar</button>
+                    <div class="col-md-8 col-xs-2 d-flex mt-4">
+                        <button id="editar" class="btn btn-primary me-1"><i class="fa-regular fa-pen-to-square"></i>Editar</button>
+                        <button type="submit" class="btn btn-success me-1" id="submit" disabled><i class="fa-regular fa-floppy-disk"></i>Salvar</button>
+                        <button type="reset" id="cancelar" class="btn btn-danger me-1" disabled><i class="fa-solid fa-ban"></i>Cancelar</button>
                     </div>
                 </form>
             </div>
@@ -363,15 +362,15 @@
             </div>
         </div>
 
-        <div class="col-md-12 mb-5 card shadow py-4">
+        <div class="row mb-5 card shadow py-4">
 
-            <div class="col mb-5 me-1   py-4 px-4">
+            <div class="col-md-12 ms-1 mb-5 px-4 py-4">
                 <div class="titulo-card">
                     <h2>Avisos</h2>
                 </div>
 
                 <div class="row shadow rounded-3">
-                    <div class="titulo-card py-2">
+                    <div class="titulo-card py-3">
                         <h3>Adicionar Aviso</h3>
                     </div>
                     <div class="col-md-6">
@@ -410,14 +409,14 @@
                 </div>
 
 
-                <div class="col-md-12 mt-2 ms-1 mb-2 card shadow py-4">
-                    <div class="row">
+                <div class="row mt-2 mb-2 card shadow py-4">
+                    <div class="col-md-12 col-xs-12">
                         <div class="titulo-card">
                             <h3>Avisos do Funcionário</h3>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-hover" id="dataTableAvisos" width="100%" cellspacing="0">
+                                <table class="table table-hover" id="dataTableAvisos" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th><i class="fa-solid fa-signal me-2"></i>Prioridade</th>

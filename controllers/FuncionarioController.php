@@ -38,22 +38,16 @@ class FuncionarioController
 
             echo '
             <tr>
-
             <td>' . $nome . '</td>
             <td>' . $cargo . '</td>
             <td>' . $this->loja . '</td>
-
             <td>
             <form action="crudUsuario.php" method="post">
                 <button class="btn" data-bs-placement="top" title="Editar Funcionário" ><i class="fa-solid fa-user-gear" style="color:royalblue"></i></button>
                 <input type="hidden" name="codigo" value=' . $codigo . '>
-            
             </form>
             </td>
             </tr>
-
-    
-            
             ';
         }
     }
@@ -125,5 +119,7 @@ if (isset($_POST['method']) && $_POST['method'] == "editarFuncionario") {
 if (isset($_POST['method']) && $_POST['method'] == "login") {
     $user = $_POST['user'];
     $senha = $_POST['password'];
+    var_dump($user);
+    var_dump($senha);
     $controller->login($user, $senha);
 }

@@ -49,7 +49,7 @@
                     }
                     ?>
                     <div class="row">
-                        <form control="" action="views/painel.php" class="form-group" method="post">
+                        <form action="views/painel.php" class="form-group" method="post">
                             <div class="row">
                                 <input type="text" name="user" id="username" class="form__input" placeholder="CPF">
                             </div>

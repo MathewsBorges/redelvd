@@ -34,7 +34,7 @@
                                 <?php
                                 require_once '../controllers/FuncionarioController.php';
                                 require_once '../views/pdfs/projects.php';
-                                Projects::listarDocumentos(1);
+                                Projects::listarDocumentos(266);
                                 ?>
                             </tbody>
                         </table>
@@ -70,9 +70,10 @@
             <hr />
         </div>
     </div>
+
     <div class="row mt-2">
         <div class="col-12">
-            <div class="col-md-12 ms-2 card shadow mb-4 pt-4">
+            <div class="col-12 ms-2 card shadow mb-4 pt-4">
                 <div class="titulo-card">
                     <h4><i class="fa-regular fa-file me-2"></i>Documentos RH</h4>
                 </div>

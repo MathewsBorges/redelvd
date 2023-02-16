@@ -117,10 +117,10 @@
                 <table class="table table-hover table-borderless" id="dataCheques" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Documento</th>
-                            <th>Mês de Competência</th>
-                            <th>Emissão do Documento</th>
-                            <th>Resumo</th>
+                            <th><i class="fa-solid fa-file me-2"></i>Documento</th>
+                            <th><i class="fa-regular fa-calendar me-2"></i>Mês de Competência</th>
+                            <th><i class="fa-regular fa-calendar-days me-2"></i>Emissão do Documento</th>
+                            <th><i class="fa-solid fa-tachograph-digital me-2"></i>Resumo</th>
                         </tr>
                     </thead>
                     <tbody>

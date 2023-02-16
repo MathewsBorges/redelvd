@@ -21,7 +21,7 @@
   transition: all 0.3s ease-in-out;
 }
 .layout-wrapper:not(.layout-horizontal) .bg-menu-theme .menu-inner .menu-item .menu-link {
-  border-radius: 0.375rem;
+  /* border-radius: 0.375rem; */
 }
 .layout-horizontal .bg-menu-theme .menu-inner > .menu-item > .menu-link {
   border-radius: 0.375rem;

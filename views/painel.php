@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/" data-template="vertical-menu-template-free">
+
 <head>
 
   <head>
@@ -39,7 +40,7 @@
           </a>
         </div>
         <div class="menu-inner-shadow"></div>
-        <ul class="menu-inner py-1">
+        <ul class="menu-inner">
           <li class="menu-item">
             <a href="documentos.php" class="menu-link">
               <i class="fa-regular fa-file me-2"></i>
@@ -77,12 +78,15 @@
             </a>
           </li>
         </ul>
-        <li class="menu-item sair">
-          <a href="../index.php" class="menu-link">
-            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
-            Sair
-          </a>
-        </li>
+   
+          <li class="menu-item sair">
+            <a href="../index.php" class="menu-link">
+              <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+              Sair
+            </a>
+          </li>
+     
+
       </aside>
       <div class="layout-page">
         <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
@@ -107,7 +111,7 @@
                 <h1>REDE LVD</h1>
               </div>
               <div class="texto-secundario  justify-content-center">
-                <p>Aqui você tem amigos</p>
+                <p>Aqui vc tem amigos</p>
               </div>
             </div>
           </div>
@@ -131,13 +135,13 @@
 <script>
   $(".menu-inner  a").click(function(e) {
     e.preventDefault();
-   
+
     $(".menu-inner li").each(function(index, elemente) {
       $(elemente).removeClass('active');
     });
     $(this).parent().addClass('active');
     var href = $(this).attr('href');
-     $("#conteudo").load(href);
+    $("#conteudo").load(href);
   });
 </script>
 

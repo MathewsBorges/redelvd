@@ -64,7 +64,6 @@
             </div>
         </div>
 
-
         <div class="col-md-12   mb-5 card shadow">
             <div class="titulo-card mt-3">
                 <h3><i class="fa-regular fa-folder-open me-2"></i>Arquivos da Farmácia</h3>
