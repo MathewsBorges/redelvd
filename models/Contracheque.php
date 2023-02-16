@@ -29,10 +29,7 @@ class Contracheque
     public function insertCheque($campos)
     {
         try {
-
-
             $data = date('d/m/Y');
-
             $query = $this->bd->prepare("INSERT into contracheque (fk_funcionario, salario, ferias, outros, total_credito, convenio_farmacia, vales, emprestimos, total_debito, valor_total, nome_documento, documento, mes_competencia) values
          (:id, :salario, :ferias, :outros, :total_credito, :convenio_farmacia, :vales, :emprestimos, :total_debito, :valor_total, :nome_documento, :documento, :mes_competencia )");
             $query->bindValue(":id", $campos['id']);
@@ -50,7 +47,6 @@ class Contracheque
             $query->bindValue(":mes_competencia", $campos['mes']);
             $query->bindValue(":data_geracao", $data);
             $query->execute();
-
         } catch (\Throwable $th) {
             echo 'Erro Ao emitir contracheque';
         }

@@ -16,7 +16,6 @@ class Aviso
         $query->bindValue(":id", $id);
         $query->execute();
         $dados = $query->fetchAll();
-
         return $dados;
     }
 
@@ -26,7 +25,6 @@ class Aviso
         $query->bindValue(":id", $id);
         $query->execute();
         $dados = $query->fetch();
-
         return $dados;
     }
 
@@ -52,9 +50,7 @@ class Aviso
         try {
             $query = BDconexao::getConexao()->prepare("DELETE FROM avisos_funcionario where codigo = :id");
             $query->bindValue(":id", $cod);
-
             $query->execute();
-
             header("location: $caminho&status=deleted");
         } catch (\Throwable $th) {
             header("location: $caminho&status=deletedFailed");

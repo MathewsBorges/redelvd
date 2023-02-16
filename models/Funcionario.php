@@ -53,7 +53,6 @@ class Funcionario
         $query->execute();
         $dados = $query->fetch();
         $arquivo = base64_decode($dados['arquivo']);
-
         header('Content-type: application/pdf');
         readfile($arquivo);
 
