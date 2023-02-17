@@ -15,7 +15,7 @@ class FuncionarioController
         $this->loja = new Empresa();
     }
 
-    static protected $cargos  = [1 => "Administrador", 2 => "Gerente", 3 => "Vendedor", 5 => "Motoboy", 7 => "Diretor Geral", 8 => "Auxiliar Administrativo", 10 => "Farmacêutica", "E" => "Entregador", 4 => "Comprador", 11 =>"Gerente Folga"];
+    static protected $cargos  = [1 => "Administrador", 2 => "Gerente", 3 => "Vendedor", 5 => "Motoboy", 7 => "Diretor Geral", 8 => "Auxiliar Administrativo", 10 => "Farmacêutica", "E" => "Entregador", 4 => "Comprador", 11 => "Gerente Folga"];
 
     function listarFuncionario()
     {
@@ -101,6 +101,14 @@ class FuncionarioController
         } else {
             header("location: ../index.php?falhaLogin");
         }
+    }
+
+
+    function sair()
+    {
+        session_start();
+        session_destroy();
+        header('../index.php');
     }
 }
 

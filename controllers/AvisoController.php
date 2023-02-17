@@ -28,17 +28,17 @@ class AvisoController
 
             echo '
            <div class="media text-muted pt-3 border-bottom border-gray">
-           <span class="badge ' . $prioridade[$aviso['prioridade']] . ' me-5">' . $aviso['prioridade'] . '</span>
+                 <span class="badge ' . $prioridade[$aviso['prioridade']] . ' me-5">' . $aviso['prioridade'] . '</span>
 
-           <p class="media-body pb-3 mb-0 small lh-125 text-break">
-               <strong class="d-block text-gray-dark">@' . $user['nome'] . '</strong>
-               ' . $aviso['mensagem'] . '
+             <p class="media-body pb-3 mb-0 small lh-125 text-break">
+                 <strong class="d-block text-gray-dark">@' . $user['nome'] . '</strong>
+                ' . $aviso['mensagem'] . '
 
-           </p>
-           <div class="d-flex justify-content-between">
+             </p>
+            <div class="d-flex justify-content-between">
                <p class="me-5">Data de Envio: ' . $date->format('d/m/Y') . '</p>
-           </div>
-       </div>
+            </div>
+            </div>
            ';
         }
     }

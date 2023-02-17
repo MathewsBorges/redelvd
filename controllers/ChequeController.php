@@ -21,7 +21,7 @@ class ChequeController
             $total = $total_cred - $total_deb;
             $total = number_format($total, 2, ',', '.');
             $total_deb = number_format($total_deb, 2, ',', '.');
-           $total_cred = number_format($total_cred, 2, ',', '.');
+            $total_cred = number_format($total_cred, 2, ',', '.');
 
         
             //    <button type="submit" data-bs-placement="top" title="Apagar Mensagem" class="btn">
