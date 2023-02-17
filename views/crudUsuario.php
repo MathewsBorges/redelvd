@@ -13,6 +13,8 @@
     <script src="https://kit.fontawesome.com/7073a72774.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="../assets/vendor/css/crudUsuario.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
 
 
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
@@ -24,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <script src="./js/maskMoney.min.js" type="text/javascript"></script>
 
-    <title>Funcionário</title>
+    <title>Gestão de Funcionário</title>
 
 </head>
 

@@ -38,7 +38,7 @@ class Projects
                 <input type="hidden" name="id" value="' . $row['id'] . '">
                 
 
-                <input  class="btn btn-danger"type="submit" value="Excluir"></form></td>
+                <button type="submit" class="btn"><i class="fa-solid fa-trash text-danger"></i></button>
 
               
                 </tr>
@@ -170,11 +170,8 @@ class Projects
 
                     echo '
                     <tr>
-               
-    
+        
                     <td><a href="pdfs/displayCheque.php?doc=' . $row['id'] . ' " target="_blank">' . $row['nome'] . '</a></td>
-                    
-                 
                     <td>' . $date->format('d/m/Y') . '</td>
                     <td>' . $row['mes_competencia'] . '</td>
                     <td> 
@@ -182,9 +179,6 @@ class Projects
                     <input type="hidden" name="codcheque" value="' . $row['id'] . '">
                     <button type="submit" data-toggle="modal" data-target="#exampleModalCenter" num="' . $row['id'] . ' "class="btn"><i class="fa-solid fa-trash text-danger"></i></button></td>
 
-
-    
-                  
                     </tr>
                     ';
                 }
@@ -215,8 +209,6 @@ class Projects
                         'nome' => $row['nome_documento'],
                         'project_name' => $row['nome_documento'],
                         'mes_competencia' => $row['mes_competencia']
-
-
                     ];
                 }
                 foreach ($records as $row) {
@@ -227,16 +219,10 @@ class Projects
                     echo '
                     <tr>
                
-    
                     <td><a href="pdfs/displayCheque.php?doc=' . $row['id'] . ' " target="_blank">' . $row['nome'] . '</a></td>
-                    
-                 
                     <td>' . $date->format('d/m/Y') . '</td>
                     <td>' . $row['mes_competencia'] . '</td>
-
-
-    
-                  
+                
                     </tr>
                     ';
                 }
