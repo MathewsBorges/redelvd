@@ -26,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <script src="./js/maskMoney.min.js" type="text/javascript"></script>
 
-    <title>Gestão de Funcionário</title>
+    <title>Rede LVD - Gestão de Funcionário</title>
 
 </head>
 
