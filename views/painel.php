@@ -107,10 +107,10 @@
         <div class="row">
           <div class="col-md-12" id="conteudo" style="width:100%">
             <div class="titulo justify-content-center">
-              <div class="texto-principal  justify-content-center">
+              <div class="texto-principal justify-content-center">
                 <h1>REDE LVD</h1>
               </div>
-              <div class="texto-secundario  justify-content-center">
+              <div class="texto-secundario justify-content-center">
                 <p>Aqui vc tem amigos</p>
               </div>
             </div>
