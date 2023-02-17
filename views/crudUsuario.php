@@ -439,81 +439,83 @@
         <div class="row shadow bg-white rounded-3 py-4 px-3">
             <h3>Contracheque do Funcionário</h3>
             <div class="col-md-6">
-                <div class="row g-2">
-                    <h4>Créditos</h4>
-                    <div class="col-md mb-1">
-                        <div class="form-floating">
-                            <input type="text" class="form-control money" id="salario" placeholder="Salário" value="">
-                            <label for="floatingInputGrid"><i class="fa-solid fa-dollar-sign me-2"></i>Salário Mês</label>
+                <form class="form-arquivos" action="pdfs/enviarCheque.php" method="post" enctype="multipart/form-data">
+
+                    <div class="row g-2">
+                        <h4>Créditos</h4>
+
+                        <div class="col-md mb-1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control money" id="salario" name="salario" placeholder="Salário" value="">
+                                <label for="floatingInputGrid"><i class="fa-solid fa-dollar-sign me-2"></i>Salário Mês</label>
+                            </div>
+                        </div>
+                        <div class="col-md mb-1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control money" id="ferias" name="ferias" placeholder="Férias" value="">
+                                <label for="floatingInputGrid"><i class="fa-solid fa-gift me-2"></i>Férias</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md mb-1">
-                        <div class="form-floating">
-                            <input type="text" class="form-control money" id="ferias" placeholder="Férias" value="">
-                            <label for="floatingInputGrid"><i class="fa-solid fa-gift me-2"></i>Férias</label>
+                    <div class="row g-2">
+                        <div class="col-md mb-1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control money" id="outros" name="outros" placeholder="Outros" value="">
+                                <label for="floatingInputGrid"><i class="fa-solid fa-receipt me-2"></i>Outros</label>
+                            </div>
+                        </div>
+                        <div class="col-md mb-1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control moneyTotal" id="total_creditos" name="total_creditos" placeholder="Total" value="">
+                                <label for="floatingInputGrid"><i class="fa-solid fa-sack-dollar me-2"></i>Total de Créditos</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row g-2">
-                    <div class="col-md mb-1">
-                        <div class="form-floating">
-                            <input type="text" class="form-control money" id="outros" placeholder="Outros" value="">
-                            <label for="floatingInputGrid"><i class="fa-solid fa-receipt me-2"></i>Outros</label>
+                    <hr>
+                    <div class="row g-2">
+                        <h4>Débitos</h4>
+                        <div class="col-md mb-1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="convenio" placeholder="Convênio" value="">
+                                <label for="floatingInputGrid"><i class="fa-regular fa-credit-card me-2"></i>Convênio Farmácia</label>
+                            </div>
+                        </div>
+                        <div class="col-md mb-1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="vales" placeholder="Vales" value="">
+                                <label for="floatingInputGrid"><i class="fa-solid fa-file-invoice-dollar me-2"></i>Vales</label>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md mb-1">
-                        <div class="form-floating">
-                            <input type="text" class="form-control moneyTotal" id="total_creditos" placeholder="Total" value="">
-                            <label for="floatingInputGrid"><i class="fa-solid fa-sack-dollar me-2"></i>Total de Créditos</label>
+                    <div class="row g-2">
+                        <div class="col-md mb-1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="emprestimos" placeholder="Empréstimos" value="">
+                                <label for="floatingInputGrid"><i class="fa-solid fa-hand-holding-dollar me-2"></i>Empréstimos</label>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="total_debitos" name="total_debitos" placeholder="Total de Débitos" value="">
+                                <label for="floatingInputGrid"> <i class="fa-solid fa-cash-register me-2"></i>Total de Débitos</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <hr>
-                <div class="row g-2">
-                    <h4>Débitos</h4>
-                    <div class="col-md mb-1">
-                        <div class="form-floating">
-                            <input type="text" class="form-control moneyDeb" id="moneydeb" placeholder="Convênio" value="">
-                            <label for="floatingInputGrid"><i class="fa-regular fa-credit-card me-2"></i>Convênio Farmácia</label>
-                        </div>
-                    </div>
-                    <div class="col-md mb-1">
-                        <div class="form-floating">
-                            <input type="text" class="form-control moneyDeb" id="moneydeb" placeholder="Vales" value="">
-                            <label for="floatingInputGrid"><i class="fa-solid fa-file-invoice-dollar me-2"></i>Vales</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-2">
-                    <div class="col-md mb-1">
-                        <div class="form-floating">
-                            <input type="text" class="form-control moneyDeb" id="moneydeb" placeholder="Empréstimos" value="">
-                            <label for="floatingInputGrid"><i class="fa-solid fa-hand-holding-dollar me-2"></i>Empréstimos</label>
-                        </div>
-                    </div>
+                    <hr>
                     <div class="col-md">
+                        <h4>Total</h4>
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="total_debitos" placeholder="Total de Débitos" value="">
-                            <label for="floatingInputGrid"> <i class="fa-solid fa-cash-register me-2"></i>Total de Débitos</label>
+                            <input type="text" class="form-control" id="total" name="total_receber" placeholder="Total a Receber" value="">
+                            <label for="floatingInputGrid"><i class="fa-solid fa-coins me-2"></i>Total a Receber</label>
                         </div>
                     </div>
-                </div>
-                <hr>
-                <div class="col-md">
-                    <h4>Total</h4>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="total" placeholder="Total a Receber" value="">
-                        <label for="floatingInputGrid"><i class="fa-solid fa-coins me-2"></i>Total a Receber</label>
-                    </div>
-                </div>
-                <hr>
-                <div class="input-arquivos mt-2">
-                    <h4>Upload de Contracheque</h4>
-                    <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
+                    <hr>
+                    <div class="input-arquivos mt-2">
+                        <h4>Upload de Contracheque</h4>
                         <div class="col-md-12">
                             <div class="col-md-12">
                                 <div class="input-group">
-                                    <input type="file" name="pdf_file" class="form-control" id="pdf" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+                                    <input type="file" name="pdf" class="form-control" id="pdf" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                                 </div>
                             </div>
                             <div class="col-md-12">
@@ -537,44 +539,45 @@
                             </div>
 
                             <div class="col-md-12 d-flex justify-content-center mt-4 mb-5">
+                                <input type="hidden" name="codigo" value="<?php echo $dados['codigo'] ?>">
                                 <button type="submit" class="btn btn-success"> <i class="fa-solid fa-file-circle-plus me-2"></i>Adicionar Contracheque</button>
                             </div>
                         </div>
-                    </form>
-                </div>
+                </form>
             </div>
-            <div class="col-md-6 mt-2">
-                <div class="col-md-12 ms-2 mt-4 shadow  py-4 px-2 rounded-3">
-                    <div class="row">
-                        <div class="titulo-card">
-                            <h4>Últimos Contracheques</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover" id="dataContracheques" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Documento</th>
-                                            <th>Data de Emissão</th>
-                                            <th>Mês de Competência</th>
-                                            <th>Opções</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>cheque.pdf</td>
-                                            <td>10/02/2023</td>
-                                            <td>Janeiro</td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+        </div>
+        <div class="col-md-6 mt-2">
+            <div class="col-md-12 ms-2 mt-4 shadow  py-4 px-2 rounded-3">
+                <div class="row">
+                    <div class="titulo-card">
+                        <h4>Últimos Contracheques</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="dataContracheques" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Documento</th>
+                                        <th>Data de Emissão</th>
+                                        <th>Mês de Competência</th>
+                                        <th>Opções</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <?php
+                                    require_once 'pdfs/projects.php';
+                                    Projects::listarContracheque(266)
+                                    ?>
+
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
 

@@ -35,7 +35,7 @@
                             <thead>
                                 <tr>
                                     <th><i class="fa-solid fa-sack-dollar me-2"></i>Créditos</th>
-                                    <th><i class="fa-regular fa-rectangle-list me-2"></i>Descrição</th>
+                                  
                                     <th><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
                                 </tr>
                             </thead>
@@ -60,7 +60,6 @@
                             <thead>
                                 <tr>
                                     <th><i class="fa-solid fa-cash-register me-2"></i>Débitos</th>
-                                    <th><i class="fa-regular fa-rectangle-list me-2"></i>Descrição</th>
                                     <th><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
                                 </tr>
                             </thead>

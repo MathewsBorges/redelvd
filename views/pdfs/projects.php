@@ -140,4 +140,109 @@ class Projects
                 ': ' . $e->getLine();
         }
     }
+
+    static function listarContracheque($id)
+    {
+        require_once "../connection/BDconexao.php";
+
+        try {
+            $sql = BDconexao::getConexao()->prepare("SELECT codigo, nome_documento, documento, mes_competencia, data_geracao FROM contracheque where fk_funcionario= :id");
+            $sql->bindValue(":id", $id);
+            $sql->execute();
+            $result = $sql->fetchAll();
+            if ($result != null) {
+                foreach ($result as $row) {
+                    $records[] = [
+                        'id' => $row['codigo'],
+                        'nome_documento' => $row['nome_documento'],
+                        'data' => $row['data_geracao'],
+                        'nome' => $row['nome_documento'],
+                        'project_name' => $row['nome_documento'],
+                        'mes_competencia' => $row['mes_competencia']
+
+
+                    ];
+                }
+                foreach ($records as $row) {
+
+                    $date =  new DateTime($row['data']);
+
+
+                    echo '
+                    <tr>
+               
+    
+                    <td><a href="pdfs/displayCheque.php?doc=' . $row['id'] . ' " target="_blank">' . $row['nome'] . '</a></td>
+                    
+                 
+                    <td>' . $date->format('d/m/Y') . '</td>
+                    <td>' . $row['mes_competencia']. '</td>
+
+
+    
+                  
+                    </tr>
+                    ';
+                }
+            }
+        } catch (PDOException $e) {
+            echo 'Database Error ' . $e->getMessage() . ' em ' . $e->getFile() .
+                ': ' . $e->getLine();
+        }
+    }
+
+
+
+    static function listarContrachequeFuncionario($id)
+    {
+        require_once "../connection/BDconexao.php";
+
+        try {
+            $sql = BDconexao::getConexao()->prepare("SELECT codigo, nome_documento, documento, mes_competencia, data_geracao FROM contracheque where fk_funcionario= :id");
+            $sql->bindValue(":id", $id);
+            $sql->execute();
+            $result = $sql->fetchAll();
+            if ($result != null) {
+                foreach ($result as $row) {
+                    $records[] = [
+                        'id' => $row['codigo'],
+                        'nome_documento' => $row['nome_documento'],
+                        'data' => $row['data_geracao'],
+                        'nome' => $row['nome_documento'],
+                        'project_name' => $row['nome_documento'],
+                        'mes_competencia' => $row['mes_competencia']
+
+
+                    ];
+                }
+                foreach ($records as $row) {
+
+                    $date =  new DateTime($row['data']);
+
+
+                    echo '
+                    <tr>
+               
+    
+                    <td><a href="pdfs/displayCheque.php?doc=' . $row['id'] . ' " target="_blank">' . $row['nome'] . '</a></td>
+                    
+                 
+                    <td>' . $date->format('d/m/Y') . '</td>
+                    <td>' . $row['mes_competencia']. '</td>
+
+
+    
+                  
+                    </tr>
+                    ';
+                }
+            }
+        } catch (PDOException $e) {
+            echo 'Database Error ' . $e->getMessage() . ' em ' . $e->getFile() .
+                ': ' . $e->getLine();
+        }
+    }
+
+
+
 }
