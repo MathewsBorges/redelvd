@@ -17,13 +17,13 @@ class ChequeController
             $date =  new DateTime($cheque['data_geracao']);
             $total_cred = $cheque['salario'] + $cheque['ferias'] + $cheque['outros'];
             $total_deb = $cheque['convenio_farmacia'] + $cheque['vales'] + $cheque['emprestimos'];
-           
+
             $total = $total_cred - $total_deb;
             $total = number_format($total, 2, ',', '.');
             $total_deb = number_format($total_deb, 2, ',', '.');
             $total_cred = number_format($total_cred, 2, ',', '.');
 
-        
+
             //    <button type="submit" data-bs-placement="top" title="Apagar Mensagem" class="btn">
             echo '
         <tr>
@@ -129,7 +129,7 @@ class ChequeController
 
         <div class="col-md">
         <div class="form-floating mb-3">
-        <input type="text" class="form-control text-success" id="floatingInputDisabled" placeholder="Total de Créditos" disabled value=' . $total_cred. '>
+        <input type="text" class="form-control text-success" id="floatingInputDisabled" placeholder="Total de Créditos" disabled value=' . $total_cred . '>
         <label for="floatingInputDisabled"><i class="fa-solid fa-sack-dollar me-2"></i>Total de Créditos</label>
         </div>
         </div>    
@@ -158,5 +158,104 @@ class ChequeController
           </div>
         </div> ';
         }
+    }
+
+    public function contracheque($id)
+    {
+        $dados = $this->cheque->getLastContraCheque($id);
+        $total_cred = $dados['salario'] + $dados['ferias'] + $dados['outros'];
+        $total_deb = $dados['convenio_farmacia'] + $dados['vales'] + $dados['emprestimos'];
+        $total = $total_cred - $total_deb;
+        echo '
+        <div class="row">
+        <div class="col-md-6 nome">
+            <p>Nome: Matheus Neugebauer Borges</p>
+        </div>
+        <div class="col-md-4 data ms-2">
+            <p>Mês de Competência: '.$dados['mes_competencia'].'</p>
+        </div>
+    </div>
+        <div class="row">
+        <div class="col-md-6">
+
+            <table class="table table-hover" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="bg-success"><i class="fa-solid fa-sack-dollar me-2"></i>Créditos</th>
+                      
+                        <th class="bg-success"><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="table-success" scope="row"><i class="fa-solid fa-dollar-sign me-2"></i>Salário Mês</th>
+                        <td class="table-success" >R$ +' . number_format($dados['salario'], 2, ',', '.') . '</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="table-success" ><i class="fa-solid fa-gift me-2"></i>Férias</th>
+                        <td class="table-success" >R$ +' . number_format($dados['ferias'], 2, ',', '.') . '</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" class="table-success" ><i class="fa-solid fa-receipt me-2"></i>Outros</th>
+                        <td class="table-success" >R$ +' . number_format($dados['outros'], 2, ',', '.') . '</td>
+
+                    </tr>
+                    <tr>
+                        <th scope="row" class="table-success" >Total</th>
+                        <td class="table-success" >R$ +' . number_format($total_cred, 2, ',', '.') . '</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-hover" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="bg-danger"><i class="fa-solid fa-cash-register me-2"></i>Débitos</th>
+                        <th class="bg-danger"><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="table-danger" scope="row"><i class="fa-regular fa-credit-card me-2"></i>Convênio Farmácia</th>
+                        <td class="table-danger">R$ - ' . number_format($dados['convenio_farmacia'], 2, ',', '.') . '</td>
+
+                    </tr>
+                    <tr>
+                        <th class="table-danger" scope="row"><i class="fa-solid fa-file-invoice-dollar me-2"></i>Vales</th>
+                        <td class="table-danger">R$ - ' . number_format($dados['vales'], 2, ',', '.') . '</td>
+
+                    </tr>
+                    <tr>
+                        <th class="table-danger" scope="row"><i class="fa-solid fa-hand-holding-dollar me-2"></i>Empréstimos</th>
+                        <td class="table-danger">R$ - ' . number_format($dados['emprestimos'], 2, ',', '.') . '</td>
+
+                    </tr>
+                    <tr>
+                        <th class="table-danger" scope="row">Total</th>
+                        <td class="table-danger">R$ - ' . number_format($total_deb, 2, ',', '.') . '</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ms-2 mt-1 col-md-12">
+            <div class="input-group input-group-lg">
+                <span class="valor-span" id="">Total a Receber:</span>
+                <div class="col-md-10 valor">
+                    <p>R$ '.number_format($total, 2, ',', '.').'</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        
+        
+        
+        
+        
+        ';
     }
 }

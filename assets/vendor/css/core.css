@@ -21,7 +21,7 @@
   --bs-success: #0ac193;
   --bs-info: #03c3ec;
   --bs-warning: #ffab00;
-  --bs-danger: #ff3e1d;
+  --bs-danger: #ff4747;
   --bs-light: #fcfdfd;
   --bs-dark: #121214;
   --bs-gray: rgba(67, 89, 113, 0.1);
@@ -30,7 +30,7 @@
   --bs-success-rgb: 87, 170, 167;
   --bs-info-rgb: 3, 195, 236;
   --bs-warning-rgb: 255, 171, 0;
-  --bs-danger-rgb: 255, 62, 29;
+  --bs-danger-rgb: 255, 71, 71;
   --bs-light-rgb: 252, 253, 253;
   --bs-dark-rgb: 35, 52, 70;
   --bs-gray-rgb: 67, 89, 113;

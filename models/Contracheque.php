@@ -11,7 +11,7 @@ class Contracheque
 
     public function getContrachequeID($id)
     {
-        $query = $this->bd->prepare("SELECT * from contracheque where fk_funcionario = :id ");
+        $query = $this->bd->prepare("SELECT * from contracheque where fk_funcionario = :id order by codigo desc");
         $query->bindValue(":id", $id);
         $query->execute();
         $dados = $query->fetchAll();
@@ -27,8 +27,16 @@ class Contracheque
         return $dados;
     }
 
+    public function getLastContraCheque($id)
+    {
+        $query = $this->bd->prepare("SELECT * from contracheque where fk_funcionario = :id order by codigo desc limit 1");
+        $query->bindValue(":id", $id);
+        $query->execute();
+        $dados = $query->fetch();
+        return $dados;
+    }
+
     public function insertCheque($campos)
     {
-       
     }
 }
