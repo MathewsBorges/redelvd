@@ -220,22 +220,22 @@ class ChequeController
                 <tbody>
                     <tr>
                         <th class="table-danger" scope="row"><i class="fa-regular fa-credit-card me-2"></i>Convênio Farmácia</th>
-                        <td class="table-danger">R$ - ' . number_format($dados['convenio_farmacia'], 2, ',', '.') . '</td>
+                        <td class="table-danger">R$ -' . number_format($dados['convenio_farmacia'], 2, ',', '.') . '</td>
 
                     </tr>
                     <tr>
                         <th class="table-danger" scope="row"><i class="fa-solid fa-file-invoice-dollar me-2"></i>Vales</th>
-                        <td class="table-danger">R$ - ' . number_format($dados['vales'], 2, ',', '.') . '</td>
+                        <td class="table-danger">R$ -' . number_format($dados['vales'], 2, ',', '.') . '</td>
 
                     </tr>
                     <tr>
                         <th class="table-danger" scope="row"><i class="fa-solid fa-hand-holding-dollar me-2"></i>Empréstimos</th>
-                        <td class="table-danger">R$ - ' . number_format($dados['emprestimos'], 2, ',', '.') . '</td>
+                        <td class="table-danger">R$ -' . number_format($dados['emprestimos'], 2, ',', '.') . '</td>
 
                     </tr>
                     <tr>
                         <th class="table-danger" scope="row">Total</th>
-                        <td class="table-danger">R$ - ' . number_format($total_deb, 2, ',', '.') . '</td>
+                        <td class="table-danger">R$ -' . number_format($total_deb, 2, ',', '.') . '</td>
 
                     </tr>
                 </tbody>

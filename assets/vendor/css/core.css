@@ -8467,9 +8467,9 @@ button:focus {
 }
 
 .alert-success {
-  background-color: #e8fadf;
+  background-color: var(--bs-teal);
   border-color: #d4f5c3;
-  color: #71dd37;
+  color: #fff;
 }
 
 .alert-success .btn-close {
@@ -8762,7 +8762,7 @@ button:focus {
   color: #b4bdc6;
 }
 
-.form-floating>.form-control:focus::placeholder,
+.form-floating>.form-control:focus::placeholder,feed
 .form-floating>.form-control:not(:placeholder-shown)::placeholder {
   color: #b4bdc6;
 }
@@ -8772,7 +8772,7 @@ button:focus {
   width: 100%;
   margin-top: 0.3rem;
   font-size: 85%;
-  color: #71dd37;
+  color: var(--bs-success);
 }
 
 .valid-tooltip {
@@ -8785,7 +8785,7 @@ button:focus {
   margin-top: 0.1rem;
   font-size: 0.9375rem;
   color: #fff;
-  background-color: #71dd37;
+  background-color: var(--bs-success);
   border-radius: 0.25rem;
 }
 
@@ -8877,7 +8877,7 @@ button:focus {
   width: 100%;
   margin-top: 0.3rem;
   font-size: 85%;
-  color: #ff3e1d;
+  color: var(--bs-danger);
 }
 
 .invalid-tooltip {

@@ -176,7 +176,11 @@ class Projects
                     
                  
                     <td>' . $date->format('d/m/Y') . '</td>
-                    <td>' . $row['mes_competencia']. '</td>
+                    <td>' . $row['mes_competencia'] . '</td>
+                    <td> 
+                 
+                    <input type="hidden" name="codcheque" value="' . $row['id'] . '">
+                    <button type="submit" data-toggle="modal" data-target="#exampleModalCenter" num="' . $row['id'] . ' "class="btn"><i class="fa-solid fa-trash text-danger"></i></button></td>
 
 
     
@@ -228,7 +232,7 @@ class Projects
                     
                  
                     <td>' . $date->format('d/m/Y') . '</td>
-                    <td>' . $row['mes_competencia']. '</td>
+                    <td>' . $row['mes_competencia'] . '</td>
 
 
     
@@ -242,7 +246,4 @@ class Projects
                 ': ' . $e->getLine();
         }
     }
-
-
-
 }
