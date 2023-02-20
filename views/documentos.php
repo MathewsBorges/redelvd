@@ -1,3 +1,5 @@
+<script type="text/javascript" src="js/function.js"></script>
+
 <div class="row mt-2">
     <div class="col-md-12 mt-2">
         <div class="col-md-12">
@@ -30,7 +32,7 @@
                                     <th><i class="fa-solid fa-gears me-2"></i>Opções</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tabelaDocumentos">
                                 <?php
                                 require_once '../controllers/FuncionarioController.php';
                                 require_once '../views/pdfs/projects.php';
@@ -43,7 +45,9 @@
                 <hr />
                 <div class="input-arquivos">
                     <h5><i class="fa-solid fa-upload me-2"></i>Upload de Arquivos</h5>
-                    <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
+                    <div class="col-md-12" id="resultado"></div>
+
+                    <form class="form-arquivos" id="frm" action="" enctype="multipart/form-data" method="post">
                         <div class="col-md-12 d-flex">
                             <div class="col-md-6">
                                 <div class="input-group">
@@ -53,15 +57,15 @@
                             <div class="col-md-6">
                                 <div class="input-group mt-1 mb-3 tipo">
                                     <label class="input-group-text ms-2" for="inputGroupSelect01">Tipo de Arquivo</label>
-                                    <select class="form-select" name="tipo" id="inputGroupSelect01">
+                                    <select class="form-select" name="tipo" id="tipoDocumento">
                                         <option value="Atestado Médico" selected>Atestado Médico</option>
                                         <option value="Folha Ponto">Folha Ponto</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center">
-                                <button type="submit" class="btn btn-success"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
-                                
+                                <button id="salvar" class="btn btn-success"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
+
                             </div>
                         </div>
                     </form>

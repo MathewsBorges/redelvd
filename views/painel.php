@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
     <link rel="stylesheet" href="../assets/vendor/css/painel.css">
+    <script src="js/function.js"></script>
+
 
     <script src="../assets/vendor/js/helpers.js"></script>
     <script src="../assets/js/config.js"></script>
@@ -78,14 +80,14 @@
             </a>
           </li>
         </ul>
-   
-          <li class="menu-item sair">
-            <a href="../index.php" class="menu-link">
-              <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
-              Sair
-            </a>
-          </li>
-     
+
+        <li class="menu-item sair">
+          <a href="../index.php" class="menu-link">
+            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+            Sair
+          </a>
+        </li>
+
 
       </aside>
       <div class="layout-page">
@@ -129,6 +131,7 @@
 
 
 <script src="../assets/vendor/js/bootstrap.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/vendor/js/menu.js"></script>
 <script src="../assets/js/main.js"></script>
 

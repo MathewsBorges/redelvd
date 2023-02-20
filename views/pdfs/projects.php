@@ -41,7 +41,7 @@ class Projects
 
                 <button type="submit" class="btn"><i class="fa-solid fa-trash text-danger"></i></button>
 
-              
+              </form>
                 </tr>
                 ';
                 }
@@ -249,7 +249,7 @@ class Projects
             <p>Mês de Competência: </p>
             <p>' . $dados['mes_competencia'] . '</p>
         </div>
-    </div>
+        </div>
         ';
     }
 }

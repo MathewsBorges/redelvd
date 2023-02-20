@@ -11,7 +11,7 @@ if (!empty($_FILES['pdf_file']['name'])) {
         $file_tmp = $_FILES['pdf_file']['tmp_name'];
         $tipo = $_POST['tipo'];
         $data = date("d/m/Y");
-        $id_funcionario = $_POST['codigo'];
+        $id_funcionario = 266;
         if ($pdf_blob = fopen($file_tmp, "rb")) {
             try {
 
@@ -25,22 +25,38 @@ if (!empty($_FILES['pdf_file']['name'])) {
                 $stmt->execute();
 
                 if (isset($_POST['crud'])) {
-                    header("location: ../crudUsuario.php?id=$id_funcionario&status=fileUploaded");
+                    // header("location: ../crudUsuario.php?id=$id_funcionario&status=fileUploaded");
+                    echo '<div class="alert alert-success" role="alert">
+                    <i class="fa-regular fa-circle-check me-2"></i> Arquivo Anexado com Sucesso!
+                 </div>';
                 } else {
-                    header("location: ../painel.php");
+                    // header("location: ../painel.php");
+                    echo '<div class="alert alert-success" role="alert" id="msg">
+                    <i class="fa-regular fa-circle-check me-2"></i> Arquivo Anexado com Sucesso!
+                 </div>';
                 }
             } catch (PDOException $e) {
-                echo 'Database Error ' . $e->getMessage() . ' em ' . $e->getFile() .
-                    ': ' . $e->getLine();
+
+                echo '<div class="alert alert-danger" role="alert">
+                <i class="fa-regular fa-circle-check me-2"></i> Erro banco de dados, consulte um Administrador, 
+                Database Error ' . $e->getMessage() . ' em ' . $e->getFile() .
+                    ': ' . $e->getLine() . '
+             </div>';
             }
         } else {
             if (isset($_POST['crud'])) {
-                header("location: ../crudUsuario.php?id=$id_funcionario&status=fileError");
+                // header("location: ../crudUsuario.php?id=$id_funcionario&status=fileError");
+                echo '<h1>Deu ruim no arquivo<h1>';
             }
             echo 'erro';
         }
     }
 } else {
 
-    header('Location: choose_file.php');
+    // header('Location: choose_file.php');
+    echo '<div class="alert alert-warning" id="msg" role="alert">
+    <i class="fa-solid fa-triangle-exclamation me-2"></i> Ops! O Arquivo não foi anexado
+  </div>';
 }
+
+?>

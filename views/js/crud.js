@@ -56,8 +56,6 @@ $(document).on("keyup", ".money", function () {
 
 });
 
-
-
 ///DEBITO=================================================
 $(document).on("keyup", ".moneyDeb", function () {
 
@@ -90,7 +88,6 @@ $(document).on("keyup", ".moneyDeb", function () {
 
     document.getElementById('total').value = formatter.format(total / 100).toString();
 
-
 });
 
 
@@ -115,3 +112,6 @@ document.onreadystatechange = () => {
         removeMensagem();
     }
 }
+
+
+
