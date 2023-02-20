@@ -318,7 +318,7 @@
                                     <tbody>
                                         <?php
                                         require_once 'pdfs/projects.php';
-                                        Projects::listarDocumentos($dados['codigo']) ?>
+                                        Projects::listarDocumentos($codigo) ?>
 
                                     </tbody>
                                 </table>
@@ -368,7 +368,7 @@
 
             <div class="col-md-12 ms-1 mb-5 px-4 py-4">
                 <div class="titulo-card">
-                    <h2>Avisos</h2>
+                    <h2>Avisos do Funcionário</h2>
                 </div>
 
                 <div class="row shadow rounded-3">
@@ -414,7 +414,7 @@
                 <div class="row mt-2 mb-2 card shadow py-4">
                     <div class="col-md-12 col-xs-12">
                         <div class="titulo-card">
-                            <h3>Avisos do Funcionário</h3>
+                            <h3>Lista de Avisos</h3>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -569,7 +569,7 @@
 
                                     <?php
                                     require_once 'pdfs/projects.php';
-                                    Projects::listarContracheque(266)
+                                    Projects::listarContracheque($codigo)
                                     ?>
 
                                 </tbody>

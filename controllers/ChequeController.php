@@ -169,10 +169,10 @@ class ChequeController
         echo '
         <div class="row">
         <div class="col-md-6 nome">
-            <p>Nome: Matheus Neugebauer Borges</p>
+            <p>Funcionário: Matheus Neugebauer Borges</p>
         </div>
         <div class="col-md-4 data ms-2">
-            <p>Mês de Competência: '.$dados['mes_competencia'].'</p>
+            <p>Mês de Competência: ' . $dados['mes_competencia'] . '</p>
         </div>
     </div>
         <div class="row">
@@ -245,7 +245,7 @@ class ChequeController
             <div class="input-group input-group-lg">
                 <span class="valor-span" id="">Total a Receber:</span>
                 <div class="col-md-10 valor">
-                    <p>R$ '.number_format($total, 2, ',', '.').'</p>
+                    <p>R$ ' . number_format($total, 2, ',', '.') . '</p>
                 </div>
             </div>
         </div>
@@ -257,5 +257,12 @@ class ChequeController
         
         
         ';
+    }
+
+
+    public function downloadCheque($id)
+    {
+        $dados = $this->cheque->getLastContraCheque($id);
+        return $dados;
     }
 }

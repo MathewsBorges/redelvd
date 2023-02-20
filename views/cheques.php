@@ -19,10 +19,10 @@
     <div class="col-md-12 mt-2">
         <div class="row">
             <div class="col-md-12 card shadow py-4 px-4 rounded-3">
-             <h3>Contracheque</h3>
-             <hr>
+                <h3>Contracheque</h3>
+                <hr>
 
-                <?php 
+                <?php
                 require_once '../controllers/ChequeController.php';
                 $cheque = new ChequeController();
                 $cheque->contracheque(266);
@@ -34,16 +34,10 @@
     <div class="col-md-12 card rounded-3 py-5 mt-5 mb-5">
         <h3 class="ms-4">Último Contracheque</h3>
         <hr>
-        <div class="col-md-12 ms-4 cheque">
-            <div class="arquivo">
-                <p>Arquivo: </p>
-                <p><a href="http://">Arquivo.pdf</a></p>
-            </div>
-            <div class="mes">
-                <p>Mês de Competência: </p>
-                <p>Janeiro</p>
-            </div>
-        </div>
+        <?php
+         require_once '../views/pdfs/projects.php';
+         Projects::downloadCheque(266);
+        ?>
         <hr>
     </div>
 

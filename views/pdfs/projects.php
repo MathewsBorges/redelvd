@@ -1,4 +1,5 @@
 <?php
+include_once '../models/Contracheque.php';
 
 class Projects
 {
@@ -231,5 +232,24 @@ class Projects
             echo 'Database Error ' . $e->getMessage() . ' em ' . $e->getFile() .
                 ': ' . $e->getLine();
         }
+    }
+
+    static function downloadCheque($id)
+    {
+        $cheque = new Contracheque();
+        $dados = $cheque->getLastContraCheque($id);
+        echo '
+        <div class="col-md-12 ms-4 cheque">
+        <div class="arquivo">
+            <p>Arquivo: </p>
+            <p><td><a href="pdfs/displayCheque.php?doc=' . $dados['codigo'] . ' " target="_blank">' . $dados['nome_documento'] . '</a></td>
+            </p>
+        </div>
+        <div class="mes">
+            <p>Mês de Competência: </p>
+            <p>' . $dados['mes_competencia'] . '</p>
+        </div>
+    </div>
+        ';
     }
 }
