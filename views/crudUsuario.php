@@ -144,6 +144,29 @@
                     ';
                 }
             }
+
+            if (isset($_GET['status'])) {
+                if ($_GET['status'] == "filenotselected") {
+                    echo '
+                    <div class="alert alert-warning" role="alert" id="msg-success">
+                        <i class="fa-solid fa-triangle-exclamation" style="color:"></i>
+                        Ops! Você não anexou um documento ao contracheque, não foi possivel adicionar o contracheque
+                    </div>
+                    ';
+                }
+            }
+
+            
+            if (isset($_GET['status'])) {
+                if ($_GET['status'] == "inputempty") {
+                    echo '
+                    <div class="alert alert-warning" role="alert" id="msg-success">
+                        <i class="fa-solid fa-triangle-exclamation" style="color:"></i>
+                        Ops! Todos os campos do contracheque devem ser informados para adicioná-lo
+                    </div>
+                    ';
+                }
+            }
         }
         ?>
     </div>

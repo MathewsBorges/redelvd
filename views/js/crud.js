@@ -108,7 +108,7 @@ function removeMensagem() {
         var msg = document.getElementById("msg-success");
 
         if (msg != null) msg.parentNode.removeChild(msg);
-    }, 3000);
+    }, 5000);
 }
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {

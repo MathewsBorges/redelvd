@@ -1,6 +1,7 @@
 <?php
 require_once '../../connection/BDconexao.php';
 
+$id_funcionario = $_POST['codigo'];
 
 
 if (!empty($_FILES['pdf']['name'])) {
@@ -22,30 +23,26 @@ if (!empty($_FILES['pdf']['name'])) {
                 $query->bindValue(":salario", str_replace(",", ".", str_replace(".", "", str_replace("R$ ", "", $_POST['salario']))));
                 $query->bindValue(":ferias", str_replace(",", ".", str_replace(".", "", str_replace("R$ ", "", $_POST['ferias']))));
                 $query->bindValue(":outros", str_replace(",", ".", str_replace(".", "", str_replace("R$ ", "", $_POST['outros']))));
-
                 $query->bindValue(":convenio_farmacia", str_replace(",", ".", str_replace(".", "", str_replace("R$ ", "", $_POST['convenio']))));
                 $query->bindValue(":vales", str_replace(",", ".", str_replace(".", "", str_replace("R$ ", "", $_POST['vales']))));
                 $query->bindValue(":emprestimos", str_replace(",", ".", str_replace(".", "", str_replace("R$ ", "", $_POST['emprestimos']))));
-              
                 $query->bindValue(":nome_documento", $file_name);
                 $query->bindValue(":documento",  $pdf_blob, PDO::PARAM_LOB);
                 $query->bindValue(":mes_competencia", $_POST['mes']);
                 $query->bindValue(":data_geracao", $data);
                 $query->execute();
-
-
                 header("location: ../crudUsuario.php?id=$id_funcionario&status=fileUploaded");
             } catch (PDOException $e) {
                 echo 'Database Error ' . $e->getMessage() . ' em ' . $e->getFile() .
                     ': ' . $e->getLine();
-                // header("location: ../crudUsuario.php?id=$id_funcionario&status=fileError");
+            header("location: ../crudUsuario.php?id=$id_funcionario&status=inputempty");
+
             }
         } else {
-
             header("location: ../crudUsuario.php?id=$id_funcionario&status=fileError");
         }
     }
 } else {
+    header("location: ../crudUsuario.php?id=$id_funcionario&status=filenotselected");
 
-    header('Location: choose_file.php');
 }
