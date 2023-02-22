@@ -21,6 +21,9 @@ $("#salvar").on("click", function (event) {
         success: function (resposta) {
             $("#resultado").html(resposta);
             atualizarTabela()
+            var target_offset = $("#ancora").offset();
+            var target_top = target_offset.top;
+            $('html, body').animate({ scrollTop: target_top }, 10);
             $("#pdf").val("")
             removeMensagem()
         }

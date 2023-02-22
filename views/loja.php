@@ -45,7 +45,6 @@
                                     <th><i class="fa-solid fa-user me-2"></i>Funcionário</th>
                                     <th><i class="fa-solid fa-file me-2"></i>Arquivo</th>
                                     <th><i class="fa-regular fa-calendar-days me-2"></i>Data Emissão</th>
-                                    <th><i class="fa-solid fa-gears me-2"></i>Opções</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,9 +52,6 @@
                                     <td>Teste</td>
                                     <td>arquivo.pdf</td>
                                     <td>27/01/2023</td>
-                                    <td>
-                                        <button class="btn btn-primary">Visualizar</button>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>

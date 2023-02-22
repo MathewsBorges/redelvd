@@ -19,7 +19,7 @@
     <div class="row mt-2">
         <div class="col-md-12 ms-2 card shadow mb-4 pt-4">
             <div class="col-md-12">
-                <div class="titulo-card">
+                <div class="titulo-card" id="ancora">
                     <h4><i class="fa-solid fa-user me-2"></i>Meus Documentos Anexados</h4>
                 </div>
                 <div class="card-body">
