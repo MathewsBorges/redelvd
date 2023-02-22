@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+atualizarTabela()
 $("#salvar").on("click", function (event) {
     event.preventDefault()
     console.log('entrou na função');
@@ -8,16 +8,11 @@ $("#salvar").on("click", function (event) {
     let tipoDocumento = document.getElementById('tipoDocumento').value
     formData.append("pdf_file", arquivo)
     formData.append("tipo", tipoDocumento)
-=======
-$('#frm').submit(function (event) {
-    event.preventDefault()
-    var formData = new FormData($('#frm')[0])
->>>>>>> a5d5d8b96b76cbc6ca08bfb9b55dfeb696f1f02d
+
     $.ajax({
         method: "POST",
-        url: "pdfs/enviar.php",
+        url: "js/function/enviar.php",
         data: formData,
-<<<<<<< HEAD
         cache: false,
         processData: false,
         contentType: false,
@@ -25,31 +20,40 @@ $('#frm').submit(function (event) {
         async: true,
         success: function (resposta) {
             $("#resultado").html(resposta);
+            atualizarTabela()
             $("#pdf").val("")
-            removeMensagem();
+            removeMensagem()
         }
 
     })
 
+});
 
 
+function atualizarTabela() {
+    var nid = parseInt(document.getElementById("nid").value)
+    console.log(nid);
+    var formData = new FormData();
+    formData.append("numero", nid)
 
-
-=======
+    $.ajax({
+        method: 'POST',
+        url: 'js/function/listarDocumentos.php',
+        data: formData,
+        cache: false,
         processData: false,
         contentType: false,
+        processData: false,
         async: true,
-        success: function (response) {
-            $("#resultado").html(response);
-            $("#pdf").val("");
-            removeMensagem();
-           
-          
-        },
-    });
->>>>>>> a5d5d8b96b76cbc6ca08bfb9b55dfeb696f1f02d
+        success: function (resposta) {
+            console.log(resposta);
+            $("#tabelaDocumentos").html(resposta);
+        }
 
-})
+    })
+}
+
+
 
 function removeMensagem() {
     setTimeout(function () {
@@ -57,12 +61,3 @@ function removeMensagem() {
         if (msg != null) msg.parentNode.removeChild(msg);
     }, 4000);
 }
-
-<<<<<<< HEAD
-=======
-function atualizarTabela(id) {
-
-}
-
->>>>>>> a5d5d8b96b76cbc6ca08bfb9b55dfeb696f1f02d
-

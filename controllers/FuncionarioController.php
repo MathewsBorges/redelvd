@@ -131,3 +131,8 @@ if (isset($_POST['method']) && $_POST['method'] == "login") {
     var_dump($senha);
     $controller->login($user, $senha);
 }
+
+if (isset($_POST['numero'])) {
+    require_once '../views/pdfs/projects.php';
+    Projects::listarDocumentos($_POST['numero']);
+}

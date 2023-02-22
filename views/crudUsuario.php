@@ -156,7 +156,7 @@
                 }
             }
 
-            
+
             if (isset($_GET['status'])) {
                 if ($_GET['status'] == "inputempty") {
                     echo '
@@ -174,6 +174,7 @@
 
 
     <div class="container principal overflow-hidden">
+        <input type="hidden" id="nid" value="<?php echo $codigo ?>">
 
 
 
@@ -461,10 +462,13 @@
             </div>
         </div>
 
-        <div class="row shadow bg-white rounded-3 py-4 px-3">
+        <div class="row shadow bg-white rounded-3 py-4 px-3" id="ancora">
             <h3>Contracheque do Funcionário</h3>
+            <div class="col-md-12" id="resultado">
+
+            </div>
             <div class="col-md-6">
-                <form class="form-arquivos" action="pdfs/enviarCheque.php" method="post" enctype="multipart/form-data">
+                <form class="form-arquivos" id="formCheque" enctype="multipart/form-data">
 
                     <div class="row g-2">
                         <h4>Créditos</h4>
@@ -565,7 +569,7 @@
 
                             <div class="col-md-12 d-flex justify-content-center mt-4 mb-5">
                                 <input type="hidden" name="codigo" value="<?php echo $dados['codigo'] ?>">
-                                <button type="submit" class="btn btn-success"> <i class="fa-solid fa-file-circle-plus me-2"></i>Adicionar Contracheque</button>
+                                <button id="salvarCheque" type="submit" class="btn btn-success"> <i class="fa-solid fa-file-circle-plus me-2"></i>Adicionar Contracheque</button>
                             </div>
                         </div>
                 </form>

@@ -1,5 +1,5 @@
 <?php
-include_once '../models/Contracheque.php';
+require_once '../models/Contracheque.php';
 
 class Projects
 {
@@ -35,13 +35,11 @@ class Projects
                 
                 <td>' . $row['tipo'] . '</td>
                 <td>' . $date->format('d/m/Y') . '</td>
-                <td><form action="pdfs/excluirDocumento.php" method="post">
-                <input type="hidden" name="id" value="' . $row['id'] . '">
-                
-
-                <button type="submit" class="btn"><i class="fa-solid fa-trash text-danger"></i></button>
-
-              </form>
+                <td>
+                <form action="pdfs/excluirDocumento.php" method="post">
+                    <input type="hidden" name="id" value="' . $row['id'] . '">
+                    <button type="submit" class="btn"><i class="fa-solid fa-trash text-danger"></i></button>
+                </form>
                 </tr>
                 ';
                 }
@@ -253,3 +251,4 @@ class Projects
         ';
     }
 }
+

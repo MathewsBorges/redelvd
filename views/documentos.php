@@ -2,6 +2,7 @@
 
 <div class="row mt-2">
     <div class="col-md-12 mt-2">
+        <input type="hidden" value="266" id="nid">
         <div class="col-md-12">
             <div class="h-20 p-4 bg-light border rounded-3  me-2">
                 <h2><i class="fa-regular fa-file me-4"></i>Meus Documentos</h2>
@@ -33,11 +34,7 @@
                                 </tr>
                             </thead>
                             <tbody id="tabelaDocumentos">
-                                <?php
-                                require_once '../controllers/FuncionarioController.php';
-                                require_once '../views/pdfs/projects.php';
-                                Projects::listarDocumentos(266);
-                                ?>
+                             
                             </tbody>
                         </table>
                     </div>

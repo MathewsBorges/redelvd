@@ -91,15 +91,6 @@ $(document).on("keyup", ".moneyDeb", function () {
 });
 
 
-
-
-
-
-
-
-
-
-
 function removeMensagem() {
     setTimeout(function () {
         var msg = document.getElementById("msg-success");
@@ -113,5 +104,57 @@ document.onreadystatechange = () => {
     }
 }
 
+$("#salvarCheque").on("click", function (event) {
+    event.preventDefault()
+    let arquivo = document.getElementById('pdf').files[0]
+    let salario = document.getElementsByName('salario')[0].value
+    let ferias = document.getElementsByName('ferias')[0].value
+    let outros = document.getElementsByName('outros')[0].value
+    let convenio = document.getElementsByName('convenio')[0].value
+    let vales = document.getElementsByName('vales')[0].value
+    let emprestimos = document.getElementsByName('emprestimos')[0].value
+    let mes = document.getElementsByName('mes')[0].value
+    let nid = parseInt(document.getElementById('nid').value)
+    console.log(nid);
+
+    var formData = new FormData()
+    formData.append('pdf', arquivo)
+    formData.append('salario', salario)
+    formData.append('ferias', ferias)
+    formData.append('outros', outros)
+    formData.append('convenio', convenio)
+    formData.append('vales', vales)
+    formData.append('emprestimos', emprestimos)
+    formData.append('mes', mes)
+    formData.append('codigo', nid)
+
+
+    $.ajax({
+        method: "POST",
+        url: "js/function/enviarCheque.php",
+        data: formData,
+        cache: false,
+        processData: false,
+        contentType: false,
+        processData: false,
+        async: true,
+        success: function (resposta) {
+            $("#resultado").html(resposta);
+            var target_offset = $("#ancora").offset();
+            var target_top = target_offset.top;
+            $('html, body').animate({ scrollTop: target_top }, 10);
+            removeMensagem()
+        }
+
+    })
+})
+
+
+function removeMensagem() {
+    setTimeout(function () {
+        var msg = document.getElementById("msg");
+        if (msg != null) msg.parentNode.removeChild(msg);
+    }, 4000);
+}
 
 

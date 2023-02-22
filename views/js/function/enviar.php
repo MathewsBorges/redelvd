@@ -1,5 +1,5 @@
 <?php
-require_once '../../connection/BDconexao.php';
+require_once '../../../connection/BDconexao.php';
 
 
 if (!empty($_FILES['pdf_file']['name'])) {

@@ -1,4 +1,5 @@
 <?php
+
 require_once '../connection/BDconexao.php';
 class Contracheque
 {
@@ -36,7 +37,5 @@ class Contracheque
         return $dados;
     }
 
-    public function insertCheque($campos)
-    {
-    }
+    
 }
