@@ -1,5 +1,3 @@
-
-atualizarTabela()
 $("#salvar").on("click", function (event) {
     event.preventDefault()
     console.log('entrou na função');
@@ -18,43 +16,22 @@ $("#salvar").on("click", function (event) {
         contentType: false,
         processData: false,
         async: true,
-        success: function (resposta) {
+        success: async function (resposta) {
             $("#resultado").html(resposta);
-            atualizarTabela()
             var target_offset = $("#ancora").offset();
             var target_top = target_offset.top;
             $('html, body').animate({ scrollTop: target_top }, 10);
             $("#pdf").val("")
-            removeMensagem()
+            await removeMensagem()
+
         }
 
     })
+
 
 });
 
 
-function atualizarTabela() {
-    var nid = parseInt(document.getElementById("nid").value)
-    console.log(nid);
-    var formData = new FormData();
-    formData.append("numero", nid)
-
-    $.ajax({
-        method: 'POST',
-        url: 'js/function/listarDocumentos.php',
-        data: formData,
-        cache: false,
-        processData: false,
-        contentType: false,
-        processData: false,
-        async: true,
-        success: function (resposta) {
-            console.log(resposta);
-            $("#tabelaDocumentos").html(resposta);
-        }
-
-    })
-}
 
 
 

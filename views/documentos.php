@@ -33,8 +33,11 @@
                                     <th><i class="fa-solid fa-gears me-2"></i>Opções</th>
                                 </tr>
                             </thead>
-                            <tbody id="tabelaDocumentos">
-                             
+                            <tbody>
+                                <?php
+                                    require_once 'pdfs/projects.php';
+                                    Projects::listarDocumentos(266);
+                                ?>
                             </tbody>
                         </table>
                     </div>

@@ -96,14 +96,16 @@ function removeMensagem() {
         var msg = document.getElementById("msg-success");
 
         if (msg != null) msg.parentNode.removeChild(msg);
-    }, 5000);
+    }, 10000);
 }
+
 document.onreadystatechange = () => {
     if (document.readyState === 'complete') {
         removeMensagem();
     }
 }
 
+//Contracheque
 $("#salvarCheque").on("click", function (event) {
     event.preventDefault()
     let arquivo = document.getElementById('pdf').files[0]
@@ -138,23 +140,64 @@ $("#salvarCheque").on("click", function (event) {
         contentType: false,
         processData: false,
         async: true,
-        success: function (resposta) {
+        success: async function (resposta) {
             $("#resultado").html(resposta);
+            atualizarTabelaCheques()
             var target_offset = $("#ancora").offset();
             var target_top = target_offset.top;
             $('html, body').animate({ scrollTop: target_top }, 10);
-            removeMensagem()
+            await removeMensagem()
+            location.reload(true)
+
+
         }
 
     })
 })
+//Avisos
+$("#submit-aviso").on("click", function (event) {
+    event.preventDefault()
+    let nid = parseInt(document.getElementById('nid').value);
+    var formData = new FormData();
+    let aviso = document.getElementsByName('mensagem')[0].value
+    let prioridade = document.getElementsByName('prioridade')[0].value
+    let remetente = parseInt(document.getElementById('nid2').value)
+
+
+    formData.append('mensagem', aviso)
+    formData.append('prioridade', prioridade)
+    formData.append('remetente', remetente)
+    formData.append('numero', nid)
+    formData.append('method', 'insertAviso')
+
+    $.ajax({
+        method: "POST",
+        url: "../controllers/AvisoController.php",
+        data: formData,
+        cache: false,
+        processData: false,
+        contentType: false,
+        processData: false,
+        async: true,
+        success: async function (resposta) {
+            $("#resultadoAvisos").html(resposta);
+            var target_offset = $("#ancoraAviso").offset();
+            var target_top = target_offset.top;
+            $('html, body').animate({ scrollTop: target_top }, 10);
+            await removeMensagem()
+            location.reload(true)
+
+        }
+    })
+})
+//Documentos
 
 
 function removeMensagem() {
     setTimeout(function () {
         var msg = document.getElementById("msg");
         if (msg != null) msg.parentNode.removeChild(msg);
-    }, 4000);
+    }, 10000);
 }
 
 

@@ -267,3 +267,9 @@ class ChequeController
         return $dados;
     }
 }
+
+
+$contracheque = new ChequeController();
+
+
+

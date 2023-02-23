@@ -77,25 +77,26 @@ class AvisoController
             </button>
             </form>
             </td>
+            <div class="modal fade" id="exampleModal' . $aviso['codigo'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content modal-dialog-scrollable">
+                    <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Mensagem do Funcionário</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                 <div class="modal-body">
+                     ' . $aviso['mensagem'] . '
+                 </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+    
+                </div>
+                </div>
+          </div>
+        </div> 
             </tr>
 
-            <div class="modal fade" id="exampleModal' . $aviso['codigo'] . '" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                    <div class="modal-content modal-dialog-scrollable">
-                        <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">Mensagem do Funcionário</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                     <div class="modal-body">
-                         ' . $aviso['mensagem'] . '
-                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-        
-                    </div>
-                    </div>
-              </div>
-            </div> ';
+         ';
         }
     }
 
@@ -111,11 +112,11 @@ class AvisoController
     {
         $this->aviso->insertAviso($campos);
     }
-    
-    function removerAviso($cod, $caminho){
+
+    function removerAviso($cod, $caminho)
+    {
         $this->aviso->removerAviso($cod,  $caminho);
     }
-
 }
 
 ////--------------------------- FORM FUNCTIONS 
@@ -123,8 +124,9 @@ $controller = new AvisoController();
 
 if (isset($_POST['method']) && $_POST['method'] == "insertAviso") {
 
-    $campos = ["mensagem" => $_POST['mensagem'], "prioridade" => $_POST['prioridade'], "rementente" => 2, "id" => $_POST['id_funcionario']];
+    $campos = ["mensagem" => $_POST['mensagem'], "prioridade" => $_POST['prioridade'], "remetente" => $_POST['remetente'], "id" => $_POST['numero']];
     $controller->insertAviso($campos);
+
 }
 
 if (isset($_POST['method']) && $_POST['method'] == "removerAviso") {
@@ -132,4 +134,9 @@ if (isset($_POST['method']) && $_POST['method'] == "removerAviso") {
     $id = $_POST['id_funcionario'];
     $caminho = $_POST['caminho'];
     $controller->removerAviso($cod, $caminho);
+}
+
+if (isset($_POST['method']) && $_POST['method'] == "listarAvisos") {
+    $id = $_POST['numero'];
+    $controller->listarAvisosTabela($id);
 }

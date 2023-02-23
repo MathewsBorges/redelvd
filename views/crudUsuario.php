@@ -91,16 +91,7 @@
             ';
             }
 
-            if (isset($_GET['status'])) {
-                if ($_GET['status'] == "enviado") {
-                    echo '
-                    <div class="alert alert-success" role="alert" id="msg-success">
-                    <i class="fa-solid fa-check"></i>
-                       Aviso Enviado Com Sucesso
-                  </div>
-                    ';
-                }
-            }
+      
 
             if (isset($_GET['status'])) {
                 if ($_GET['status'] == "fileUploaded") {
@@ -175,6 +166,8 @@
 
     <div class="container principal overflow-hidden">
         <input type="hidden" id="nid" value="<?php echo $codigo ?>">
+        <input type="hidden" id="nid2" value="266">
+
 
 
 
@@ -354,12 +347,10 @@
 
                             <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
                                 <div class="col d-flex arquivos-funcionarios">
-
                                     <div class="col-md-4">
                                         <div class="input-group">
                                             <input type="file" class="form-control" name="pdf_file" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                                         </div>
-
                                     </div>
 
                                     <div class="col-md-6">
@@ -390,9 +381,13 @@
 
         <div class="row mb-5 card shadow py-4">
 
-            <div class="col-md-12 ms-1 mb-5 px-4 py-4">
+            <div class="col-md-12 ms-1 mb-5 px-4 py-4" id="ancoraAviso">
                 <div class="titulo-card">
                     <h2>Avisos do Funcionário</h2>
+
+                </div>
+                <div class="col-md-12" id="resultadoAvisos">
+
                 </div>
 
                 <div class="row shadow rounded-3">
@@ -400,7 +395,7 @@
                         <h3>Adicionar Aviso</h3>
                     </div>
                     <div class="col-md-6">
-                        <form id="form-aviso" action="../controllers/AvisoController.php" method="post">
+                        <form id="form-aviso" action="" method="post">
                             <input type="hidden" name="method" value="insertAviso">
                             <div class="form-floating mb-4">
                                 <textarea class="form-control" name="mensagem" placeholder="Escreva o aviso aqui" id="aviso" style="height: 120px"></textarea>
@@ -408,9 +403,9 @@
                                 <div class="invalid-feedback">Preencha o Aviso</div>
                                 <div class="valid-feedback">Aviso Preenchido</div>
                             </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row d-flex align-items-center justify-content-start">
+                         </div>
+                             <div class="col-md-6">
+                            <div class="row d-flex align-items-center justify-content-start">
                             <div class="col-md-12">
                                 <div class="form-floating">
                                     <select class="form-select" name="prioridade" id="floatingSelect" aria-label="Floating label select example">
@@ -427,7 +422,7 @@
                             </div>
 
                             <input type="hidden" name="id_funcionario" value="<?php echo $dados['codigo'] ?>">
-                            </form>
+                        </form>
                         </div>
                     </div>
 
@@ -451,8 +446,12 @@
                                             <th><i class="fa-solid fa-gear me-2"></i>Opções</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <?php $controllerAviso->listarAvisosTabela($codigo); ?>
+                                    <tbody id="tabelaAvisos">
+                                        <?php
+                                            require_once '../controllers/AvisoController.php';
+                                            $aviso = new AvisoController();
+                                            $aviso->listarAvisosTabela(266)
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -593,12 +592,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
-                                    <?php
-                                    require_once 'pdfs/projects.php';
-                                    Projects::listarContracheque($codigo)
+                                    <?php 
+                                     require_once 'pdfs/projects.php';
+                                     Projects::listarContracheque(266);
                                     ?>
-
                                 </tbody>
                             </table>
                         </div>
