@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/" data-template="vertical-menu-template-free">
+<html lang="pt-br" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/">
 
 <head>
 
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
     <link rel="stylesheet" href="../assets/vendor/css/painel.css">
-    <script src="js/function.js"></script>
+    <script src="../assets/js/function.js"></script>
 
 
     <script src="../assets/vendor/js/helpers.js"></script>
