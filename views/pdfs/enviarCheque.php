@@ -1,5 +1,5 @@
 <?php
-require_once '../../../connection/BDconexao.php';
+require_once '../../connection/BDconexao.php';
 
 $id_funcionario = $_POST['codigo'];
 
