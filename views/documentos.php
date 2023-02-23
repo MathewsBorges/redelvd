@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="../assets/js/function.js"></script>
 
 <div class="row mt-2">
     <div class="col-md-12 mt-2">
@@ -43,13 +43,13 @@
                     </div>
                 </div>
                 <hr />
-                <div class="input-arquivos">
+                <div class="input-arquivos col-md-12 col-lg-12">
                     <h5><i class="fa-solid fa-upload me-2"></i>Upload de Arquivos</h5>
-                    <div class="col-md-12" id="resultado"></div>
+                    <div class="col-md-12 col-lg-12" id="resultado"></div>
 
                     <form class="form-arquivos" id="frm" action="" enctype="multipart/form-data" method="post">
-                        <div class="col-md-12 d-flex">
-                            <div class="col-md-6">
+                        <div class="col-md-12 col-lg-12 d-flex">
+                            <div class="col-md-6 col-lg-10">
                                 <div class="input-group">
                                     <input type="file" name="pdf_file" class="form-control" id="pdf" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                                 </div>

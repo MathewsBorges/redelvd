@@ -31,26 +31,26 @@ if (!empty($_FILES['pdf']['name'])) {
                 $query->bindValue(":mes_competencia", $_POST['mes']);
                 $query->bindValue(":data_geracao", $data);
                 $query->execute();
-                //header("location: ../crudUsuario.php?id=$id_funcionario&status=fileUploaded");
+          
                 echo '<div class="alert alert-success" role="alert" id="msg">
                         <i class="fa-regular fa-circle-check me-2"></i> Contracheque adicionado com Sucesso!
                     </div>';
             } catch (PDOException $e) {
                 echo $e;
-                //   header("location: ../crudUsuario.php?id=$id_funcionario&status=inputempty");
+
                 echo '<div class="alert alert-warning" id="msg" role="alert">
                       <i class="fa-solid fa-triangle-exclamation me-2"></i> Ops! Todos os valores devem ser informados para adicionar um Contracheque, Tente Novamente
                     </div>';
             }
         } else {
-            // header("location: ../crudUsuario.php?id=$id_funcionario&status=fileError");
+            
             echo '<div class="alert alert-danger" role="alert">
                 <i class="fa-regular fa-circle-check me-2"></i> Erro no Arquivo, certifique que é um arquivo pdf e não está corrompido!
              </div>';
         }
     }
 } else {
-    // header("location: ../crudUsuario.php?id=$id_funcionario&status=filenotselected");
+ 
     echo '<div class="alert alert-warning" id="msg" role="alert">
              <i class="fa-solid fa-triangle-exclamation me-2"></i> Ops! O arquivo do Contracheque não foi anexado
            </div>';

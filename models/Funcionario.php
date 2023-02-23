@@ -124,8 +124,8 @@ class Funcionario
         $query = $this->bd->prepare("DELETE FROM funcionario_documentos where codigo = $id");
         $query->execute();
         echo '
-        <div class="alert alert-success" role="alert" id="msg">
-        <i class="fa-regular fa-circle-check me-2"></i> Arquivo apagado com Sucesso
-    </div>';
+             <div class="alert alert-success" role="alert" id="msg">
+                 <i class="fa-regular fa-circle-check me-2"></i> Arquivo apagado com Sucesso
+            </div>';
     }
 }
