@@ -103,6 +103,9 @@ class FuncionarioController
         }
     }
 
+    function apagarArquivo($id){
+        $this->funcionario->excluirArquivo($id);
+    }
 
     function sair()
     {
@@ -130,6 +133,12 @@ if (isset($_POST['method']) && $_POST['method'] == "login") {
     var_dump($user);
     var_dump($senha);
     $controller->login($user, $senha);
+}
+
+if (isset($_POST['method']) && $_POST['method'] == "apagarArquivo") {
+    $id = $_POST['numero'];
+
+    $controller->apagarArquivo($id);
 }
 
 if (isset($_POST['numero'])) {

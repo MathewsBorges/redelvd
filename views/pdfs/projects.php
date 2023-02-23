@@ -36,10 +36,27 @@ class Projects
                 <td>' . $row['tipo'] . '</td>
                 <td>' . $date->format('d/m/Y') . '</td>
                 <td>
-                <form action="pdfs/excluirDocumento.php" method="post">
-                    <input type="hidden" name="id" value="' . $row['id'] . '">
-                    <button type="submit" class="btn"><i class="fa-solid fa-trash text-danger"></i></button>
-                </form>
+                <button type="submit" data-toggle="modal" data-target="#exampleModalCenter' . $row['id'] . '" num="' . $row['id'] . ' "class="btn"><i class="fa-solid fa-file-circle-minus text-danger"></i></button></td>
+
+                <div class="modal fade" id="exampleModalCenter' .  $row['id'] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Apagar Documento</h5>
+                <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Deseja apagar o documento? Lembre-se, não será possível recuperar após isso e o funcionário não terá mais acesso a ele</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" data-dismiss="modal" onclick="excluirArquivo(' . $row['id'] . ')" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Apagar</button>
+            </div>
+        </div>
+    </div>
+</div>
                 </tr>
                 ';
                 }
@@ -168,7 +185,7 @@ class Projects
 
 
                     echo '
-                    <tr>
+                <tr>
         
                     <td><a href="pdfs/displayCheque.php?doc=' . $row['id'] . ' " target="_blank">' . $row['nome'] . '</a></td>
                     <td>' . $date->format('d/m/Y') . '</td>
@@ -179,25 +196,25 @@ class Projects
                     <button type="submit" data-toggle="modal" data-target="#exampleModalCenter' . $row['id'] . '" num="' . $row['id'] . ' "class="btn"><i class="fa-solid fa-trash text-danger"></i></button></td>
 
                     <div class="modal fade" id="exampleModalCenter' .  $row['id'] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Apagar Contracheque</h5>
-                    <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Deseja apagar o contracheque? Lembre-se, não será possível recuperalo após isso e o funcionário não terá mais acesso</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" data-dismiss="modal" onclick="excluirCheque(' . $row['id'] . ')" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Apagar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-                    </tr>
+                     <div class="modal-dialog modal-dialog-centered" role="document">
+                       <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Apagar Contracheque</h5>
+                                <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                             <p>Deseja apagar o contracheque? Lembre-se, não será possível recuperalo após isso e o funcionário não terá mais acesso</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="button" data-dismiss="modal" onclick="excluirCheque(' . $row['id'] . ')" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Apagar</button>
+                            </div>
+                     </div>
+                    </div>
+                    </div>
+                 </tr>
 
                     ';
                 }

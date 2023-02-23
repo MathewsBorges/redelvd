@@ -12,7 +12,7 @@ $(".moneyDeb").maskMoney({
   decimal: ",",
   affixesStay: true,
 });
-
+//Credito
 $(document).on("keyup", ".money", function () {
   var total = 0;
   $(".money").each(function () {
@@ -52,7 +52,6 @@ $(document).on("keyup", ".money", function () {
     console.log(error);
   }
 });
-
 ///DEBITO=================================================
 $(document).on("keyup", ".moneyDeb", function () {
   let total = 0;
@@ -170,7 +169,7 @@ $("#submit-aviso").on("click", function (event) {
 function excluirCheque(id) {
   var formData = new FormData();
   formData.append("numero", id);
-  formData.append("method", "excluirAviso");
+  formData.append("method", "excluirCheque");
   $.ajax({
     method: "POST",
     url: "../../controllers/ChequeController.php",
@@ -183,6 +182,65 @@ function excluirCheque(id) {
     success: async function (resposta) {
       $("#resultado").html(resposta);
       var target_offset = $("#ancora").offset();
+      var target_top = target_offset.top;
+      $("html, body").animate({ scrollTop: target_top }, 10);
+      await removeMensagem();
+      window.location.reload(true);
+      
+    },
+  });
+}
+
+
+$("#anexar").on("click", function (event) {
+  event.preventDefault();
+  let arquivo = document.getElementById("inputGroupFile04").files[0];
+  let nid = parseInt(document.getElementById("nid").value);
+  let tipo = document.getElementById("inputGroupSelect01").value
+
+  var formData = new FormData();
+  formData.append("pdf_file", arquivo);
+  formData.append("tipo", tipo);
+  formData.append("codigo", nid);
+
+  $.ajax({
+    method: "POST",
+    url: "pdfs/enviar.php",
+    data: formData,
+    cache: false,
+    processData: false,
+    contentType: false,
+    processData: false,
+    async: true,
+    success: async function (resposta) {
+      $("#resultadoArquivos").html(resposta);
+      var target_offset = $("#ancoraArquivos").offset();
+      var target_top = target_offset.top;
+      $("html, body").animate({ scrollTop: target_top }, 10);
+      await removeMensagem();
+      window.location.reload(true);
+
+    },
+  });
+});
+
+
+function excluirArquivo(id){
+  var formData = new FormData();
+  formData.append("numero", id);
+  formData.append("method", "apagarArquivo");
+  $.ajax({
+    method: "POST",
+    url: "../../controllers/FuncionarioController.php",
+    data: formData,
+    cache: false,
+    processData: false,
+    contentType: false,
+    processData: false,
+    async: true,
+    success: async function (resposta) {
+      $("#resultadoArquivos").html(resposta);
+      var target_offset = $("#ancoraArquivos").offset();
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
       await removeMensagem();

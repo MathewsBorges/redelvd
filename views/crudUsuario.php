@@ -314,10 +314,11 @@
             </div>
         </div>
 
-        <div class="row mb-5 card shadow py-4">
+        <div class="row mb-5 card shadow py-4" id="ancoraArquivos">
             <div class="titulo-card">
                 <h2>Arquivos do Funcionário</h2>
             </div>
+            <div class="col-md-12" id="resultadoArquivos"></div>
             <div class="arquivos col-md-12">
                 <div class="row">
                     <div class="col-md-12 ">
@@ -345,7 +346,7 @@
                     <div class="row">
                         <div class="input-arquivos">
 
-                            <form class="form-arquivos" action="pdfs/enviar.php" method="post" enctype="multipart/form-data">
+                            <form class="form-arquivos" method="post" enctype="multipart/form-data">
                                 <div class="col d-flex arquivos-funcionarios">
                                     <div class="col-md-4">
                                         <div class="input-group">
@@ -366,7 +367,7 @@
                                     </div>
 
                                     <div class="botao-anexar">
-                                        <button class="btn btn-success" type="submit"><i class="fa-solid fa-file-circle-plus me-2"></i>Anexar</button>
+                                        <button class="btn btn-success" id="anexar" type="submit"><i class="fa-solid fa-file-circle-plus me-2"></i>Anexar</button>
                                         <input type="hidden" name="codigo" value="<?php echo $dados['codigo'] ?>">
                                         <input type="hidden" name="crud" value="crud">
                                     </div>
