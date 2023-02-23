@@ -9,7 +9,7 @@ $("#salvar").on("click", function (event) {
 
     $.ajax({
         method: "POST",
-        url: "js/function/enviar.php",
+        url: "pdfs/enviar.php",
         data: formData,
         cache: false,
         processData: false,

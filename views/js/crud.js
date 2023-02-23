@@ -133,7 +133,7 @@ $("#salvarCheque").on("click", function (event) {
 
     $.ajax({
         method: "POST",
-        url: "js/function/enviarCheque.php",
+        url: "pdfsd/enviarCheque.php",
         data: formData,
         cache: false,
         processData: false,
