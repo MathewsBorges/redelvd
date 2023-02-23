@@ -22,9 +22,12 @@
                 <div class="titulo-card" id="ancora">
                     <h4><i class="fa-solid fa-user me-2"></i>Meus Documentos Anexados</h4>
                 </div>
+                <div class="col-md-12 col-lg-12" id="resultadoArquivos"></div>
+
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-hover" id="dataMeusDocumentos" width="100%" cellspacing="0">
+                            
                             <thead>
                                 <tr>
                                     <th><i class="fa-regular fa-file me-2"></i>Documento</th>
@@ -115,3 +118,4 @@
 <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="../assets/js/datatables-demo.js"></script>
 <script src="../assets/js/sb-admin-2.min.js"></script>
+<script src="../assets/js/crud.js"></script>

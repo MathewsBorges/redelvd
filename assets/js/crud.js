@@ -112,7 +112,7 @@ $("#salvarCheque").on("click", function (event) {
 
   $.ajax({
     method: "POST",
-    url: "pdfs/enviarCheque.php",
+    url: "../../views/pdfs/enviarCheque.php",
     data: formData,
     cache: false,
     processData: false,
@@ -147,7 +147,7 @@ $("#submit-aviso").on("click", function (event) {
 
   $.ajax({
     method: "POST",
-    url: "../controllers/AvisoController.php",
+    url: "../../controllers/AvisoController.php",
     data: formData,
     cache: false,
     processData: false,
@@ -226,6 +226,7 @@ $("#anexar").on("click", function (event) {
 
 
 function excluirArquivo(id){
+ console.log('ok');
   var formData = new FormData();
   formData.append("numero", id);
   formData.append("method", "apagarArquivo");

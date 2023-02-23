@@ -9,7 +9,7 @@ $("#salvar").on("click", function (event) {
 
     $.ajax({
         method: "POST",
-        url: "pdfs/enviar.php",
+        url: "../../views/pdfs/enviar.php",
         data: formData,
         cache: false,
         processData: false,
@@ -31,6 +31,32 @@ $("#salvar").on("click", function (event) {
 
 });
 
+
+function excluirArquivo(id){
+    console.log('ok');
+     var formData = new FormData();
+     formData.append("numero", id);
+     formData.append("method", "apagarArquivo");
+     $.ajax({
+       method: "POST",
+       url: "../../controllers/FuncionarioController.php",
+       data: formData,
+       cache: false,
+       processData: false,
+       contentType: false,
+       processData: false,
+       async: true,
+       success: async function (resposta) {
+         $("#resultadoArquivos").html(resposta);
+         var target_offset = $("#ancora").offset();
+         var target_top = target_offset.top;
+         $("html, body").animate({ scrollTop: target_top }, 10);
+         await removeMensagem();
+         
+         
+       },
+     });
+   }
 
 
 

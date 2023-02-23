@@ -137,7 +137,6 @@ if (isset($_POST['method']) && $_POST['method'] == "login") {
 
 if (isset($_POST['method']) && $_POST['method'] == "apagarArquivo") {
     $id = $_POST['numero'];
-
     $controller->apagarArquivo($id);
 }
 
