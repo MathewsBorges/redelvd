@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/vendor/css/core.css">
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css">
-  
+
 
 
     <title>Farmácia</title>
@@ -36,7 +36,7 @@
                             <p class="card-text"><i class="fa-solid fa-location-dot me-2"></i>Av. Capitão Adolfo Castro, 385 - Centro Camaquã/RS</p>
                             <br>
                             <p class="card-text"><small class="text-muted">Fone: (51) 3671-9311 <br>
-                            Celular: (51) 99528-3283</small></p>
+                                    Celular: (51) 99528-3283</small></p>
                             <hr>
                             <form action="farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">

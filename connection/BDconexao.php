@@ -19,6 +19,4 @@ class BDconexao
 
         return $bd;
     }
-
-
 }

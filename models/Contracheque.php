@@ -37,5 +37,9 @@ class Contracheque
         return $dados;
     }
 
-    
+    public function excluirCheque($id)
+    {
+        $query = $this->bd->prepare("DELETE FROM contracheque where codigo = $id");
+        $query->execute();
+    }
 }

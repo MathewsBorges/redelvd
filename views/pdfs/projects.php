@@ -176,9 +176,29 @@ class Projects
                     <td> 
                  
                     <input type="hidden" name="codcheque" value="' . $row['id'] . '">
-                    <button type="submit" data-toggle="modal" data-target="#exampleModalCenter" num="' . $row['id'] . ' "class="btn"><i class="fa-solid fa-trash text-danger"></i></button></td>
+                    <button type="submit" data-toggle="modal" data-target="#exampleModalCenter' . $row['id'] . '" num="' . $row['id'] . ' "class="btn"><i class="fa-solid fa-trash text-danger"></i></button></td>
 
+                    <div class="modal fade" id="exampleModalCenter' .  $row['id'] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Apagar Contracheque</h5>
+                    <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Deseja apagar o contracheque? Lembre-se, não será possível recuperalo após isso e o funcionário não terá mais acesso</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" data-dismiss="modal" onclick="excluirCheque(' . $row['id'] . ')" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Apagar</button>
+                </div>
+            </div>
+        </div>
+    </div>
                     </tr>
+
                     ';
                 }
             }
@@ -187,8 +207,6 @@ class Projects
                 ': ' . $e->getLine();
         }
     }
-
-
 
     static function listarContrachequeFuncionario($id)
     {
@@ -236,19 +254,26 @@ class Projects
     {
         $cheque = new Contracheque();
         $dados = $cheque->getLastContraCheque($id);
-        echo '
-        <div class="col-md-12 ms-4 cheque">
-        <div class="arquivo">
-            <p>Arquivo: </p>
-            <p><td><a href="pdfs/displayCheque.php?doc=' . $dados['codigo'] . ' " target="_blank">' . $dados['nome_documento'] . '</a></td>
-            </p>
-        </div>
-        <div class="mes">
-            <p>Mês de Competência: </p>
-            <p>' . $dados['mes_competencia'] . '</p>
-        </div>
-        </div>
-        ';
+        if (!empty($dados)) {
+            echo '
+            <div class="col-md-12 cheque">
+            <div class="arquivo">
+                <p>Arquivo: </p>
+                <p><td><a href="pdfs/displayCheque.php?doc=' . $dados['codigo'] . ' " target="_blank">' . $dados['nome_documento'] . '</a></td>
+                </p>
+            </div>
+            <div class="mes">
+                <p>Mês de Competência: </p>
+                <p>' . $dados['mes_competencia'] . '</p>
+            </div>
+            </div>
+            ';
+        }else{
+            echo'<div class="col-md-12 ms-4">
+            <p>Não há contracheques para baixar</p>
+            <div>';
+        }
+
+        
     }
 }
-

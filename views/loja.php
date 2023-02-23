@@ -104,7 +104,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center align-itens-center mb-4">
-                              <button class="btn btn-success"type="submit"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
+                                <button class="btn btn-success" type="submit"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
                             </div>
                         </div>
                     </form>

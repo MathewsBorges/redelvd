@@ -30,7 +30,7 @@ class Aviso
 
     public function insertAviso($campos)
     {
-        if(!empty($_POST['mensagem'])){
+        if (!empty($_POST['mensagem'])) {
             $data = date('d/m/Y');
             try {
                 $query = BDconexao::getConexao()->prepare("INSERT INTO avisos_funcionario (mensagem, prioridade, data_envio, remetente, id_user) values (:mensagem, :prioridade, :data_envio, :remetente, :id)");
@@ -41,35 +41,36 @@ class Aviso
                 $query->bindValue(":id", $campos['id']);
                 $query->execute();
                 $id = $campos['id'];
-               // header("location: ../views/crudUsuario.php?id=$id&status=enviado");
-               echo '<div class="alert alert-success" role="alert" id="msg">
+                // header("location: ../views/crudUsuario.php?id=$id&status=enviado");
+                echo '<div class="alert alert-success" role="alert" id="msg">
                <i class="fa-regular fa-circle-check me-2"></i> Aviso enviado com Sucesso!
            </div>';
-               
             } catch (\Throwable $th) {
                 echo '<div class="alert alert-danger" role="alert" id="msg">
-               <i class="fa-regular fa-circle-exclamation me-2"></i>Não foi possivel enviar o aviso, erro: '.$th.'
+               <i class="fa-regular fa-circle-exclamation me-2"></i>Não foi possivel enviar o aviso, erro: ' . $th . '
            </div>';
             }
-        }else{
+        } else {
             echo '<div class="alert alert-warning" id="msg" role="alert">
             <i class="fa-solid fa-triangle-exclamation me-2"></i> Ops! Preencha o campo aviso
           </div>';
         }
-      
     }
 
-    public function removerAviso($cod, $caminho)
+    public function removerAviso($cod)
     {
         try {
             $query = BDconexao::getConexao()->prepare("DELETE FROM avisos_funcionario where codigo = :id");
             $query->bindValue(":id", $cod);
             $query->execute();
-            header("location: $caminho&status=deleted");
+            echo '<div class="alert alert-success" role="alert" id="msg">
+            <i class="fa-regular fa-circle-check me-2"></i> Aviso apagado com Sucesso
+        </div>
+            ';
         } catch (\Throwable $th) {
-            header("location: $caminho&status=deletedFailed");
-
-
+            echo '<div class="alert alert-danger" role="alert" id="msg">
+            <i class="fa-regular fa-circle-exclamation me-2"></i>Não foi possivel apagar o aviso, erro: ' . $th . '
+        </div>';
         }
     }
 }

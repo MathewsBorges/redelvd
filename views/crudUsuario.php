@@ -72,7 +72,7 @@
         if (isset($_GET['status'])) {
             if ($_GET['status'] == 'deleted') {
                 echo '
-            <div class="alert alert-success" role="alert" id="msg-success">
+            <div class="alert alert-success" role="alert" id="msg">
             <i class="fa-solid fa-check" style="color: green"></i>
 
                      Aviso do Funcionário apagada com Sucesso
@@ -81,7 +81,7 @@
 
             if ($_GET['status'] == 'deletedFailed') {
                 echo '
-            <div class="alert alert-danger" role="alert" id="msg-success">
+            <div class="alert alert-danger" role="alert" id="msg">
             <i class="fa-solid fa-circle-exclamation" style="color: red"></i>
 
              Ops! Não foi possível apagar o aviso do Funcionário
@@ -96,7 +96,7 @@
             if (isset($_GET['status'])) {
                 if ($_GET['status'] == "fileUploaded") {
                     echo '
-                    <div class="alert alert-success" role="alert" id="msg-success">
+                    <div class="alert alert-success" role="alert" id="msg">
                     <i class="fa-solid fa-check"></i>
                        Documento Anexado com Sucesso
                   </div>
@@ -396,7 +396,7 @@
                     </div>
                     <div class="col-md-6">
                         <form id="form-aviso" action="" method="post">
-                            <input type="hidden" name="method" value="insertAviso">
+                          
                             <div class="form-floating mb-4">
                                 <textarea class="form-control" name="mensagem" placeholder="Escreva o aviso aqui" id="aviso" style="height: 120px"></textarea>
                                 <label for="floatingTextarea2"><i class="fa-solid fa-envelope me-2"></i>Aviso</label>
@@ -607,25 +607,7 @@
 
     </div>
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Apagar Contracheque</h5>
-                    <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Deseja apagar o contracheque? Lembre-se, não será possível recuperalo após isso e o funcionário não terá mais acesso</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Apagar</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <footer class="footer">
         <span class="text-white">
@@ -642,6 +624,17 @@
         $('#cep').mask('00000-000');
         $('#cpf').mask('000.000.000-00');
     </script>
+
+ <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            var scrollpos = localStorage.getItem('scrollpos');
+            if (scrollpos) window.scrollTo(0, scrollpos);
+        });
+
+        window.onbeforeunload = function(e) {
+            localStorage.setItem('scrollpos', window.scrollY);
+        };
+    </script> 
 
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
