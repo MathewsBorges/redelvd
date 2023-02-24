@@ -88,7 +88,7 @@
             ';
             }
 
-      
+
 
             if (isset($_GET['status'])) {
                 if ($_GET['status'] == "fileUploaded") {
@@ -394,16 +394,16 @@
                     </div>
                     <div class="col-md-6">
                         <form id="form-aviso" action="" method="post">
-                          
+
                             <div class="form-floating mb-4">
                                 <textarea class="form-control" name="mensagem" placeholder="Escreva o aviso aqui" id="aviso" style="height: 120px"></textarea>
                                 <label for="floatingTextarea2"><i class="fa-solid fa-envelope me-2"></i>Aviso</label>
                                 <div class="invalid-feedback">Preencha o Aviso</div>
                                 <div class="valid-feedback">Aviso Preenchido</div>
                             </div>
-                         </div>
-                             <div class="col-md-6">
-                            <div class="row d-flex align-items-center justify-content-start">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row d-flex align-items-center justify-content-start">
                             <div class="col-md-12">
                                 <div class="form-floating">
                                     <select class="form-select" name="prioridade" id="floatingSelect" aria-label="Floating label select example">
@@ -420,7 +420,7 @@
                             </div>
 
                             <input type="hidden" name="id_funcionario" value="<?php echo $dados['codigo'] ?>">
-                        </form>
+                            </form>
                         </div>
                     </div>
 
@@ -446,9 +446,9 @@
                                     </thead>
                                     <tbody id="tabelaAvisos">
                                         <?php
-                                            require_once '../controllers/AvisoController.php';
-                                            $aviso = new AvisoController();
-                                            $aviso->listarAvisosTabela($dados['codigo'])
+                                        require_once '../controllers/AvisoController.php';
+                                        $aviso = new AvisoController();
+                                        $aviso->listarAvisosTabela($dados['codigo'])
                                         ?>
                                     </tbody>
                                 </table>
@@ -472,13 +472,13 @@
 
                         <div class="col-md mb-1">
                             <div class="form-floating">
-                                <input type="text" class="form-control money" id="salario" name="salario" placeholder="Salário" value="">
+                                <input type="text" class="form-control money" id="salario" name="salario" placeholder="Salário" value="R$ 0,00">
                                 <label for="floatingInputGrid"><i class="fa-solid fa-dollar-sign me-2"></i>Salário Mês</label>
                             </div>
                         </div>
                         <div class="col-md mb-1">
                             <div class="form-floating">
-                                <input type="text" class="form-control money" id="ferias" name="ferias" placeholder="Férias" value="">
+                                <input type="text" class="form-control money" id="ferias" name="ferias" placeholder="Férias" value="R$ 0,00">
                                 <label for="floatingInputGrid"><i class="fa-solid fa-gift me-2"></i>Férias</label>
                             </div>
                         </div>
@@ -486,13 +486,13 @@
                     <div class="row g-2">
                         <div class="col-md mb-1">
                             <div class="form-floating">
-                                <input type="text" class="form-control money" id="outros" name="outros" placeholder="Outros" value="">
+                                <input type="text" class="form-control money" id="outros" name="outros" placeholder="Outros" value="R$ 0,00">
                                 <label for="floatingInputGrid"><i class="fa-solid fa-receipt me-2"></i>Outros</label>
                             </div>
                         </div>
                         <div class="col-md mb-1">
                             <div class="form-floating">
-                                <input type="text" class="form-control moneyTotal" id="total_creditos" name="total_creditos" placeholder="Total" value="">
+                                <input readonly type="text" class="form-control moneyTotal" id="total_creditos" name="total_creditos" placeholder="Total" value="">
                                 <label for="floatingInputGrid"><i class="fa-solid fa-sack-dollar me-2"></i>Total de Créditos</label>
                             </div>
                         </div>
@@ -502,13 +502,13 @@
                         <h4>Débitos</h4>
                         <div class="col-md mb-1">
                             <div class="form-floating">
-                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="convenio" placeholder="Convênio" value="">
+                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="convenio" placeholder="Convênio" value="R$ 0,00">
                                 <label for="floatingInputGrid"><i class="fa-regular fa-credit-card me-2"></i>Convênio Farmácia</label>
                             </div>
                         </div>
                         <div class="col-md mb-1">
                             <div class="form-floating">
-                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="vales" placeholder="Vales" value="">
+                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="vales" placeholder="Vales" value="R$ 0,00">
                                 <label for="floatingInputGrid"><i class="fa-solid fa-file-invoice-dollar me-2"></i>Vales</label>
                             </div>
                         </div>
@@ -516,13 +516,13 @@
                     <div class="row g-2">
                         <div class="col-md mb-1">
                             <div class="form-floating">
-                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="emprestimos" placeholder="Empréstimos" value="">
+                                <input type="text" class="form-control moneyDeb" id="moneydeb" name="emprestimos" placeholder="Empréstimos" value="R$ 0,00">
                                 <label for="floatingInputGrid"><i class="fa-solid fa-hand-holding-dollar me-2"></i>Empréstimos</label>
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="total_debitos" name="total_debitos" placeholder="Total de Débitos" value="">
+                                <input readonly type="text" class="form-control" id="total_debitos" name="total_debitos" placeholder="Total de Débitos" value="">
                                 <label for="floatingInputGrid"> <i class="fa-solid fa-cash-register me-2"></i>Total de Débitos</label>
                             </div>
                         </div>
@@ -531,7 +531,7 @@
                     <div class="col-md">
                         <h4>Total</h4>
                         <div class="form-floating">
-                            <input type="text" class="form-control" id="total" name="total_receber" placeholder="Total a Receber" value="">
+                            <input readonly type="text" class="form-control" id="total" name="total_receber" placeholder="Total a Receber" value="">
                             <label for="floatingInputGrid"><i class="fa-solid fa-coins me-2"></i>Total a Receber</label>
                         </div>
                     </div>
@@ -576,7 +576,7 @@
             <div class="col-md-12 ms-2 mt-4 shadow  py-4 px-2 rounded-3">
                 <div class="row">
                     <div class="titulo-card">
-                        <h4>Últimos Contracheques</h4>
+                        <h4>Lista de Contracheques</h4>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -590,9 +590,9 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php 
-                                     require_once 'pdfs/projects.php';
-                                     Projects::listarContracheque($dados['codigo']);
+                                    <?php
+                                    require_once 'pdfs/projects.php';
+                                    Projects::listarContracheque($dados['codigo']);
                                     ?>
                                 </tbody>
                             </table>
@@ -600,12 +600,42 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-12 ms-2 mt-2 p-2 bg-light card shadow rounded-3">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h5 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Ajuda
+                            </button>
+                        </h5>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <p>Preencher contracheque</p>
+                                <ol>
+                                    <li> Preencher todos os campos</li>
+                                    <li> Selecionar o arquivo do contracheque</li>
+                                    <li> Selecionar o mês de competência</li>
+                                    <li> Clicar no botão adicionar</li>
+                                </ol>
+                                <p>Obs: Verifique a mensagem para confirmar se o contracheque foi adicionado com sucesso</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-    </div>
 
     </div>
 
-    
+
+    </div>
+
+    </div>
+
+
 
     <footer class="footer">
         <span class="text-white">
@@ -623,8 +653,8 @@
         $('#cpf').mask('000.000.000-00');
     </script>
 
- <script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
             var scrollpos = localStorage.getItem('scrollpos');
             if (scrollpos) window.scrollTo(0, scrollpos);
         });
@@ -632,7 +662,7 @@
         window.onbeforeunload = function(e) {
             localStorage.setItem('scrollpos', window.scrollY);
         };
-    </script> 
+    </script>
 
     <script src="../assets/vendor/jquery/jquery.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

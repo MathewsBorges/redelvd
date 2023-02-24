@@ -125,7 +125,9 @@ $("#salvarCheque").on("click", function (event) {
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
       await removeMensagem();
-      window.location.reload(true);
+      setTimeout(() => {
+        window.location.reload(true);
+      }, 1000);
     },
   });
 });
@@ -180,12 +182,12 @@ function excluirCheque(id) {
     async: true,
     success: async function (resposta) {
       $("#resultado").html(resposta);
-      $("[col=" + id + "]").remove();
+   
       var target_offset = $("#ancora").offset();
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
       await removeMensagem();
-      //window.location.reload(true);
+      window.location.reload(true);
     },
   });
 }
@@ -237,7 +239,8 @@ function excluirArquivo(id) {
     success: async function (resposta) {
       $("#resultadoArquivos").html(resposta);
       console.log(window.location.pathname);
-      if (window.location.pathname == "/views/Funcionario.php") location.reload(true);
+      if (window.location.pathname == "/views/Funcionario.php")
+        location.reload(true);
 
       setTimeout(() => {
         $("#conteudo-pagina").load("../../views/Documentos.php");
