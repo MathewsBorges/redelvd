@@ -1,7 +1,7 @@
 <div class="row">
     <div class="mt-4 col-md-12">
         <div class="h-40 p-5 bg-light border rounded-3 mb-4">
-            <h2>Rede LVD - Loja 02</h2>
+            <h2>Rede LVD - Loja 99</h2>
         </div>
     </div>
     <div class="col-md-12 mb-5 principal">
@@ -24,7 +24,7 @@
                                 <?php
                                 require_once '../controllers/FuncionarioController.php';
                                 $controller =  new FuncionarioController();
-                                $controller->listarFuncionarioLoja(2);
+                                $controller->listarFuncionarioLoja(99);
                                 ?>
                             </tbody>
                         </table>
@@ -39,20 +39,21 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-hover" id="dataTable3" width="100%" cellspacing="0">
+                        <table class="table table-hover" id="dataTable5" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th><i class="fa-solid fa-user me-2"></i>Funcionário</th>
-                                    <th><i class="fa-solid fa-file me-2"></i>Arquivo</th>
-                                    <th><i class="fa-regular fa-calendar-days me-2"></i>Data Emissão</th>
+                                    <th scope="col"><i class="fa-solid fa-user me-2"></i>Funcionário</th>
+                                    <th scope="col"><i class="fa-solid fa-file me-2"></i>Arquivo</th>
+                                    <th scope="col"><i class="fa-regular fa-calendar-days me-2"></i>Data Emissão</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Teste</td>
-                                    <td>arquivo.pdf</td>
-                                    <td>27/01/2023</td>
-                                </tr>
+                             
+                                    <?php 
+                                    require_once 'pdfs/projects.php';
+                                    Projects::listarContrachequeLoja(99);
+                                    ?>
+                             
                             </tbody>
                         </table>
                     </div>

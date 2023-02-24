@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
-    <script src="./js/maskMoney.min.js" type="text/javascript"></script>
+    <script src="../assets/js/maskMoney.min.js" type="text/javascript"></script>
 
     <title>Rede LVD - Gestão de Funcionário</title>
 
@@ -74,7 +74,6 @@
                 echo '
             <div class="alert alert-success" role="alert" id="msg">
             <i class="fa-solid fa-check" style="color: green"></i>
-
                      Aviso do Funcionário apagada com Sucesso
             </div>';
             }
@@ -83,9 +82,7 @@
                 echo '
             <div class="alert alert-danger" role="alert" id="msg">
             <i class="fa-solid fa-circle-exclamation" style="color: red"></i>
-
              Ops! Não foi possível apagar o aviso do Funcionário
-
           </div>
          
             ';
@@ -617,7 +614,7 @@
     </footer>
 
 
-    <script src="../assets/crud.js"></script>
+    <script src="../assets/js/crud.js"></script>
     <script src="../assets/js/validator.js"></script>
 
     <script type="text/javascript">

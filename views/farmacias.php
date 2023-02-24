@@ -38,7 +38,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (51) 3671-9311 <br>
                                     Celular: (51) 99528-3283</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="1">
                             </form>
@@ -53,7 +53,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (51) 3678-1002 <br>
                                     Celular: (51) 98168-5874</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="2">
                             </form>
@@ -69,7 +69,7 @@
                                     Celular: (51) 98168-5882</small></p>
 
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="3">
                             </form>
@@ -91,7 +91,7 @@
                                     Fone: (51) 3692-1213 <br>
                                     Celular: (51) 99568-1898</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="4">
                             </form>
@@ -105,7 +105,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (51) 3692-1070 <br>
                                     Celular: (51) 99568-1877</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="5">
                             </form>
@@ -119,7 +119,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (51) 3671-5411 <br>
                                     Celular: (51) 99568-1924</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="6">
                             </form>
@@ -138,7 +138,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3225-4033 <br>
                                     Celular: (53) 99931-2644</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="7">
                             </form>
@@ -152,7 +152,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3228-1180 <br>
                                     Celular: (53) 99990-6190</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="8">
                             </form>
@@ -166,7 +166,7 @@
                                     Fone: (53) 3029-3993 <br>
                                     Celular: (53) 99921-7648</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="9">
                             </form>
@@ -184,7 +184,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (51) 3671-1990 <br>
                                     Celular: (51) 99631-4481</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="10">
                             </form>
@@ -197,7 +197,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3228-6189 <br>
                                     Celular: (53) 99955-8029</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="11">
                             </form>
@@ -210,7 +210,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3221-3821 <br>
                                     Celular: (53) 99705-9019</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="12">
                             </form>
@@ -228,7 +228,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3222-0373 <br>
                                     Celular: (53) 99975-9604</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="13">
                             </form>
@@ -241,7 +241,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3231-3577 <br>
                                     Celular: (53) 98127-0050</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="14">
                             </form>
@@ -255,7 +255,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3235-3317 <br>
                                     Celular: (53) 98127-0052</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="15">
                             </form>
@@ -275,7 +275,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3231-2664 <br>
                                     Celular: (53) 98127-0044</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="16">
                             </form>
@@ -290,7 +290,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (53) 3231-4070 <br>
                                     Celular: (53) 98127-0051</small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="17">
                             </form>
@@ -303,7 +303,7 @@
                             <p class="card-text"><small class="text-muted">Fone: (51) 3671-9311 <br>
                                     Celular: </small></p>
                             <hr>
-                            <form action="farmacia.php" method="post">
+                            <form action="Farmacia.php" method="post">
                                 <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
                                 <input type="hidden" name="farmacia" value="18">
                             </form>

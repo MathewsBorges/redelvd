@@ -126,7 +126,6 @@ $("#salvarCheque").on("click", function (event) {
       $("html, body").animate({ scrollTop: target_top }, 10);
       await removeMensagem();
       window.location.reload(true);
-
     },
   });
 });
@@ -181,22 +180,21 @@ function excluirCheque(id) {
     async: true,
     success: async function (resposta) {
       $("#resultado").html(resposta);
+      $("[col=" + id + "]").remove();
       var target_offset = $("#ancora").offset();
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
       await removeMensagem();
-      window.location.reload(true);
-      
+      //window.location.reload(true);
     },
   });
 }
-
 
 $("#anexar").on("click", function (event) {
   event.preventDefault();
   let arquivo = document.getElementById("inputGroupFile04").files[0];
   let nid = parseInt(document.getElementById("nid").value);
-  let tipo = document.getElementById("inputGroupSelect01").value
+  let tipo = document.getElementById("inputGroupSelect01").value;
 
   var formData = new FormData();
   formData.append("pdf_file", arquivo);
@@ -219,14 +217,11 @@ $("#anexar").on("click", function (event) {
       $("html, body").animate({ scrollTop: target_top }, 10);
       await removeMensagem();
       window.location.reload(true);
-
     },
   });
 });
 
-
-function excluirArquivo(id){
- console.log('ok');
+function excluirArquivo(id) {
   var formData = new FormData();
   formData.append("numero", id);
   formData.append("method", "apagarArquivo");
@@ -241,18 +236,16 @@ function excluirArquivo(id){
     async: true,
     success: async function (resposta) {
       $("#resultadoArquivos").html(resposta);
+      $("[col=" + id + "]").remove();
       var target_offset = $("#ancoraArquivos").offset();
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
       await removeMensagem();
-      window.location.reload(true);
-      
     },
   });
 }
 
-
-function excluirAviso(id){
+function excluirAviso(id) {
   var formData = new FormData();
   formData.append("numero", id);
   formData.append("method", "removerAviso");
@@ -267,12 +260,11 @@ function excluirAviso(id){
     async: true,
     success: async function (resposta) {
       $("#resultadoAvisos").html(resposta);
+      $("[col=" + id + "]").remove();
       var target_offset = $("#ancoraAviso").offset();
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
       await removeMensagem();
-      window.location.reload(true);
-      
     },
   });
 }
@@ -281,19 +273,20 @@ function removeMensagem() {
   setTimeout(function () {
     var msg = document.getElementById("msg");
     if (msg != null) msg.parentNode.removeChild(msg);
-  }, 10000);
+  }, 5000);
 }
 
 function removeMensagens() {
   setTimeout(function () {
-      var msg = document.getElementById("msg-success");
+    var msg = document.getElementById("msg-success");
 
-      if (msg != null) msg.parentNode.removeChild(msg);
+    if (msg != null) msg.parentNode.removeChild(msg);
   }, 5000);
 }
 
 document.onreadystatechange = () => {
-  if (document.readyState === 'complete') {
-      removeMensagens();
+  if (document.readyState === "complete") {
+    removeMensagens();
+    removeMensagem();
   }
-}
+};

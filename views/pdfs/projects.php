@@ -30,7 +30,7 @@ class Projects
 
 
                     echo '
-                <tr>
+                <tr col="' . $row['id'] . '">
                 <td><a href="pdfs/display.php?id=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file me-2"></i>' . $row['nome'] . '</a></td>
                 
                 <td>' . $row['tipo'] . '</td>
@@ -185,7 +185,7 @@ class Projects
 
 
                     echo '
-                <tr>
+                <tr col="' . $row['id'] . '">
         
                     <td><a href="pdfs/displayCheque.php?doc=' . $row['id'] . ' " target="_blank">' . $row['nome'] . '</a></td>
                     <td>' . $date->format('d/m/Y') . '</td>
@@ -224,6 +224,62 @@ class Projects
                 ': ' . $e->getLine();
         }
     }
+
+    static function listarContrachequeLoja($id)
+    {
+        require_once "../connection/BDconexao.php";
+
+        try {
+
+            $sql = BDconexao::getConexao()->prepare('SELECT c.*, f.nome
+            FROM (
+                SELECT fk_funcionario, MAX(data_geracao) AS ultima_data 
+                FROM contracheque 
+                GROUP BY fk_funcionario
+            ) AS ultimos_contracheques 
+            INNER JOIN contracheque c ON c.fk_funcionario = ultimos_contracheques.fk_funcionario AND c.data_geracao = ultimos_contracheques.ultima_data 
+            INNER JOIN colaborador f ON ultimos_contracheques.fk_funcionario = f.codigo
+            WHERE f.loja = :id');
+            $sql->bindValue(":id", $id);
+            $sql->execute();
+            $result = $sql->fetchAll();
+            if ($result != null) {
+                foreach ($result as $row) {
+                    $records[] = [
+                        'id' => $row['codigo'],
+                        'nome_funcionario' => $row['nome'],
+                        'nome_documento' => $row['nome_documento'],
+                        'data' => $row['data_geracao'],
+                        'nome' => $row['nome_documento'],
+                        'project_name' => $row['nome_documento']
+
+
+
+                    ];
+                }
+                foreach ($records as $row) {
+
+                    $date =  new DateTime($row['data']);
+
+
+                    echo '
+                 <tr>
+                    <td>' . $row['nome_funcionario'] . '</td>
+                    <td><a href="pdfs/displayCheque.php?doc=' . $row['id'] . ' " target="_blank">' . $row['nome'] . '</a></td>
+                    <td>' . $date->format('d/m/Y') . '</td>
+                 
+                    
+                 </tr>
+
+                    ';
+                }
+            }
+        } catch (PDOException $e) {
+            echo 'Database Error ' . $e->getMessage() . ' em ' . $e->getFile() .
+                ': ' . $e->getLine();
+        }
+    }
+
 
     static function listarContrachequeFuncionario($id)
     {
@@ -285,12 +341,10 @@ class Projects
             </div>
             </div>
             ';
-        }else{
-            echo'<div class="col-md-12 ms-4">
+        } else {
+            echo '<div class="col-md-12 ms-4">
             <p>Não há contracheques para baixar</p>
             <div>';
         }
-
-        
     }
 }

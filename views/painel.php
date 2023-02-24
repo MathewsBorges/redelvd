@@ -44,37 +44,37 @@
         <div class="menu-inner-shadow"></div>
         <ul class="menu-inner">
           <li class="menu-item">
-            <a href="documentos.php" class="menu-link">
+            <a href="Documentos.php" class="menu-link">
               <i class="fa-regular fa-file me-2"></i>
               Meus Documentos
             </a>
           </li>
           <li class="menu-item ">
-            <a href="cheques.php" class="menu-link">
+            <a href="Contracheques.php" class="menu-link">
               <i class="fa-solid fa-file-invoice me-2"></i>
               Contracheques
             </a>
           </li>
           <li class="menu-item ">
-            <a href="farmacias.php" class="menu-link">
+            <a href="Farmacias.php" class="menu-link">
               <i class="fa-solid fa-shop me-2"></i>
               Farmácias
             </a>
           </li>
           <li class="menu-item ">
-            <a href="avisos.php" class="menu-link">
+            <a href="Avisos.php" class="menu-link">
               <i class="fa-solid fa-bell me-2"></i>
               Avisos
             </a>
           </li>
           <li class="menu-item ">
-            <a href="loja.php" class="menu-link">
+            <a href="Loja.php" class="menu-link">
               <i class="fa-solid fa-server me-2"></i>
               Dados da Farmácia
             </a>
           </li>
           <li class="menu-item ">
-            <a href="crud.php" class="menu-link">
+            <a href="ListaFuncionarios.php" class="menu-link">
               <i class="fa-solid fa-users me-2"></i>
               Gestão de Funcionários
             </a>
