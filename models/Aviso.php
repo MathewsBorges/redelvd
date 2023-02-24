@@ -41,19 +41,19 @@ class Aviso
                 $query->bindValue(":id", $campos['id']);
                 $query->execute();
                 $id = $campos['id'];
-                // header("location: ../views/crudUsuario.php?id=$id&status=enviado");
+
                 echo '<div class="alert alert-success" role="alert" id="msg">
-               <i class="fa-regular fa-circle-check me-2"></i> Aviso enviado com Sucesso!
-           </div>';
+                         <i class="fa-regular fa-circle-check me-2"></i> Aviso enviado com Sucesso!
+                     </div>';
             } catch (\Throwable $th) {
                 echo '<div class="alert alert-danger" role="alert" id="msg">
-               <i class="fa-regular fa-circle-exclamation me-2"></i>Não foi possivel enviar o aviso, erro: ' . $th . '
-           </div>';
+                        <i class="fa-regular fa-circle-exclamation me-2"></i>Não foi possivel enviar o aviso, erro: ' . $th . '
+                     </div>';
             }
         } else {
             echo '<div class="alert alert-warning" id="msg" role="alert">
-            <i class="fa-solid fa-triangle-exclamation me-2"></i> Ops! Preencha o campo aviso
-          </div>';
+                     <i class="fa-solid fa-triangle-exclamation me-2"></i> Ops! Preencha o campo aviso
+                </div>';
         }
     }
 
@@ -64,13 +64,13 @@ class Aviso
             $query->bindValue(":id", $cod);
             $query->execute();
             echo '<div class="alert alert-success" role="alert" id="msg">
-            <i class="fa-regular fa-circle-check me-2"></i> Aviso apagado com Sucesso
-        </div>
+                    <i class="fa-regular fa-circle-check me-2"></i> Aviso apagado com Sucesso
+                  </div>
             ';
         } catch (\Throwable $th) {
             echo '<div class="alert alert-danger" role="alert" id="msg">
-            <i class="fa-regular fa-circle-exclamation me-2"></i>Não foi possivel apagar o aviso, erro: ' . $th . '
-        </div>';
+                     <i class="fa-regular fa-circle-exclamation me-2"></i>Não foi possivel apagar o aviso, erro: ' . $th . '
+                 </div>';
         }
     }
 }
