@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="conteudo-pagina">
     <div class="mt-4 col-md-12">
         <div class="h-40 p-5 bg-light border rounded-3 mb-4">
             <h2>Rede LVD - Loja 99</h2>
@@ -48,12 +48,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                             
-                                    <?php 
-                                    require_once 'pdfs/projects.php';
-                                    Projects::listarContrachequeLoja(99);
-                                    ?>
-                             
+
+                                <?php
+                                require_once 'pdfs/projects.php';
+                                Projects::listarContrachequeLoja(99);
+                                ?>
+
                             </tbody>
                         </table>
                     </div>
@@ -64,6 +64,9 @@
         <div class="col-md-12   mb-5 card shadow">
             <div class="titulo-card mt-3">
                 <h3><i class="fa-regular fa-folder-open me-2"></i>Arquivos da Farmácia</h3>
+            </div>
+            <div class="col-md-12 ms-2" id="resultadoArquivos">
+
             </div>
             <div class="card mb-3">
                 <div class="card-body">
@@ -88,12 +91,12 @@
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <form class="form-arquivos-loja" action="pdfs/enviarfarmacias.php" method="post" enctype="multipart/form-data">
+                    <form class="form-arquivos-loja" method="post" enctype="multipart/form-data">
                         <div class="col-md-6 d-flex justify-content-center ms-2 ps-2">
                             <h5><i class="fa-solid fa-upload me-2"></i>Upload de Arquivos</h5>
                             <div class="col-md-10 mb-2">
                                 <div class="input-group">
-                                    <input type="file" name="pdf_file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+                                    <input type="file" name="pdf_file" class="form-control" id="pdf" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                                 </div>
                             </div>
                             <div class="col-md-6 ms-2">
@@ -107,7 +110,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center align-itens-center mb-4">
-                                <button class="btn btn-success" type="submit"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
+                                <button class="btn btn-success" type="submit" id="salvar-arquivo"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
                             </div>
                         </div>
                     </form>
@@ -126,3 +129,4 @@
 <script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="../assets/js/datatables-demo.js"></script>
+<script src="../assets/js/function.js"></script>

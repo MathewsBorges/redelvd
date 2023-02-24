@@ -27,4 +27,12 @@ class Empresa
         return $dados;
     }
 
+    public function apagarArquivo($id)
+    {
+        $query = $this->bd->prepare("Delete from documentos_farmacia where codigo = $id");
+        $query->execute();
+        echo '  <div class="alert alert-success" role="alert" id="msg">
+                    <i class="fa-regular fa-circle-check me-2"></i> Arquivo apagado com Sucesso
+                </div>';
+    }
 }

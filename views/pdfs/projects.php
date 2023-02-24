@@ -116,7 +116,7 @@ class Projects
         require_once "../connection/BDconexao.php";
 
         try {
-            $sql = BDconexao::getConexao()->prepare("SELECT codigo, tipo_documento, data_emissao, nome_documento FROM documentos_farmacia where fk_farmacia = :id");
+            $sql = BDconexao::getConexao()->prepare("SELECT codigo, tipo_documento, data_emissao, nome_documento FROM documentos_farmacia where fk_farmacia = :id order by codigo desc");
             $sql->bindValue(":id", $id);
             $sql->execute();
             $result = $sql->fetchAll();
@@ -138,7 +138,7 @@ class Projects
 
 
                     echo '
-                    <tr col="'.$row['id'].'">
+                    <tr col-arquivo="'.$row['id'].'">
                
     
                     <td><a href="pdfs/display.php?doc=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file me-2"></i>' . $row['nome'] . '</a></td>

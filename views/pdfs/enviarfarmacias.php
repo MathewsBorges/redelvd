@@ -20,13 +20,18 @@ if (!empty($_FILES['pdf_file']['name'])) {
                 $stmt->bindParam(':pdf_doc', $pdf_blob, PDO::PARAM_LOB);
                 $stmt->bindValue(':nome_documento', $file_name);
                 $stmt->execute();
-                header("location: ../painel.php");
+                //header("location: ../painel.php");
+                echo '    <div class="alert alert-success" role="alert" id="msg">
+                <i class="fa-regular fa-circle-check me-2"></i> Arquivo anexado com Sucesso
+           </div>';
             } catch (PDOException $e) {
                 echo 'Database Error ' . $e->getMessage() . ' em ' . $e->getFile() .
                     ': ' . $e->getLine();
             }
         } else {
-            echo 'erro';
+            echo '    <div class="alert alert-danger" role="alert" id="msg">
+            Não foi possivel adicionar
+       </div>';
         }
     }
 } else {
