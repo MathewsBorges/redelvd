@@ -162,7 +162,7 @@
 
 
     <div class="container principal overflow-hidden">
-        <input type="hidden" id="nid" value="<?php echo $codigo ?>">
+        <input type="hidden" id="nid" value="<?php echo $dados['codigo'] ?>">
         <input type="hidden" id="nid2" value="266">
 
 
@@ -448,7 +448,7 @@
                                         <?php
                                             require_once '../controllers/AvisoController.php';
                                             $aviso = new AvisoController();
-                                            $aviso->listarAvisosTabela(266)
+                                            $aviso->listarAvisosTabela($dados['codigo'])
                                         ?>
                                     </tbody>
                                 </table>
@@ -592,7 +592,7 @@
                                 <tbody>
                                     <?php 
                                      require_once 'pdfs/projects.php';
-                                     Projects::listarContracheque(266);
+                                     Projects::listarContracheque($dados['codigo']);
                                     ?>
                                 </tbody>
                             </table>

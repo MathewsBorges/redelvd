@@ -182,10 +182,10 @@ class ChequeController
     
                 <table class="table table-hover" width="100%" cellspacing="0">
                     <thead>
-                        <tr>
-                            <th class="bg-success"><i class="fa-solid fa-sack-dollar me-2"></i>Créditos</th>
+                        <tr class="table-dark">
+                            <th class="text-white"><i class="fa-solid fa-sack-dollar me-2"></i>Créditos</th>
                           
-                            <th class="bg-success"><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
+                            <th class="text-white"><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -212,11 +212,11 @@ class ChequeController
                 </table>
             </div>
             <div class="col-md-6">
-                <table class="table table-hover" width="100%" cellspacing="0">
+                <table class="table table-hover " width="100%" cellspacing="0">
                     <thead>
-                        <tr>
-                            <th class="bg-danger"><i class="fa-solid fa-cash-register me-2"></i>Débitos</th>
-                            <th class="bg-danger"><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
+                        <tr class="table-dark">
+                            <th class="text-white"><i class="fa-solid fa-cash-register me-2"></i>Débitos</th>
+                            <th class="text-white"><i class="fa-solid fa-dollar-sign me-2"></i>Valor</th>
                         </tr>
                     </thead>
                     <tbody>
