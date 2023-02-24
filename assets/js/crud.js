@@ -236,6 +236,8 @@ function excluirArquivo(id) {
     async: true,
     success: async function (resposta) {
       $("#resultadoArquivos").html(resposta);
+      console.log(window.location.pathname);
+      if (window.location.pathname == "/views/Funcionario.php") location.reload(true);
 
       setTimeout(() => {
         $("#conteudo-pagina").load("../../views/Documentos.php");
