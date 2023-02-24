@@ -31,3 +31,9 @@ $(document).ready(function () {
   $(document).ready(function () {
     $("#dataTable5").DataTable();
   })
+  $(document).ready(function () {
+    $("#tabelaAvisosFuncionario").DataTable();
+  })
+
+
+ 

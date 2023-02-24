@@ -131,6 +131,10 @@ class AvisoController
     {
         $this->aviso->removerAviso($cod);
     }
+
+    function tabelaAviso($id){
+        $this->aviso->tabelaAviso($id);
+    }
 }
 
 ////--------------------------- FORM FUNCTIONS 

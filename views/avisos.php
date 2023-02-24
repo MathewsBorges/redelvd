@@ -31,20 +31,43 @@
                 <button type="button" class="btn"> <i class="fa-solid fa-trash"></i> </button>
             </div>
         </div> -->
-        <?php
-        require_once '../controllers/AvisoController.php';
-        $controller = new AvisoController();
-        $controller->listarAvisos(266);
-        ?>
-        <nav aria-label="Page navigation example" class="mt-5 float-end">
+        <table class="table table-hover mb-2" id="tabelaAvisosFuncionario" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th><i class="fa-regular fa-file me-2"></i>Aviso</th>
+                    <th hidden>Prioridade</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                   
+                <?php
+                require_once '../controllers/AvisoController.php';
+                $controller = new AvisoController();
+                $controller->tabelaAviso(266);
+                ?>
+             
+            </tbody>
+        </table>
+
+        <!-- <nav aria-label="Page navigation example" class="mt-5 float-end">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#"><</a></li>
+                <li class="page-item"><a class="page-link" href="#">
+                        << /a>
+                </li>
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item"><a class="page-link" href="#">></a></li>
             </ul>
-        </nav>
+        </nav> -->
     </div>
 </div>
-
+<script src="../assets/vendor/jquery/jquery.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+<script src="../assets/js/datatables-demo.js"></script>
+<script src="../assets/js/sb-admin-2.min.js"></script>
+<script src="../assets/js/crud.js"></script>

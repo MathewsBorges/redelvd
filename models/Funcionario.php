@@ -25,7 +25,7 @@ class Funcionario
         $query = $this->bd->prepare("SELECT nome from colaborador where codigo= :id ");
         $query->bindValue(":id", $id);
         $query->execute();
-        $dados = $query->fetch();
+        $dados = $query->fetch(PDO::FETCH_ASSOC);
         return $dados;
     }
 
