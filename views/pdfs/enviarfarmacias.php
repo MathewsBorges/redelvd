@@ -10,13 +10,14 @@ if (!empty($_FILES['pdf_file']['name'])) {
         $file_tmp = $_FILES['pdf_file']['tmp_name'];
         $tipo = $_POST['tipo'];
         $data = date("d/m/Y");
+        $numFarmacia = $_POST['farmacia'];
         if ($pdf_blob = fopen($file_tmp, "rb")) {
             try {
                 $insert_sql = "INSERT INTO documentos_farmacia (tipo_documento, data_emissao, fk_farmacia, documento, nome_documento) VALUES(:tipo, :data, :fk, :pdf_doc, :nome_documento)";
                 $stmt = BDconexao::getConexao()->prepare($insert_sql);
                 $stmt->bindValue(':tipo', $tipo);
                 $stmt->bindValue(':data', $data);
-                $stmt->bindValue(':fk', 2);
+                $stmt->bindValue(':fk', $numFarmacia);
                 $stmt->bindParam(':pdf_doc', $pdf_blob, PDO::PARAM_LOB);
                 $stmt->bindValue(':nome_documento', $file_name);
                 $stmt->execute();
@@ -36,5 +37,7 @@ if (!empty($_FILES['pdf_file']['name'])) {
     }
 } else {
 
-    header('Location: choose_file.php');
+    echo '<div class="alert alert-warning" id="msg" role="alert">
+    <i class="fa-solid fa-triangle-exclamation me-2"></i> Ops! O Arquivo não foi anexado
+  </div>';
 }

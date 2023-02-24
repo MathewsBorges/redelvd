@@ -57,12 +57,13 @@
                             </table>
                         </div>
                     </div>
-                    <form class="form-arquivos-loja" action="pdfs/enviarfarmacias.php" method="post" enctype="multipart/form-data">
+                    <form class="form-arquivos-loja"  method="post" enctype="multipart/form-data">
                         <div class="col-md-12 ps-2">
                             <h5><i class="ms-2 me-2 fa-solid fa-upload"></i>Upload de Arquivos</h5>
                             <div class="col-md-12 pe-2 mb-2">
+                                <div class="col-md-12 ms-2" id="resultadoArquivos"></div>
                                 <div class="input-group">
-                                    <input type="file" name="pdf_file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+                                    <input type="file" name="pdf" class="form-control" id="pdf" aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
                                 </div>
                             </div>
                             <div class="col-md-12 pe-2">
@@ -76,7 +77,8 @@
                                 </div>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center mb-4">
-                                <button class="btn btn-success" type="submit"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
+                                <input type="hidden" id="farmacia" value="<?php echo $farmacia?>">
+                                <button id="salvar-arquivo" class="btn btn-success" type="submit"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
                             </div>
                         </div>
                     </form>
@@ -171,3 +173,4 @@
 <script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="../assets/js/datatables-demo.js"></script>
+<script src="../assets/js/function.js"></script>

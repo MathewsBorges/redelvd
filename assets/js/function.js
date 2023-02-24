@@ -68,6 +68,8 @@ function excluirDocumentoFarmacia(id) {
     success: function (resposta) {
       $("#resultadoArquivos").html(resposta);
       var target_offset = $("#ancora").offset();
+      if(window.location.pathname == "/views/Farmacia.php") location.reload(true)
+
       setTimeout(() => {
         $("#conteudo-pagina").load("../../views/Loja.php");
       }, 500);
@@ -84,8 +86,10 @@ $("#salvar-arquivo").on("click", function (event) {
   var formData = new FormData();
   let arquivo = document.getElementById("pdf").files[0];
   let tipoDocumento = document.getElementById("inputGroupSelect01").value;
+  let farmacia = parseInt(document.getElementById("farmacia").value)
   formData.append("pdf_file", arquivo);
   formData.append("tipo", tipoDocumento);
+  formData.append("farmacia", farmacia)
 
   $.ajax({
     method: "POST",
@@ -98,10 +102,11 @@ $("#salvar-arquivo").on("click", function (event) {
     async: true,
     success: async function (resposta) {
       $("#resultadoArquivos").html(resposta);
-      // var target_offset = $("#ancora").offset();
-      // var target_top = target_offset.top;
-      // $("html, body").animate({ scrollTop: target_top }, 10);
       $("#pdf").val("");
+      if(window.location.pathname == "/views/Farmacia.php") 
+      setInterval(() => {
+        location.reload(true)
+      }, 500); 
       $("#conteudo-pagina").load("../../views/Loja.php");
       removeMensagem();
     },
