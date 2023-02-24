@@ -74,6 +74,8 @@
                                     <th scope="col"><i class="fa-solid fa-file me-2"></i>Arquivo</th>
                                     <th scope="col"><i class="fa-solid fa-clipboard-list me-2"></i>Tipo</th>
                                     <th scope="col"><i class="fa-regular fa-calendar-days me-2"></i>Emissão</th>
+                                    <th scope="col"><i class="fa-solid fa-gear me-2"></i>Opções</th>
+
                                 </tr>
                             </thead>
                             <tbody>

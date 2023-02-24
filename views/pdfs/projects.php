@@ -39,24 +39,24 @@ class Projects
                 <button type="submit" data-toggle="modal" data-target="#exampleModalCenter' . $row['id'] . '" num="' . $row['id'] . ' "class="btn"><i class="fa-solid fa-file-circle-minus text-danger"></i></button></td>
 
                 <div class="modal fade" id="exampleModalCenter' .  $row['id'] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
+             <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitle">Apagar Documento</h5>
                 <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
+                 </div>
+                     <div class="modal-body">
+                         <p>Deseja apagar o documento? Lembre-se, não será possível recuperar após isso e o funcionário não terá mais acesso a ele</p>
+                     </div>
+                            <div class="modal-footer">
+                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                             <button type="button" data-dismiss="modal" onclick="excluirArquivo(' . $row['id'] . ')" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Apagar</button>
+                            </div>
+                     </div>
+                </div>
             </div>
-            <div class="modal-body">
-                <p>Deseja apagar o documento? Lembre-se, não será possível recuperar após isso e o funcionário não terá mais acesso a ele</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <button type="button" data-dismiss="modal" onclick="excluirArquivo(' . $row['id'] . ')" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Apagar</button>
-            </div>
-        </div>
-    </div>
-</div>
                 </tr>
                 ';
                 }
@@ -138,14 +138,37 @@ class Projects
 
 
                     echo '
-                    <tr>
+                    <tr col="'.$row['id'].'">
                
     
                     <td><a href="pdfs/display.php?doc=' . $row['id'] . ' " target="_blank"><i class="fa-regular fa-file me-2"></i>' . $row['nome'] . '</a></td>
                     
                     <td>' . $row['tipo'] . '</td>
                     <td>' . $date->format('d/m/Y') . '</td>
-    
+                   
+                    <td> 
+                    <button type="submit" data-toggle="modal" data-target="#exampleModalCenter' . $row['id'] . '" num="' . $row['id'] . ' "class="btn"><i class="fa-solid fa-trash text-danger"></i></button></td>
+                    <div class="modal fade" id="exampleModalCenter' .  $row['id'] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                     <div class="modal-dialog modal-dialog-centered" role="document">
+                       <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Excluir Documento</h5>
+                                <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                                 <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                             <p>Deseja apagar o documento? Lembre-se, não será possível recuperar o documento após a ação</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <button type="button" data-dismiss="modal" onclick="excluirDocumentoFarmacia(' . $row['id'] . ')" class="btn btn-danger"><i class="fa-solid fa-trash me-2"></i>Apagar</button>
+                            </div>
+                     </div>
+                    </div>
+                    </div>
+                 </tr>
+                    </td>
                   
                     </tr>
                     ';
@@ -347,4 +370,5 @@ class Projects
             <div>';
         }
     }
+
 }
