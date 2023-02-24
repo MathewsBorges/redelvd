@@ -236,11 +236,14 @@ function excluirArquivo(id) {
     async: true,
     success: async function (resposta) {
       $("#resultadoArquivos").html(resposta);
-      $("[col=" + id + "]").remove();
+
+      setTimeout(() => {
+        $("#conteudo-pagina").load("../../views/Documentos.php");
+      }, 500);
+
       var target_offset = $("#ancoraArquivos").offset();
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
-      await removeMensagem();
     },
   });
 }
@@ -260,11 +263,12 @@ function excluirAviso(id) {
     async: true,
     success: async function (resposta) {
       $("#resultadoAvisos").html(resposta);
-      $("[col=" + id + "]").remove();
+
       var target_offset = $("#ancoraAviso").offset();
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
-      await removeMensagem();
+      // await removeMensagem();
+      location.reload(true);
     },
   });
 }

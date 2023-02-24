@@ -21,8 +21,9 @@ $("#salvar").on("click", function (event) {
       var target_offset = $("#ancora").offset();
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
-      $("#pdf").val("");
-      await removeMensagem();
+      setTimeout(() => {
+        $("#conteudo-pagina").load("../../views/Documentos.php");
+      }, 1000);
     },
   });
 });
@@ -50,7 +51,6 @@ function excluirArquivo(id) {
   });
 }
 
-
 function excluirDocumentoFarmacia(id) {
   var formData = new FormData();
   formData.append("numero", id);
@@ -68,14 +68,15 @@ function excluirDocumentoFarmacia(id) {
     success: function (resposta) {
       $("#resultadoArquivos").html(resposta);
       var target_offset = $("#ancora").offset();
-      $("[col-arquivo=" + id + "]").remove();
+      setTimeout(() => {
+        $("#conteudo-pagina").load("../../views/Loja.php");
+      }, 500);
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
-      removeMensagem();
+   
     },
   });
 }
-
 
 $("#salvar-arquivo").on("click", function (event) {
   event.preventDefault();
@@ -101,23 +102,9 @@ $("#salvar-arquivo").on("click", function (event) {
       // var target_top = target_offset.top;
       // $("html, body").animate({ scrollTop: target_top }, 10);
       $("#pdf").val("");
-      $("#conteudo-pagina").load("../../views/Loja.php")
+      $("#conteudo-pagina").load("../../views/Loja.php");
       removeMensagem();
     },
   });
 });
 
-
-
-function removeMensagem() {
-  setTimeout(function () {
-    var msg = document.getElementById("msg");
-    if (msg != null) msg.parentNode.removeChild(msg);
-  }, 5000);
-}
-
-// document.onreadystatechange = () => {
-//   if (document.readyState === "complete") {
-//     removeMensagem();
-//   }
-// };

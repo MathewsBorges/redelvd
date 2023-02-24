@@ -1,6 +1,6 @@
 <script type="text/javascript" src="../assets/js/function.js"></script>
 
-<div class="row mt-2">
+<div class="row mt-2" id="conteudo-pagina">
     <div class="col-md-12 mt-2">
         <input type="hidden" value="266" id="nid">
         <div class="col-md-12">
