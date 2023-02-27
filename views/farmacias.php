@@ -313,6 +313,24 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Rede LVD - Depósito 99</h5>
+                            <p class="card-text"><i class="fa-solid fa-location-dot me-2"></i>Av. Capitão Adolfo Castro, 378 - Centro Camaquã/RS</p>
+                            <br>
+                        <p class="card-text"><small class="text-muted">Fone: (51) 3671-9311 <br>
+                                
+                        <hr>
+                        <form action="Farmacia.php" method="post">
+                            <input class="btn btn-warning" id="envio" type="submit" value="Acessar Loja">
+                            <input type="hidden" name="farmacia" value="99">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
 
 </body>

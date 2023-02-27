@@ -53,10 +53,28 @@ class Aviso
             </p>
             <div class="d-flex justify-content-between">
                 <p class="me-5">Data de Envio: ' . $date->format('d/m/Y') . '</p>
-                <button type="button" class="btn"> <i class="fa-solid fa-trash"></i> </button>
+                <button type="submit" data-toggle="modal" data-target="#exampleModalCenter' . $row['codigo'] . ' "class="btn"><i class="fa-solid fa-trash-can me-2 text-danger"></i></button></td>
+
+                <div class="modal fade" id="exampleModalCenter' .  $row['codigo'] . '" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+             <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Apagar Aviso</h5>
+                <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                 </div>
+                     <div class="modal-body">
+                         <p>Deseja apagar o aviso? Lembre-se, não será possível recuperar ele após isso</p>
+                     </div>
+                            <div class="modal-footer">
+                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                             <button type="button" data-dismiss="modal" onclick="excluirAviso(' . $row['codigo'] . ')" class="btn btn-danger"><i class="fa-solid fa-trash-can me-2"></i>Apagar</button>
+                            </div>
+                     </div>
+                </div>
             </div>
-        </div>
-        </td>
+                </tr>
         </tr>
             ';
         }

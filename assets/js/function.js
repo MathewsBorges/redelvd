@@ -68,14 +68,14 @@ function excluirDocumentoFarmacia(id) {
     success: function (resposta) {
       $("#resultadoArquivos").html(resposta);
       var target_offset = $("#ancora").offset();
-      if(window.location.pathname == "/views/Farmacia.php") location.reload(true)
+      if (window.location.pathname == "/views/Farmacia.php")
+        location.reload(true);
 
       setTimeout(() => {
         $("#conteudo-pagina").load("../../views/Loja.php");
       }, 500);
       var target_top = target_offset.top;
       $("html, body").animate({ scrollTop: target_top }, 10);
-   
     },
   });
 }
@@ -86,10 +86,10 @@ $("#salvar-arquivo").on("click", function (event) {
   var formData = new FormData();
   let arquivo = document.getElementById("pdf").files[0];
   let tipoDocumento = document.getElementById("inputGroupSelect01").value;
-  let farmacia = parseInt(document.getElementById("farmacia").value)
+  let farmacia = parseInt(document.getElementById("farmacia").value);
   formData.append("pdf_file", arquivo);
   formData.append("tipo", tipoDocumento);
-  formData.append("farmacia", farmacia)
+  formData.append("farmacia", farmacia);
 
   $.ajax({
     method: "POST",
@@ -103,13 +103,40 @@ $("#salvar-arquivo").on("click", function (event) {
     success: async function (resposta) {
       $("#resultadoArquivos").html(resposta);
       $("#pdf").val("");
-      if(window.location.pathname == "/views/Farmacia.php") 
-      setInterval(() => {
-        location.reload(true)
-      }, 500); 
+      if (window.location.pathname == "/views/Farmacia.php") {
+        setInterval(() => {
+          location.reload(true);
+        }, 500);
+      }
+
       $("#conteudo-pagina").load("../../views/Loja.php");
       removeMensagem();
     },
   });
 });
 
+function excluirAviso(id) {
+  var formData = new FormData();
+  formData.append("numero", id);
+  formData.append("method", "removerAviso");
+  $.ajax({
+    method: "POST",
+    url: "../../controllers/AvisoController.php",
+    data: formData,
+    cache: false,
+    processData: false,
+    contentType: false,
+    processData: false,
+    async: true,
+    success: async function (resposta) {
+      $("#resultadoAvisos").html(resposta);
+
+      // var target_offset = $("#ancoraAviso").offset();
+      // var target_top = target_offset.top;
+      // $("html, body").animate({ scrollTop: target_top }, 10);
+      setTimeout(() => {
+        $("#conteudo-pagina").load("../../views/Avisos.php");
+      }, 500);
+    },
+  });
+}

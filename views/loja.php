@@ -110,6 +110,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center align-itens-center mb-4">
+                                <input type="hidden" name="farmacia" id="farmacia" value="99">
                                 <button class="btn btn-success" type="submit" id="salvar-arquivo"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
                             </div>
                         </div>

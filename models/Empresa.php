@@ -13,7 +13,7 @@ class Empresa
 
     public function getLojas()
     {
-        $query = $this->bd->prepare("SELECT * from empresa");
+        $query = $this->bd->prepare("SELECT * from empresa order by nome_res");
         $query->execute();
         $dados = $query->fetchAll();
         return $dados;

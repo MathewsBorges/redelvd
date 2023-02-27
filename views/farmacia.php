@@ -59,7 +59,7 @@
                             </table>
                         </div>
                     </div>
-                    <form class="form-arquivos-loja"  method="post" enctype="multipart/form-data">
+                    <form class="form-arquivos-loja" method="post" enctype="multipart/form-data">
                         <div class="col-md-12 ps-2">
                             <h5><i class="ms-2 me-2 fa-solid fa-upload"></i>Upload de Arquivos</h5>
                             <div class="col-md-12 pe-2 mb-2">
@@ -79,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12 d-flex justify-content-center mb-4">
-                                <input type="hidden" id="farmacia" value="<?php echo $farmacia?>">
+                                <input type="hidden" id="farmacia" value="<?php echo $farmacia ?>">
                                 <button id="salvar-arquivo" class="btn btn-success" type="submit"><i class="fa-solid fa-paperclip me-2"></i>Anexar</button>
                             </div>
                         </div>
@@ -126,20 +126,17 @@
                             <table class="table table-hover" id="dataTable3" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th><i class="fa-solid fa-hashtag me-2"></i>Código</th>
+                    
                                         <th><i class="fa-solid fa-user me-2"></i>Funcionário</th>
                                         <th><i class="fa-solid fa-file me-2"></i>Arquivo</th>
                                         <th><i class="fa-regular fa-calendar-days me-2"></i>Data Emissão</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Teste</td>
-                                        <td>arquivo.pdf</td>
-                                        <td>27/01/2023</td>
-                                    </tr>
-                                <tbody>
+                                    <?php
+                                    require_once 'pdfs/projects.php';
+                                    Projects::listarContrachequeLoja($farmacia);
+                                    ?>
 
                                 </tbody>
                             </table>

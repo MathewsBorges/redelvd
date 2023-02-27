@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../assets/vendor/css/core.css">
-<div class="row">
+<div class="row" id="conteudo-pagina">
     <div class="col-md-12 mt-2">
         <div class="col-md-12">
             <div class="h-20 p-4 bg-light border rounded-3  me-2">
@@ -17,6 +17,7 @@
 
     <div class="my-1 p-3 bg-white rounded shadow-sm">
         <h6 class="border-bottom border-gray pb-2 mb-0">Avisos</h6>
+        <div class="col-md-12" id="resultadoAvisos"></div>
         <table class="table table-hover mb-2" id="tabelaAvisosFuncionario" width="100%" cellspacing="0">
             <thead>
                 <tr>
@@ -26,13 +27,13 @@
                 </tr>
             </thead>
             <tbody>
-                   
+
                 <?php
                 require_once '../controllers/AvisoController.php';
                 $controller = new AvisoController();
                 $controller->tabelaAviso(266);
                 ?>
-             
+
             </tbody>
         </table>
 
@@ -56,4 +57,5 @@
 <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="../assets/js/datatables-demo.js"></script>
 <script src="../assets/js/sb-admin-2.min.js"></script>
-<script src="../assets/js/crud.js"></script>
+<!-- <script src="../assets/js/crud.js"></script> -->
+<script src="../assets/js/function.js"></script>
