@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="../assets/css/demo.css" />
 <link rel="stylesheet" href="../assets/vendor/css/painel.css">
 <link rel="stylesheet" href="../assets/vendor/css/farmacia.css">
+<link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+<title>Rede LVD - Farmácia <?php echo $_POST['farmacia'] ?></title>
 
 
 

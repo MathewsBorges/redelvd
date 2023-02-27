@@ -4567,7 +4567,7 @@ fieldset:disabled .btn {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: rgba(105, 108, 255, 0.08);
+ /* background-color: rgba(105, 108, 255, 0.08); */
   border-color: rgba(105, 108, 255, 0.08);
 }
 
