@@ -45,12 +45,12 @@
 
     <header>
 
-        <div class="col-md-12 col-sm-12 cabecalho">
+        <div class="col-md-12 col-sm-12 cabecalho mt-2">
 
             <div class="img">
                 <img class="fa-solid fa-user ms-4 fa-6x" src="" alt="">
             </div>
-            <div class="descricao">
+            <div class="descricao mt-4">
                 <?php echo '
                                 <h2>' . $dados['nome'] . '</h2>
                                  <h4>' . $cargos[$dados['perfil']] . '</h4>
@@ -59,8 +59,8 @@
 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item  active" aria-current="page"><a href="painel.php">Painel</a></li>
-                        <li class="breadcrumb-item">Gestão de Funcionários - <?php echo $dados['nome'] ?></li>
+                        <li class="breadcrumb-item "><a href="painel.php">Painel</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Gestão de Funcionários - <?php echo $dados['nome'] ?></li>
                     </ol>
                 </nav>
             </div>
