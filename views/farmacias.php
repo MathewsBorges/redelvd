@@ -209,8 +209,8 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Rede LVD - Loja 12</h5>
-                            <br>
                             <p class="card-text"><i class="fa-solid fa-location-dot me-2"></i>Rua Marechal Floriano, 115 - Centro Pelotas/RS</p>
+                            <br>
                             <p class="card-text"><small class="text-muted">Fone: (53) 3221-3821 <br>
                                     Celular: (53) 99705-9019</small></p>
                             <hr>
@@ -303,8 +303,8 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Rede LVD - Loja 18</h5>
-                            <br>
                             <p class="card-text"><i class="fa-solid fa-location-dot me-2"></i>Av. 28 de Dezembro, 3180 - Centro Chuvisca/RS</p>
+                            <br>
                             <p class="card-text"><small class="text-muted">Fone: (51) 3671-9311 <br>
                                     Celular: </small></p>
                             <hr>
