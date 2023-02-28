@@ -113,9 +113,9 @@ class Funcionario
     }
 
     public function getLogin($user, $senha){
-        $query = $this->bd->prepare("SELECT * from colaborador where cpf = :user && senha = :senha");
+        $query = $this->bd->prepare("SELECT * from colaborador where cpf = :user && data_n = :senha");
         $query->bindValue(":user", $user);
-        $query->bindValue(":senha", $senha);
+        $query->bindValue(":data_n", $senha);
         $usuario = $query->fetch();
         return $usuario;
     }

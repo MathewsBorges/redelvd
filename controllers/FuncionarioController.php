@@ -98,12 +98,14 @@ class FuncionarioController
             $_SESSION['id'] = $usuario['codigo'];
             $_SESSION['nome'] = $usuario['nome'];
             $_SESSION['nivel_acesso'] = $usuario['perfil'];
+            var_dump($_SESSION['nome']);
         } else {
             header("location: ../index.php?falhaLogin");
         }
     }
 
-    function apagarArquivo($id){
+    function apagarArquivo($id)
+    {
         $this->funcionario->excluirArquivo($id);
     }
 
@@ -129,10 +131,16 @@ if (isset($_POST['method']) && $_POST['method'] == "editarFuncionario") {
 
 if (isset($_POST['method']) && $_POST['method'] == "login") {
     $user = $_POST['user'];
-    $senha = $_POST['password'];
-    var_dump($user);
-    var_dump($senha);
-    $controller->login($user, $senha);
+    $password =  $_POST['password'];
+    $dataDia = substr($password, 0, -6);
+    $dataMes = substr($password, 2, -4);
+    $dataAno = substr($password, -4);
+    $password = $dataAno . '-' . $dataMes . '-' . $dataDia;
+    $password = date($password);
+
+    var_dump($password);
+
+    // $controller->login($user, $senha);
 }
 
 if (isset($_POST['method']) && $_POST['method'] == "apagarArquivo") {
