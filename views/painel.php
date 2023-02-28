@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/">
 
-<head>
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
     <title>Rede LVD - Painel</title>
     <meta name="description" content="" />
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />

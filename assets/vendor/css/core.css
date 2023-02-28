@@ -77,7 +77,7 @@ body {
   background-color: var(--bs-body-bg);
   max-width: 120vw;
   height: 100vh;
-  zoom:90%;
+  zoom:85%;
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(67, 89, 113, 0);
@@ -16489,7 +16489,7 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
 }
 
 .layout-container {
-  min-height: 105vh;
+  min-height: 111vh;
 }
 
 .layout-wrapper,
