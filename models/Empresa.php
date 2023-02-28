@@ -27,6 +27,8 @@ class Empresa
         return $dados;
     }
 
+    
+
     public function apagarArquivo($id)
     {
         $query = $this->bd->prepare("Delete from documentos_farmacia where codigo = $id");

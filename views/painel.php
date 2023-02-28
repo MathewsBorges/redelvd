@@ -91,13 +91,13 @@
 
       </aside>
       <div class="layout-page">
-        <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+        <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme bg-body bg-gradient" id="layout-navbar">
           <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
             <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
               <i class="bx bx-menu bx-sm"></i>
             </a>
           </div>
-          <div class="navbar-nav-right d-flex align-items-start pt-1 ps-5" id="navbar-collapse">
+          <div class="navbar-nav-right d-flex align-items-start pt-1 ps-5 " id="navbar-collapse">
             <div class="navbar-nav align-items-start justify-content-center">
               <div class="nav-item d-flex align-items-start justify-content-center user">
                 <h4 class="">Matheus Neugebauer Borges</h4>
@@ -107,7 +107,7 @@
           </div>
         </nav>
         <div class="row">
-          <div class="col-md-12" id="conteudo" style="width:100%">
+          <div class="col-md-12 mt-5" id="conteudo" style="width:100%">
             <div class="titulo justify-content-center">
               <div class="texto-principal justify-content-center">
                 <h1>REDE LVD</h1>
@@ -122,9 +122,9 @@
     </div>
     <div class="layout-overlay layout-menu-toggle"></div>
   </div>
-  <footer class="footer">
-    <span style="color:black">
-      © Copyright<strong class='ms-2 text-success'>Rede LVD</strong>
+  <footer class="footer mt-1">
+    <span style="color:black h5">
+      © Copyright<strong class='ms-2 text-success h5'>Rede LVD</strong>
     </span>
   </footer>
 </body>

@@ -16,7 +16,7 @@
     </div>
 
     <div class="my-1 p-3 bg-white rounded shadow-sm">
-        <h6 class="border-bottom border-gray pb-2 mb-0">Avisos</h6>
+        <h4 class="border-bottom border-gray pb-2 mb-2">Meus Avisos</h4>
         <div class="col-md-12" id="resultadoAvisos"></div>
         <table class="table table-hover mb-2" id="tabelaAvisosFuncionario" width="100%" cellspacing="0">
             <thead>

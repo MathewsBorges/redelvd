@@ -75,7 +75,9 @@ body {
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
-  max-width: 100vw;
+  max-width: 120vw;
+  height: 100vh;
+   zoom: 90%; 
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(67, 89, 113, 0);
@@ -694,7 +696,7 @@ progress {
   .container-md,
   .container-sm,
   .container {
-    max-width: 720px;
+    max-width: 920px;
   }
 }
 
@@ -5146,8 +5148,8 @@ fieldset:disabled .btn {
   top: 0;
   left: 0;
   z-index: 1089;
-  width: 100vw;
-  height: 100vh;
+  width: 110vw;
+  height: 100%;
   background-color: #435971;
 }
 
@@ -9146,7 +9148,7 @@ form select.selectpicker.is-invalid~.btn {
 
 .breadcrumb-item,
 .breadcrumb-item a {
-  color: #697a8d;
+  /* color: #697a8d; */
 }
 
 .breadcrumb-item:hover,
@@ -16487,12 +16489,12 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
 }
 
 .layout-container {
-  min-height: 100vh;
+  min-height: 105vh;
 }
 
 .layout-wrapper,
 .layout-container {
-  width: 100%;
+  width: auto;
   display: flex;
   flex: 1 1 auto;
   align-items: stretch;

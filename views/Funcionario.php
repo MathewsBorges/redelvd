@@ -14,13 +14,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="../assets/vendor/css/crudUsuario.css">
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
-
-
-
     <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
@@ -45,7 +41,7 @@
 
     <header>
 
-        <div class="col-md-12 col-sm-12 cabecalho mt-2">
+        <div class="col-md-12 col-sm-12 p-1 cabecalho mt-2">
 
             <div class="img">
                 <img class="fa-solid fa-user ms-4 fa-6x" src="" alt="">
@@ -59,7 +55,7 @@
 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item "><a href="painel.php">Painel</a></li>
+                        <li class="breadcrumb-item text-primary"><a href="painel.php">Painel</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Gestão de Funcionários - <?php echo $dados['nome'] ?></li>
                     </ol>
                 </nav>
@@ -161,7 +157,7 @@
 
 
 
-    <div class="container principal overflow-hidden">
+    <div class="col-lg-11 col-sm-10 ms-lg-5 ms-sm-5 ps-lg-5 principal overflow-hidden">
         <input type="hidden" id="nid" value="<?php echo $dados['codigo'] ?>">
         <input type="hidden" id="nid2" value="266">
 

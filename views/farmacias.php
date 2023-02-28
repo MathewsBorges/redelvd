@@ -51,7 +51,7 @@
                             <h5 class="card-title">Rede LVD - Loja 02</h5>
                             <p class="card-text"><i class="fa-solid fa-location-dot me-2"></i>Av. Emancipação, 191 - Centro Cristal/RS</p>
                             <br>
-                            <br>
+                           
                             <p class="card-text"><small class="text-muted">Fone: (51) 3678-1002 <br>
                                     Celular: (51) 98168-5874</small></p>
                             <hr>
@@ -196,6 +196,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Rede LVD - Loja 11</h5>
                             <p class="card-text"><i class="fa-solid fa-location-dot me-2"></i>Rua Andrade Neves, 2023 - Centro Pelotas/RS</p>
+                            <br>
                             <p class="card-text"><small class="text-muted">Fone: (53) 3228-6189 <br>
                                     Celular: (53) 99955-8029</small></p>
                             <hr>
@@ -208,6 +209,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Rede LVD - Loja 12</h5>
+                            <br>
                             <p class="card-text"><i class="fa-solid fa-location-dot me-2"></i>Rua Marechal Floriano, 115 - Centro Pelotas/RS</p>
                             <p class="card-text"><small class="text-muted">Fone: (53) 3221-3821 <br>
                                     Celular: (53) 99705-9019</small></p>
@@ -301,6 +303,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Rede LVD - Loja 18</h5>
+                            <br>
                             <p class="card-text"><i class="fa-solid fa-location-dot me-2"></i>Av. 28 de Dezembro, 3180 - Centro Chuvisca/RS</p>
                             <p class="card-text"><small class="text-muted">Fone: (51) 3671-9311 <br>
                                     Celular: </small></p>
@@ -315,7 +318,7 @@
             </div>
 
 
-            <div class="col-md-12">
+            <div class="col-md-12 mb-2">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Rede LVD - Depósito 99</h5>

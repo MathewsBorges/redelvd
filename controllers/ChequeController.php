@@ -243,9 +243,9 @@ class ChequeController
                     </tbody>
                 </table>
             </div>
-            <div class="ms-2 mt-1 col-md-12">
+            <div class=" mt-1 col-md-12">
                 <div class="input-group input-group-lg">
-                    <span class="valor-span" id="">Total a Receber:</span>
+                    <span class="valor-span col-md-2" id="">Total a Receber:</span>
                     <div class="col-md-10 valor">
                         <p>R$ ' . number_format($total, 2, ',', '.') . '</p>
                     </div>

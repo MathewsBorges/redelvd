@@ -1,10 +1,14 @@
 <div class="row" id="conteudo-pagina">
-    <div class="mt-4 col-md-12">
-        <div class="h-40 p-5 bg-light border rounded-3 mb-4">
+    <div class="mt-4 col-md-12 pe-lg-4">
+        <div class="h-40 p-5 bg-light border d-flex justify-content-around align-items-center rounded-3 mb-4">
             <h2>Rede LVD - Loja 99</h2>
+            <div class="col-md-12 d-flex justify-content-around align-items-center">
+                <p><i class="fa-solid fa-location-dot me-2"></i>AV. CAPITÃO ADOLFO CASTRO, 378 - CENTRO - CAMAQUÃ</p>
+                <p><i class="fa-solid fa-phone me-2"></i>Fone: (51) 3671-9311 </p>
+            </div>
         </div>
     </div>
-    <div class="col-md-12 mb-5 principal">
+    <div class="col-md-12 mb-5 principal pe-lg-4">
         <div class="col-md-12 mb-5 card shadow">
             <div class="titulo-card mt-3">
                 <h3><i class="fa-solid fa-users me-2"></i>Funcionários da Farmácia</h3>
