@@ -87,6 +87,8 @@
 
 <script type="text/javascript">
     $('#username').mask('000.000.000-00');
+    $('#password').mask('00000000');
+
 </script>
 
 </html>
