@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
 
     <header>
 
-        <div class="col-md-12 col-sm-12 p-1 cabecalho mt-2">
+        <div class="col-lg-12 col-sm-12 p-1 cabecalho mt-2">
 
             <div class="img">
                 <img class="fa-solid fa-user ms-4 fa-6x" src="" alt="">
@@ -157,7 +157,7 @@
 
 
 
-    <div class="col-lg-11 col-sm-10 ms-lg-5 ms-sm-5 ps-lg-5 principal overflow-hidden">
+    <div class="col-lg-12 col-sm-10 ms-lg-5 ms-sm-5 ps-lg-5  pe-lg-5 principal overflow-hidden">
         <input type="hidden" id="nid" value="<?php echo $dados['codigo'] ?>">
         <input type="hidden" id="nid2" value="266">
 
@@ -633,7 +633,7 @@
 
 
 
-    <footer class="footer">
+    <footer class="footer col-lg-12">
         <span class="text-white">
             © Copyright 2023 <strong class='ms-2 text-success'>Rede LVD</strong>
         </span>

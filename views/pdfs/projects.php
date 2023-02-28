@@ -354,13 +354,13 @@ class Projects
             echo '
             <div class="col-md-12 cheque">
             <div class="arquivo">
-                <p>Arquivo: </p>
+                <p><i class="fa-regular fa-file-pdf me-2"></i>Arquivo: </p>
                 <p><td><a href="pdfs/displayCheque.php?doc=' . $dados['codigo'] . ' " target="_blank">' . $dados['nome_documento'] . '</a></td>
                 </p>
             </div>
             <div class="mes">
-                <p>Mês de Competência: </p>
-                <p>' . $dados['mes_competencia'] . '</p>
+                <p><i class="fa-regular fa-calendar-days me-2"></i>Mês de Competência: </p>
+                <p class="text-primary">' . $dados['mes_competencia'] . '</p>
             </div>
             </div>
             ';

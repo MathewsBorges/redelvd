@@ -78,6 +78,7 @@ button i {
 }
 
 footer.footer {
+    width: 116.5vw;
     height: 50px;
     margin-top: 50px;
     display: flex;
