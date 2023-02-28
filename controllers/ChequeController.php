@@ -255,7 +255,7 @@ class ChequeController
             
             
             ';
-        }else{
+        } else {
             echo '<div class="col-md-12">
             <p>Não há contracheques adicionados</p>
             </div>';

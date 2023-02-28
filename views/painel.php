@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="../assets/">
 
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=.90">
@@ -22,7 +21,6 @@
     <link rel="stylesheet" href="../assets/vendor/css/painel.css">
     <script src="../assets/js/function.js"></script>
 
-
     <script src="../assets/vendor/js/helpers.js"></script>
     <script src="../assets/js/config.js"></script>
 
@@ -42,8 +40,7 @@
         </div>
         <div class="menu-inner-shadow"></div>
         <ul class="menu-inner">
-          <li class="menu-item">
-            <a href="Documentos.php" class="menu-link">
+          <li class="menu-item"><a href="Documentos.php" class="menu-link">
               <i class="fa-regular fa-file me-2"></i>
               Meus Documentos
             </a>
@@ -112,7 +109,7 @@
                 <h1>REDE LVD</h1>
               </div>
               <div class="texto-secundario justify-content-center">
-                <p>Aqui vc tem amigos</p>
+                <p>Aqui você tem amigos</p>
               </div>
             </div>
           </div>

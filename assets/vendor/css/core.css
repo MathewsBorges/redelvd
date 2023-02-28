@@ -16820,7 +16820,7 @@ html:not(.layout-footer-fixed) .content-wrapper {
 
   .layout-menu-100vh .layout-menu,
   .layout-menu-100vh .layout-overlay {
-    height: 100vh !important;
+    height: 122vh !important;
   }
 }
 
